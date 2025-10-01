@@ -1,43 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
-import { useState, useEffect } from 'react';
+import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 
 const Navigation = () => {
   const { t } = useLanguage();
   const location = useLocation();
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Hide when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      // Show nav when mouse is in top 10% of viewport and user has scrolled
-      if (e.clientY <= window.innerHeight * 0.1 && window.scrollY > 100) {
-        setIsVisible(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, [lastScrollY]);
+  const isVisible = useScrollVisibility();
 
   const navItems = [
     {
