@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
+import VideoSection from '@/components/VideoSection';
 import ServiceSection from '@/components/ServiceSection';
 import DifferentiatorsSection from '@/components/DifferentiatorsSection';
 import VisionSection from '@/components/VisionSection';
@@ -44,6 +45,7 @@ const Index = () => {
         {/* All Sections */}
         <HeroSection />
         <AboutSection />
+        <VideoSection />
         <ServiceSection />
         <DifferentiatorsSection />
         <VisionSection />
