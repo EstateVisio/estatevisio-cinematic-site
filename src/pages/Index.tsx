@@ -8,11 +8,18 @@ import DifferentiatorsSection from '@/components/DifferentiatorsSection';
 import VisionSection from '@/components/VisionSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import { Link } from 'react-router-dom';
+import logo from '@/assets/estatevision-logo.png';
 
 const Index = () => {
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-charcoal">
+        {/* Logo - Fixed Top Left */}
+        <Link to="/" className="fixed top-6 left-6 z-50">
+          <img src={logo} alt="EstateVisio" className="h-10 w-auto" />
+        </Link>
+
         {/* Navigation Bar */}
         <Navigation />
         

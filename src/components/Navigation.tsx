@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
-import logo from '@/assets/estatevision-logo.png';
 
 const Navigation = () => {
   const { t } = useLanguage();
@@ -64,14 +63,7 @@ const Navigation = () => {
       style={{ transform: `translateX(-50%) ${isVisible ? 'translateY(0)' : 'translateY(-6rem)'}` }}
     >
       <div className="bg-charcoal/80 backdrop-blur-md border border-gold/30 rounded-full px-8 py-3 shadow-gold">
-        <div className="flex items-center gap-8">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <img src={logo} alt="EstateVisio" className="h-8 w-auto" />
-          </Link>
-
-          {/* Navigation Items */}
-          <ul className="flex items-center gap-8">
+        <ul className="flex items-center gap-8">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (
@@ -90,8 +82,7 @@ const Navigation = () => {
                 </li>
               );
             })}
-          </ul>
-        </div>
+        </ul>
       </div>
     </nav>
   );
