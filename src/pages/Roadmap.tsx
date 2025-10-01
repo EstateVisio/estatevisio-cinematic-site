@@ -140,8 +140,8 @@ const RoadmapContent = () => {
 
             <p className="text-xl md:text-2xl text-cloud-white leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               {t({
-                en: 'This is just the beginning. Our next chapter introduces AI-driven insights, automated marketing tools, and smart integrations that help agencies scale effortlessly while staying ahead of the market.',
-                bg: 'Това е само началото. Следващата ни глава представя AI-базирани анализи, автоматизирани маркетинг инструменти и интелигентни интеграции, които помагат на агенциите да се развиват без усилие и да бъдат винаги пред конкуренцията.',
+                en: 'The next chapter is about giving power back to the storytellers — brokers and property owners. EstateVisio will provide tools that allow anyone to create cinematic videos, marketing content, and immersive presentations with ease. Professional quality, now in your hands.',
+                bg: 'Следващата глава е за връщането на силата при разказвачите — брокери и собственици на имоти. EstateVisio ще предостави инструменти, които позволяват на всеки да създава кинематографични видеа, маркетинг съдържание и потапящи презентации с лекота. Професионално качество — вече във вашите ръце.',
               })}
             </p>
 
