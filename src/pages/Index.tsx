@@ -1,4 +1,3 @@
-import { LanguageProvider } from '@/contexts/LanguageContext';
 import Navigation from '@/components/Navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import HeroSection from '@/components/HeroSection';
@@ -17,8 +16,7 @@ const Index = () => {
   const isVisible = useScrollVisibility();
 
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-charcoal">
+    <div className="min-h-screen bg-charcoal">
         {/* Logo - Fixed Top Left */}
         <Link 
           to="/" 
@@ -52,7 +50,6 @@ const Index = () => {
         <CTASection />
         <Footer />
       </div>
-    </LanguageProvider>
   );
 };
 

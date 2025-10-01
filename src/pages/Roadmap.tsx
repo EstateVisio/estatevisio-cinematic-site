@@ -1,4 +1,3 @@
-import { LanguageProvider } from '@/contexts/LanguageContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navigation from '@/components/Navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -283,8 +282,7 @@ const Roadmap = () => {
   const isVisible = useScrollVisibility();
 
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-charcoal">
+    <div className="min-h-screen bg-charcoal">
         {/* Logo - Fixed Top Left */}
         <Link 
           to="/" 
@@ -308,7 +306,6 @@ const Roadmap = () => {
         <RoadmapContent />
         <Footer />
       </div>
-    </LanguageProvider>
   );
 };
 
