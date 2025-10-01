@@ -1,4 +1,5 @@
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import Navigation from '@/components/Navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -12,6 +13,9 @@ const Index = () => {
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-charcoal">
+        {/* Navigation Bar */}
+        <Navigation />
+        
         {/* Language Switcher - Fixed Top Right */}
         <div className="fixed top-6 right-6 z-50">
           <LanguageSwitcher />
