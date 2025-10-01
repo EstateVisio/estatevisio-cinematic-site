@@ -42,7 +42,7 @@ const CTASection = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-6 border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-cloud transition-smooth"
+              className="text-lg px-8 py-6 border-2 border-charcoal bg-charcoal/5 text-charcoal hover:bg-charcoal hover:text-cloud transition-smooth font-semibold"
             >
               {t({
                 en: 'Learn More',

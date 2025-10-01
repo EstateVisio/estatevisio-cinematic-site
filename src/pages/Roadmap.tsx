@@ -208,7 +208,7 @@ const RoadmapContent = () => {
                 })}
               </h2>
 
-              <p className="text-xl md:text-2xl text-warm-sand leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-cloud-white leading-relaxed max-w-3xl mx-auto">
                 {t({
                   en: 'We imagine a future where AI shapes the entire real estate experience — from first impression to final sale. EstateVisio is building that future today, bringing intelligence, creativity, and trust to every property journey.',
                   bg: 'Представяме си бъдеще, в което AI оформя цялото изживяване с недвижимите имоти — от първото впечатление до финалната сделка. EstateVisio изгражда това бъдеще още днес, като носи интелигентност, креативност и доверие във всяко имотно пътешествие.',
