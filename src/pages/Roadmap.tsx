@@ -229,7 +229,7 @@ const RoadmapContent = () => {
                     bg: '"AI не заменя недвижимите имоти — издига ги."',
                   })}
                 </p>
-                <p className="text-charcoal/70 font-medium">— EstateVisio Team</p>
+                <p className="text-charcoal font-semibold">— EstateVisio Team</p>
               </blockquote>
             </div>
           </div>

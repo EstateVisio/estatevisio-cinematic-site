@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { cn } from '@/lib/utils';
@@ -27,12 +27,6 @@ const ContactContent = () => {
       title: { en: 'Phone', bg: 'Телефон' },
       value: '+359 XXX XXX XXX',
       link: 'tel:+359XXXXXXXXX',
-    },
-    {
-      icon: MapPin,
-      title: { en: 'Location', bg: 'Локация' },
-      value: 'Sofia, Bulgaria',
-      link: null,
     },
   ];
 
@@ -146,30 +140,6 @@ const ContactContent = () => {
                 );
               })}
             </div>
-
-            {/* Additional Info */}
-            <Card className="bg-gradient-gold border-0 shadow-gold">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-charcoal mb-4">
-                  {t({
-                    en: 'Request a Demo',
-                    bg: 'Заявете демо',
-                  })}
-                </h3>
-                <p className="text-charcoal/80 mb-6">
-                  {t({
-                    en: 'See EstateVisio in action. Schedule a personalized demo with our team.',
-                    bg: 'Вижте EstateVisio в действие. Заявете персонализирано демо с нашия екип.',
-                  })}
-                </p>
-                <Button
-                  size="lg"
-                  className="w-full bg-charcoal hover:bg-charcoal/90 text-cloud shadow-elegant transition-smooth"
-                >
-                  {t({ en: 'Schedule Demo', bg: 'Планирайте демо' })}
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

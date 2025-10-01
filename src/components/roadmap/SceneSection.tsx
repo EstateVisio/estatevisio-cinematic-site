@@ -62,7 +62,7 @@ const SceneSection = ({
     <section
       ref={sectionRef}
       className={cn(
-        'relative min-h-screen flex items-center justify-center overflow-hidden transition-all duration-1000',
+        'relative min-h-screen flex items-center justify-center overflow-hidden transition-all duration-1000 bg-charcoal',
         isVisible ? 'opacity-100' : 'opacity-0',
         className
       )}
