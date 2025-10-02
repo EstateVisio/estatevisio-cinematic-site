@@ -69,9 +69,6 @@ const Navigation = () => {
             width: `${indicatorStyle.width}px`,
             top: '12px',
             height: 'calc(100% - 24px)',
-            transition: 'left 0.5s cubic-bezier(0.4, 0, 0.2, 1), width 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-out, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
-            opacity: indicatorStyle.width > 0 ? 1 : 0,
-            transform: indicatorStyle.width > 0 ? 'translateY(0)' : 'translateY(100%)',
           }}
         />
         <ul ref={navRef} className="flex items-center gap-6 relative z-10">
