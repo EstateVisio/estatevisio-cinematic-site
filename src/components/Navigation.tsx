@@ -63,12 +63,15 @@ const Navigation = () => {
     >
       <div ref={containerRef} className="relative bg-cloud/10 backdrop-blur-xl border border-cloud/20 rounded-full px-4 py-3 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-cloud/20 before:to-transparent before:opacity-50">
         <div
-          className="absolute rounded-full bg-gradient-to-br from-gold to-gold/80 shadow-[0_4px_20px_rgba(212,175,55,0.4)] transition-all duration-500 ease-in-out pointer-events-none"
+          className="absolute rounded-full bg-gradient-to-br from-gold to-gold/80 shadow-[0_4px_20px_rgba(212,175,55,0.4)] pointer-events-none"
           style={{
             left: `${indicatorStyle.left}px`,
             width: `${indicatorStyle.width}px`,
             top: '12px',
             height: 'calc(100% - 24px)',
+            transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-out, transform 0.4s ease-out',
+            opacity: indicatorStyle.width > 0 ? 1 : 0,
+            transform: indicatorStyle.width > 0 ? 'scale(1)' : 'scale(0.95)',
           }}
         />
         <ul ref={navRef} className="flex items-center gap-6 relative z-10">
