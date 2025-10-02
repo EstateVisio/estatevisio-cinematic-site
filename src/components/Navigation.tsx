@@ -30,7 +30,7 @@ const Navigation = () => {
   return (
     <nav 
       className={cn(
-        "fixed top-6 left-1/2 z-40 transition-all duration-300 hidden md:block",
+        "fixed top-6 left-1/2 z-40 transition-all duration-300 hidden lg:block",
         isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
       )}
       style={{ transform: `translateX(-50%) ${isVisible ? 'translateY(0)' : 'translateY(-6rem)'}` }}

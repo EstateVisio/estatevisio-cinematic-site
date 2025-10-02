@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/estatevision-logo.png';
 import {
   Sheet,
   SheetContent,
@@ -42,7 +43,7 @@ const MobileNav = () => {
         <Button
           variant="ghost"
           size="icon"
-          className="fixed top-6 left-6 z-50 md:hidden bg-cloud/10 backdrop-blur-xl border border-cloud/20 hover:bg-cloud/20 rounded-full h-12 w-12"
+          className="fixed top-6 left-6 z-50 lg:hidden bg-cloud/10 backdrop-blur-xl border border-cloud/20 hover:bg-cloud/20 rounded-full h-12 w-12"
         >
           <Menu className="h-6 w-6 text-cloud" />
           <span className="sr-only">Toggle menu</span>
@@ -54,7 +55,9 @@ const MobileNav = () => {
         className="w-[280px] bg-charcoal/95 backdrop-blur-xl border-gold/20"
       >
         <SheetHeader className="border-b border-gold/20 pb-4">
-          <SheetTitle className="text-gold text-xl font-bold">Menu</SheetTitle>
+          <SheetTitle className="flex items-center justify-center">
+            <img src={logo} alt="EstateVisio" className="h-8 w-auto" />
+          </SheetTitle>
         </SheetHeader>
 
         <div className="flex flex-col gap-6 mt-6">

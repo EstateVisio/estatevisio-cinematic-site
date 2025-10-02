@@ -23,7 +23,7 @@ const Services = () => {
       <Link 
         to="/" 
         className={cn(
-          "fixed top-6 left-20 md:left-6 z-50 transition-all duration-300",
+          "fixed top-6 left-20 lg:left-6 z-50 transition-all duration-300",
           isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
         )}
       >
@@ -33,7 +33,7 @@ const Services = () => {
       <Navigation />
       <div 
         className={cn(
-          "fixed top-6 right-6 z-50 transition-all duration-300 hidden md:block",
+          "fixed top-6 right-6 z-50 transition-all duration-300 hidden lg:block",
           isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
         )}
       >
