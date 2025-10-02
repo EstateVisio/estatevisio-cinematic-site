@@ -223,13 +223,13 @@ const RoadmapContent = () => {
             <div className="relative p-8 md:p-12 bg-gradient-gold rounded-2xl shadow-gold animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,0,0,0.1),transparent)] rounded-2xl" />
               <blockquote className="relative text-center space-y-4">
-                <p className="text-2xl md:text-3xl font-bold text-charcoal italic">
+                <p className="text-2xl md:text-3xl font-bold text-charcoal/95 italic">
                   {t({
                     en: '"AI is not replacing real estate — it\'s elevating it."',
                     bg: '"AI не заменя недвижимите имоти — издига ги."',
                   })}
                 </p>
-                <p className="text-charcoal font-semibold">— EstateVisio Team</p>
+                <p className="text-charcoal/90 font-semibold">— EstateVisio Team</p>
               </blockquote>
             </div>
           </div>
