@@ -39,9 +39,10 @@ const Navigation = () => {
         if (activeLink) {
           const navRect = navRef.current.getBoundingClientRect();
           const linkRect = activeLink.getBoundingClientRect();
+          const padding = 16; // px-4 = 16px on each side
           setIndicatorStyle({ 
-            left: linkRect.left - navRect.left, 
-            width: linkRect.width 
+            left: linkRect.left - navRect.left + padding, 
+            width: linkRect.width - (padding * 2)
           });
         }
       }
