@@ -2,11 +2,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
+import { useEffect, useRef, useState } from 'react';
 
 const Navigation = () => {
   const { t } = useLanguage();
   const location = useLocation();
   const isVisible = useScrollVisibility();
+  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+  const navRef = useRef<HTMLUListElement>(null);
 
   const navItems = [
     {
@@ -27,6 +30,17 @@ const Navigation = () => {
     },
   ];
 
+  useEffect(() => {
+    const activeIndex = navItems.findIndex(item => item.path === location.pathname);
+    if (activeIndex !== -1 && navRef.current) {
+      const activeLink = navRef.current.children[activeIndex]?.querySelector('a');
+      if (activeLink) {
+        const { offsetLeft, offsetWidth } = activeLink as HTMLElement;
+        setIndicatorStyle({ left: offsetLeft, width: offsetWidth });
+      }
+    }
+  }, [location.pathname]);
+
   return (
     <nav 
       className={cn(
@@ -36,7 +50,15 @@ const Navigation = () => {
       style={{ transform: `translateX(-50%) ${isVisible ? 'translateY(0)' : 'translateY(-6rem)'}` }}
     >
       <div className="relative bg-cloud/10 backdrop-blur-xl border border-cloud/20 rounded-full px-4 py-3 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-cloud/20 before:to-transparent before:opacity-50">
-        <ul className="flex items-center gap-6 relative z-10">
+        <div
+          className="absolute z-0 h-[36px] rounded-full bg-gradient-to-br from-gold to-gold/80 shadow-[0_4px_20px_rgba(212,175,55,0.4)] transition-all duration-500 ease-out"
+          style={{
+            left: `${indicatorStyle.left}px`,
+            width: `${indicatorStyle.width}px`,
+            top: '12px',
+          }}
+        />
+        <ul ref={navRef} className="flex items-center gap-6 relative z-10">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (
@@ -46,7 +68,7 @@ const Navigation = () => {
                     className={cn(
                       'text-sm font-medium transition-smooth relative px-4 py-2 rounded-full',
                       isActive
-                        ? 'text-charcoal bg-gradient-to-br from-gold to-gold/80 shadow-[0_4px_20px_rgba(212,175,55,0.4)]'
+                        ? 'text-charcoal'
                         : 'text-cloud hover:text-gold hover:bg-cloud/10'
                     )}
                   >
