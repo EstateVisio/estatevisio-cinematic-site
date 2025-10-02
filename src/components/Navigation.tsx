@@ -31,8 +31,8 @@ const Navigation = () => {
       )}
       style={{ transform: `translateX(-50%) ${isVisible ? 'translateY(0)' : 'translateY(-6rem)'}` }}
     >
-      <div className="bg-charcoal/80 backdrop-blur-md border border-gold/30 rounded-full px-8 py-3 shadow-gold">
-        <ul className="flex items-center gap-8">
+      <div className="bg-charcoal/80 backdrop-blur-md border border-gold/30 rounded-full px-4 py-3 shadow-gold">
+        <ul className="flex items-center gap-6">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (

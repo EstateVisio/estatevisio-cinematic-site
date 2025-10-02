@@ -4,11 +4,8 @@ const Footer = () => {
   const { t } = useLanguage();
 
   const links = [
-    { label: { en: 'About', bg: 'За нас' }, href: '#about' },
     { label: { en: 'Services', bg: 'Услуги' }, href: '#services' },
     { label: { en: 'Contact', bg: 'Контакт' }, href: '#contact' },
-    { label: { en: 'Careers', bg: 'Кариери' }, href: '#careers' },
-    { label: { en: 'Legal', bg: 'Правни условия' }, href: '#legal' },
   ];
 
   return (
