@@ -34,13 +34,13 @@ const Navigation = () => {
   useEffect(() => {
     const updateIndicator = () => {
       const activeIndex = navItems.findIndex(item => item.path === location.pathname);
-      if (activeIndex !== -1 && navRef.current && containerRef.current) {
+      if (activeIndex !== -1 && navRef.current) {
         const activeLink = navRef.current.children[activeIndex]?.querySelector('a');
         if (activeLink) {
-          const containerRect = containerRef.current.getBoundingClientRect();
+          const navRect = navRef.current.getBoundingClientRect();
           const linkRect = activeLink.getBoundingClientRect();
           setIndicatorStyle({ 
-            left: linkRect.left - containerRect.left, 
+            left: linkRect.left - navRect.left, 
             width: linkRect.width 
           });
         }
