@@ -31,14 +31,25 @@ const Navigation = () => {
   ];
 
   useEffect(() => {
-    const activeIndex = navItems.findIndex(item => item.path === location.pathname);
-    if (activeIndex !== -1 && navRef.current) {
-      const activeLink = navRef.current.children[activeIndex]?.querySelector('a');
-      if (activeLink) {
-        const { offsetLeft, offsetWidth } = activeLink as HTMLElement;
-        setIndicatorStyle({ left: offsetLeft, width: offsetWidth });
+    const updateIndicator = () => {
+      const activeIndex = navItems.findIndex(item => item.path === location.pathname);
+      if (activeIndex !== -1 && navRef.current) {
+        const activeLink = navRef.current.children[activeIndex]?.querySelector('a');
+        if (activeLink) {
+          const containerRect = navRef.current.getBoundingClientRect();
+          const linkRect = activeLink.getBoundingClientRect();
+          setIndicatorStyle({ 
+            left: linkRect.left - containerRect.left, 
+            width: linkRect.width 
+          });
+        }
       }
-    }
+    };
+
+    updateIndicator();
+    // Update on resize to maintain proper positioning
+    window.addEventListener('resize', updateIndicator);
+    return () => window.removeEventListener('resize', updateIndicator);
   }, [location.pathname]);
 
   return (
@@ -50,15 +61,16 @@ const Navigation = () => {
       style={{ transform: `translateX(-50%) ${isVisible ? 'translateY(0)' : 'translateY(-6rem)'}` }}
     >
       <div className="relative bg-cloud/10 backdrop-blur-xl border border-cloud/20 rounded-full px-4 py-3 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-cloud/20 before:to-transparent before:opacity-50">
-        <div
-          className="absolute z-0 h-[36px] rounded-full bg-gradient-to-br from-gold to-gold/80 shadow-[0_4px_20px_rgba(212,175,55,0.4)] transition-all duration-500 ease-out"
-          style={{
-            left: `${indicatorStyle.left}px`,
-            width: `${indicatorStyle.width}px`,
-            top: '12px',
-          }}
-        />
         <ul ref={navRef} className="flex items-center gap-6 relative z-10">
+            <div
+              className="absolute z-0 rounded-full bg-gradient-to-br from-gold to-gold/80 shadow-[0_4px_20px_rgba(212,175,55,0.4)] transition-all duration-500 ease-in-out"
+              style={{
+                left: `${indicatorStyle.left}px`,
+                width: `${indicatorStyle.width}px`,
+                height: '100%',
+                top: 0,
+              }}
+            />
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (
