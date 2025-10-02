@@ -8,6 +8,7 @@ import { ArrowRight, Sparkles, TrendingUp, Lightbulb, Rocket } from 'lucide-reac
 import { Link } from 'react-router-dom';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { cn } from '@/lib/utils';
+import MobileNav from '@/components/MobileNav';
 import logo from '@/assets/estatevision-logo.png';
 import visionImage from '@/assets/roadmap-vision.jpg';
 import presentImage from '@/assets/roadmap-present.jpg';
@@ -283,11 +284,15 @@ const Roadmap = () => {
 
   return (
     <div className="min-h-screen bg-charcoal">
-        {/* Logo - Fixed Top Left */}
+        {/* Mobile Navigation */}
+        <MobileNav />
+
+        {/* Logo - Fixed Top Left (Desktop) or Center (Mobile) */}
         <Link 
           to="/" 
           className={cn(
-            "fixed top-6 left-6 z-50 transition-all duration-300",
+            "fixed top-6 z-50 transition-all duration-300",
+            "left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0",
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
           )}
         >
@@ -297,7 +302,7 @@ const Roadmap = () => {
         <Navigation />
         <div 
           className={cn(
-            "fixed top-6 right-6 z-50 transition-all duration-300",
+            "fixed top-6 right-6 z-50 transition-all duration-300 hidden md:block",
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
           )}
         >

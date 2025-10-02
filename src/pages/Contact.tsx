@@ -10,6 +10,7 @@ import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { cn } from '@/lib/utils';
+import MobileNav from '@/components/MobileNav';
 import logo from '@/assets/estatevision-logo.png';
 
 const ContactContent = () => {
@@ -152,11 +153,15 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-charcoal">
-        {/* Logo - Fixed Top Left */}
+        {/* Mobile Navigation */}
+        <MobileNav />
+
+        {/* Logo - Fixed Top Left (Desktop) or Center (Mobile) */}
         <Link 
           to="/" 
           className={cn(
-            "fixed top-6 left-6 z-50 transition-all duration-300",
+            "fixed top-6 z-50 transition-all duration-300",
+            "left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0",
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
           )}
         >
@@ -166,7 +171,7 @@ const Contact = () => {
         <Navigation />
         <div 
           className={cn(
-            "fixed top-6 right-6 z-50 transition-all duration-300",
+            "fixed top-6 right-6 z-50 transition-all duration-300 hidden md:block",
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
           )}
         >
