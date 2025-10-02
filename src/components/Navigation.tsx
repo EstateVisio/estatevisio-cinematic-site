@@ -14,6 +14,10 @@ const Navigation = () => {
       path: '/',
     },
     {
+      label: { en: 'Services', bg: 'Услуги' },
+      path: '/services',
+    },
+    {
       label: { en: 'Roadmap', bg: 'Пътна карта' },
       path: '/roadmap',
     },
