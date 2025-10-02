@@ -160,8 +160,7 @@ const Contact = () => {
         <Link 
           to="/" 
           className={cn(
-            "fixed top-6 z-50 transition-all duration-300",
-            "left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0",
+            "fixed top-6 left-20 md:left-6 z-50 transition-all duration-300",
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
           )}
         >
