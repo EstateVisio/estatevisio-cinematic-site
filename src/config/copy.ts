@@ -148,6 +148,13 @@ export const copy = {
       email: { en: 'Email', bg: 'Имейл' },
       phone: { en: 'Phone', bg: 'Телефон' },
     },
+    vision: {
+      title: { en: 'Our Vision', bg: 'Нашата визия' },
+      description: {
+        en: 'We believe every property deserves a cinematic story. Through AI-driven video tours, we help listings come alive — beautifully, instantly, and at scale.',
+        bg: 'Вярваме, че всеки имот заслужава своята кинематографична история. Чрез видео турове, създадени с помощта на изкуствен интелект, ние вдъхваме живот на обявите — красиво, мигновено и в мащаб.',
+      },
+    },
   },
 
   // Services Page

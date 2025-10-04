@@ -133,6 +133,20 @@ const ContactContent = () => {
                 );
               })}
             </div>
+
+            {/* Our Vision Section */}
+            <div className="mt-8 pt-8 border-t border-gold/20">
+              <Card className="bg-charcoal border-gold/20">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-semibold text-gold mb-4 cinematic-text">
+                    {t(copy.contact.vision.title)}
+                  </h3>
+                  <p className="text-slate leading-relaxed">
+                    {t(copy.contact.vision.description)}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
