@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { copy } from '@/config/copy';
 
 const Navigation = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const location = useLocation();
   const isVisible = useScrollVisibility();
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
@@ -40,7 +40,7 @@ const Navigation = () => {
     // Update on resize to maintain proper positioning
     window.addEventListener('resize', updateIndicator);
     return () => window.removeEventListener('resize', updateIndicator);
-  }, [location.pathname]);
+  }, [location.pathname, language]);
 
   return (
     <nav 
