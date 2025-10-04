@@ -9,6 +9,7 @@ import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { cn } from '@/lib/utils';
 import MobileNav from '@/components/MobileNav';
 import logo from '@/assets/estatevision-logo.png';
+import { copy } from '@/config/copy';
 
 const Services = () => {
   const { t } = useLanguage();
@@ -45,17 +46,11 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
-              {t({
-                en: 'Our Services',
-                bg: 'Нашите услуги',
-              })}
+              {t(copy.servicesPage.title)}
             </h1>
             <div className="inline-block">
               <p className="text-xl md:text-2xl text-charcoal/80 leading-relaxed pb-2">
-                {t({
-                  en: 'Every cinematic tour begins with a story. EstateVisio transforms your property photos into elegant, immersive videos — making every listing unforgettable.',
-                  bg: 'Всеки кинематографичен тур започва с история. EstateVisio превръща вашите снимки на имоти в елегантни, потапящи видеа — правейки всяка обява незабравима.',
-                })}
+                {t(copy.servicesPage.intro)}
               </p>
               <div className="h-1 bg-gradient-gold rounded-full" />
             </div>
@@ -100,22 +95,16 @@ const Services = () => {
                     1
                   </div>
                   <span className="text-charcoal font-semibold">
-                    {t({ en: 'Step One', bg: 'Стъпка Първа' })}
+                    {t(copy.servicesPage.steps.one)}
                   </span>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-charcoal">
-                  {t({
-                    en: 'Sending the Photos',
-                    bg: 'Изпращане на снимките',
-                  })}
+                  {t(copy.servicesPage.step1.title)}
                 </h2>
 
                 <p className="text-lg md:text-xl text-charcoal/70 leading-relaxed">
-                  {t({
-                    en: 'It starts with your photos. Brokers and owners send us property images — the raw material for every story.',
-                    bg: 'Всичко започва с вашите снимки. Брокери и собственици ни изпращат изображения на имота — суровият материал за всяка история.',
-                  })}
+                  {t(copy.servicesPage.step1.description)}
                 </p>
               </div>
             </div>
@@ -135,22 +124,16 @@ const Services = () => {
                     2
                   </div>
                   <span className="text-estate-teal font-semibold">
-                    {t({ en: 'Step Two', bg: 'Стъпка Втора' })}
+                    {t(copy.servicesPage.steps.two)}
                   </span>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-cloud">
-                  {t({
-                    en: 'Evaluation & Processing',
-                    bg: 'Оценка и обработка',
-                  })}
+                  {t(copy.servicesPage.step2.title)}
                 </h2>
 
                 <p className="text-lg md:text-xl text-cloud-white/80 leading-relaxed">
-                  {t({
-                    en: 'Our AI evaluates, enhances, and sequences your images. Every frame is refined through quality checks to ensure cinematic consistency.',
-                    bg: 'Нашият AI оценява, подобрява и подрежда вашите изображения. Всеки кадър преминава през проверки за качество, за да се гарантира кинематографична последователност.',
-                  })}
+                  {t(copy.servicesPage.step2.description)}
                 </p>
               </div>
 
@@ -166,10 +149,7 @@ const Services = () => {
                       <div className="h-3 bg-estate-teal/30 rounded-full w-3/5 animate-pulse" style={{ animationDelay: '0.4s' }} />
                     </div>
                     <div className="pt-4 text-sm text-cloud-white/60 font-mono">
-                      {t({
-                        en: '// AI Processing...',
-                        bg: '// AI Обработка...',
-                      })}
+                      {t(copy.servicesPage.step2.aiProcessing)}
                     </div>
                   </div>
                 </div>
@@ -190,22 +170,16 @@ const Services = () => {
                   3
                 </div>
                 <span className="text-charcoal font-semibold">
-                  {t({ en: 'Step Three', bg: 'Стъпка Трета' })}
+                  {t(copy.servicesPage.steps.three)}
                 </span>
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold text-charcoal">
-                {t({
-                  en: 'The Cinematic Video',
-                  bg: 'Кинематографичното видео',
-                })}
+                {t(copy.servicesPage.step3.title)}
               </h2>
 
               <p className="text-lg md:text-xl text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-                {t({
-                  en: 'The result — a 30-second cinematic video that brings your property to life. Smooth, elegant, and ready to captivate buyers.',
-                  bg: 'Резултатът — 30-секундно кинематографично видео, което вдъхва живот на вашия имот. Гладко, елегантно и готово да впечатли купувачите.',
-                })}
+                {t(copy.servicesPage.step3.description)}
               </p>
             </div>
 
@@ -216,10 +190,7 @@ const Services = () => {
                 <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
                   <Film className="h-20 w-20 text-gold group-hover:scale-110 transition-transform" />
                   <p className="text-cloud text-lg font-semibold">
-                    {t({
-                      en: 'Cinematic Property Video',
-                      bg: 'Кинематографично видео на имота',
-                    })}
+                    {t(copy.servicesPage.step3.videoLabel)}
                   </p>
                   <div className="text-cloud-white/60 text-sm">16:9 • 30 seconds</div>
                 </div>
@@ -236,17 +207,11 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal">
-              {t({
-                en: 'From photos to film',
-                bg: 'От снимки до филм',
-              })}
+              {t(copy.servicesPage.closing.title)}
             </h2>
 
             <p className="text-xl md:text-2xl text-charcoal/70 leading-relaxed">
-              {t({
-                en: 'EstateVisio turns property listings into cinematic experiences.',
-                bg: 'EstateVisio превръща обявите в кинематографични изживявания.',
-              })}
+              {t(copy.servicesPage.closing.subtitle)}
             </p>
 
             <div className="pt-8">
@@ -256,10 +221,7 @@ const Services = () => {
                 asChild
               >
                 <Link to="/contact">
-                  {t({
-                    en: 'Start Your Story',
-                    bg: 'Започнете вашата история',
-                  })}
+                  {t(copy.servicesPage.closing.cta)}
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </Link>
               </Button>

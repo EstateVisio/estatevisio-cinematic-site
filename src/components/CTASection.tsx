@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Mail, ArrowRight } from 'lucide-react';
+import { copy } from '@/config/copy';
 
 const CTASection = () => {
   const { t } = useLanguage();
@@ -14,17 +15,11 @@ const CTASection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal animate-fade-in-up">
-            {t({
-              en: 'Elevate your listings today',
-              bg: 'Издигнете вашите обяви още днес',
-            })}
+            {t(copy.cta.title)}
           </h2>
           
           <p className="text-xl md:text-2xl text-charcoal/80 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            {t({
-              en: 'Request a demo and see how EstateVisio can transform the way you market properties.',
-              bg: 'Заявете демо и открийте как EstateVisio може да трансформира начина, по който представяте имотите си.',
-            })}
+            {t(copy.cta.description)}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -33,10 +28,7 @@ const CTASection = () => {
               className="text-lg px-8 py-6 bg-charcoal hover:bg-charcoal/90 text-cloud shadow-elegant transition-smooth"
             >
               <Mail className="mr-2 h-5 w-5" />
-              {t({
-                en: 'Request a Demo',
-                bg: 'Заявете демо',
-              })}
+              {t(copy.cta.requestDemo)}
             </Button>
             
             <Button 
@@ -44,10 +36,7 @@ const CTASection = () => {
               variant="outline"
               className="text-lg px-8 py-6 border-2 border-charcoal bg-charcoal/5 text-charcoal hover:bg-charcoal hover:text-cloud transition-smooth font-semibold"
             >
-              {t({
-                en: 'Learn More',
-                bg: 'Научете повече',
-              })}
+              {t(copy.cta.learnMore)}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

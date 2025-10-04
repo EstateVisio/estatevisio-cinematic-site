@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import aboutImage from '@/assets/about-architecture.jpg';
+import { copy } from '@/config/copy';
 
 const AboutSection = () => {
   const { t } = useLanguage();
@@ -20,25 +21,16 @@ const AboutSection = () => {
           {/* Content */}
           <div className="space-y-6 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gold">
-              {t({
-                en: 'About EstateVisio',
-                bg: 'За EstateVisio',
-              })}
+              {t(copy.about.title)}
             </h2>
             
             <p className="text-lg md:text-xl text-cloud-white/90 leading-relaxed">
-              {t({
-                en: 'EstateVisio is an AI company devoted to real estate. Our mission is to create intelligent, cinematic, and scalable solutions that elevate the way properties are presented and experienced.',
-                bg: 'EstateVisio е AI компания, посветена на недвижимите имоти. Нашата мисия е да създаваме интелигентни, кинематографични и мащабируеми решения, които издигат представянето и възприятието на имотите на ново ниво.',
-              })}
+              {t(copy.about.description)}
             </p>
 
             <div className="pt-4 border-t border-gold/20">
               <p className="text-gold font-semibold text-lg">
-                {t({
-                  en: 'Luxury visuals, powered by AI.',
-                  bg: 'Луксозни визии, задвижвани от AI.',
-                })}
+                {t(copy.about.tagline)}
               </p>
             </div>
           </div>

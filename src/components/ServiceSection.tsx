@@ -1,35 +1,15 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
-import { Video, Sparkles, TrendingUp, Shield } from 'lucide-react';
+import { Video, Sparkles, TrendingUp } from 'lucide-react';
+import { copy } from '@/config/copy';
 
 const ServiceSection = () => {
   const { t } = useLanguage();
 
   const features = [
-    {
-      icon: Video,
-      title: { en: 'Your listings, reimagined', bg: 'Вашите обяви, преосмислени' },
-      description: {
-        en: 'From static photos to immersive video experiences.',
-        bg: 'От статични снимки до потапящи видео изживявания.',
-      },
-    },
-    {
-      icon: Sparkles,
-      title: { en: 'Cinematic spotlight', bg: 'Кинематографичен фокус' },
-      description: {
-        en: 'Every property deserves the cinematic spotlight.',
-        bg: 'Всеки имот заслужава кинематографичен фокус.',
-      },
-    },
-    {
-      icon: TrendingUp,
-      title: { en: 'Quality at scale', bg: 'Качество в мащаб' },
-      description: {
-        en: 'Consistency and quality you can trust at scale.',
-        bg: 'Последователност и качество, на които може да се разчита – във всеки мащаб.',
-      },
-    },
+    { icon: Video, ...copy.service.features.reimagined },
+    { icon: Sparkles, ...copy.service.features.spotlight },
+    { icon: TrendingUp, ...copy.service.features.scale },
   ];
 
   return (
@@ -37,16 +17,10 @@ const ServiceSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-cloud mb-6">
-            {t({
-              en: 'AI-Powered Cinematic Tours',
-              bg: 'AI кинематографични турове',
-            })}
+            {t(copy.service.title)}
           </h2>
           <p className="text-xl text-warm-sand max-w-3xl mx-auto">
-            {t({
-              en: 'Your flagship service for transforming properties into unforgettable experiences.',
-              bg: 'Нашата водеща услуга за трансформиране на имоти в незабравими изживявания.',
-            })}
+            {t(copy.service.subtitle)}
           </p>
         </div>
 

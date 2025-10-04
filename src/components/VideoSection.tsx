@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { copy } from '@/config/copy';
 
 const VideoSection = () => {
   const { t } = useLanguage();
@@ -9,16 +10,10 @@ const VideoSection = () => {
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gold cinematic-text">
-              {t({
-                en: 'See It In Action',
-                bg: 'Вижте го в действие',
-              })}
+              {t(copy.video.title)}
             </h2>
             <p className="text-xl text-cloud-white/80 max-w-3xl mx-auto">
-              {t({
-                en: 'Experience the future of real estate visualization',
-                bg: 'Изживейте бъдещето на визуализацията на недвижими имоти',
-              })}
+              {t(copy.video.subtitle)}
             </p>
           </div>
 
@@ -32,10 +27,7 @@ const VideoSection = () => {
               poster="/placeholder.svg"
             >
               <source src="/path-to-your-video.mp4" type="video/mp4" />
-              {t({
-                en: 'Your browser does not support the video tag.',
-                bg: 'Вашият браузър не поддържа видео тага.',
-              })}
+              {t(copy.video.videoNotSupported)}
             </video>
           </div>
         </div>

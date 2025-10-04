@@ -1,34 +1,14 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Zap, Film, CheckCircle } from 'lucide-react';
+import { copy } from '@/config/copy';
 
 const DifferentiatorsSection = () => {
   const { t } = useLanguage();
 
   const differentiators = [
-    {
-      icon: Zap,
-      title: { en: 'Speed & Scale', bg: 'Скорост и мащаб' },
-      description: {
-        en: 'From photos to video in minutes.',
-        bg: 'От снимки до видео за минути.',
-      },
-    },
-    {
-      icon: Film,
-      title: { en: 'Cinematic Quality', bg: 'Кинематографично качество' },
-      description: {
-        en: 'Luxury visuals designed to sell.',
-        bg: 'Луксозни визии, създадени да продават.',
-      },
-    },
-    {
-      icon: CheckCircle,
-      title: { en: 'Trust & Reliability', bg: 'Доверие и надеждност' },
-      description: {
-        en: 'AI guided by human-level quality checks.',
-        bg: 'AI, воден от проверки с човешко ниво на качество.',
-      },
-    },
+    { icon: Zap, ...copy.differentiators.items.speed },
+    { icon: Film, ...copy.differentiators.items.quality },
+    { icon: CheckCircle, ...copy.differentiators.items.trust },
   ];
 
   return (
@@ -36,10 +16,7 @@ const DifferentiatorsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-cloud mb-4 animate-fade-in-up">
-            {t({
-              en: 'Why EstateVisio',
-              bg: 'Защо EstateVisio',
-            })}
+            {t(copy.differentiators.title)}
           </h2>
         </div>
 

@@ -2,6 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-property.jpg';
+import { copy } from '@/config/copy';
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -21,19 +22,11 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 cinematic-text animate-fade-in-up">
-          <span className="text-cloud">
-            {t({
-              en: 'AI for Real Estate.',
-              bg: 'AI за недвижими имоти.',
-            })}
-          </span>
+          <span className="text-cloud">{t(copy.hero.title)}</span>
         </h1>
         
         <p className="text-xl md:text-2xl lg:text-3xl text-warm-sand mb-12 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          {t({
-            en: 'Transform listings into cinematic experiences — and unlock the future of property marketing.',
-            bg: 'Превърнете обявите в кинематографични изживявания — и отключете бъдещето на имотния маркетинг.',
-          })}
+          {t(copy.hero.subtitle)}
         </p>
 
         <Button 
@@ -41,10 +34,7 @@ const HeroSection = () => {
           className="text-lg px-8 py-6 shadow-gold hover:shadow-elegant transition-smooth animate-fade-in-up bg-gold hover:bg-gold/90 text-charcoal font-semibold"
           style={{ animationDelay: '0.4s' }}
         >
-          {t({
-            en: 'Explore EstateVisio',
-            bg: 'Открийте EstateVisio',
-          })}
+          {t(copy.hero.cta)}
           <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </div>

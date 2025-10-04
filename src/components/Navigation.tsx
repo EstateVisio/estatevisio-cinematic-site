@@ -3,6 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { useEffect, useRef, useState } from 'react';
+import { copy } from '@/config/copy';
 
 const Navigation = () => {
   const { t } = useLanguage();
@@ -13,22 +14,10 @@ const Navigation = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
-    {
-      label: { en: 'Home', bg: 'Начало' },
-      path: '/',
-    },
-    {
-      label: { en: 'Services', bg: 'Услуги' },
-      path: '/services',
-    },
-    {
-      label: { en: 'Roadmap', bg: 'Пътна карта' },
-      path: '/roadmap',
-    },
-    {
-      label: { en: 'Contact', bg: 'Контакт' },
-      path: '/contact',
-    },
+    { label: copy.navigation.home, path: '/' },
+    { label: copy.navigation.services, path: '/services' },
+    { label: copy.navigation.roadmap, path: '/roadmap' },
+    { label: copy.navigation.contact, path: '/contact' },
   ];
 
   useEffect(() => {

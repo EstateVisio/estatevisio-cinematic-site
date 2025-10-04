@@ -12,6 +12,7 @@ import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { cn } from '@/lib/utils';
 import MobileNav from '@/components/MobileNav';
 import logo from '@/assets/estatevision-logo.png';
+import { copy } from '@/config/copy';
 
 const ContactContent = () => {
   const { t } = useLanguage();
@@ -19,13 +20,13 @@ const ContactContent = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: { en: 'Email', bg: 'Имейл' },
+      title: copy.contact.info.email,
       value: 'hello@estatevisio.ai',
       link: 'mailto:hello@estatevisio.ai',
     },
     {
       icon: Phone,
-      title: { en: 'Phone', bg: 'Телефон' },
+      title: copy.contact.info.phone,
       value: '+359 XXX XXX XXX',
       link: 'tel:+359XXXXXXXXX',
     },
@@ -37,16 +38,10 @@ const ContactContent = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h1 className="text-5xl md:text-6xl font-bold text-gold mb-6 cinematic-text">
-            {t({
-              en: 'Get in Touch',
-              bg: 'Свържете се с нас',
-            })}
+            {t(copy.contact.title)}
           </h1>
           <p className="text-xl text-cloud-white/80 max-w-3xl mx-auto">
-            {t({
-              en: 'Ready to transform your property listings? Let\'s start a conversation.',
-              bg: 'Готови ли сте да трансформирате вашите имотни обяви? Нека започнем разговор.',
-            })}
+            {t(copy.contact.subtitle)}
           </p>
         </div>
 
@@ -57,44 +52,41 @@ const ContactContent = () => {
               <form className="space-y-6">
                 <div>
                   <label className="block text-cloud mb-2 font-medium">
-                    {t({ en: 'Name', bg: 'Име' })}
+                    {t(copy.contact.form.name)}
                   </label>
                   <Input
-                    placeholder={t({ en: 'Your name', bg: 'Вашето име' })}
+                    placeholder={t(copy.contact.form.namePlaceholder)}
                     className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
                   />
                 </div>
 
                 <div>
                   <label className="block text-cloud mb-2 font-medium">
-                    {t({ en: 'Email', bg: 'Имейл' })}
+                    {t(copy.contact.form.email)}
                   </label>
                   <Input
                     type="email"
-                    placeholder={t({ en: 'your@email.com', bg: 'вашият@имейл.com' })}
+                    placeholder={t(copy.contact.form.emailPlaceholder)}
                     className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
                   />
                 </div>
 
                 <div>
                   <label className="block text-cloud mb-2 font-medium">
-                    {t({ en: 'Company', bg: 'Компания' })}
+                    {t(copy.contact.form.company)}
                   </label>
                   <Input
-                    placeholder={t({ en: 'Your company (optional)', bg: 'Вашата компания (по желание)' })}
+                    placeholder={t(copy.contact.form.companyPlaceholder)}
                     className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
                   />
                 </div>
 
                 <div>
                   <label className="block text-cloud mb-2 font-medium">
-                    {t({ en: 'Message', bg: 'Съобщение' })}
+                    {t(copy.contact.form.message)}
                   </label>
                   <Textarea
-                    placeholder={t({
-                      en: 'Tell us about your project...',
-                      bg: 'Разкажете ни за вашия проект...',
-                    })}
+                    placeholder={t(copy.contact.form.messagePlaceholder)}
                     rows={6}
                     className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold resize-none"
                   />
@@ -105,7 +97,7 @@ const ContactContent = () => {
                   size="lg"
                   className="w-full bg-gold hover:bg-gold/90 text-charcoal font-semibold shadow-gold transition-smooth"
                 >
-                  {t({ en: 'Send Message', bg: 'Изпратете съобщение' })}
+                  {t(copy.contact.form.submit)}
                 </Button>
               </form>
             </CardContent>

@@ -1,11 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { copy } from '@/config/copy';
 
 const Footer = () => {
   const { t } = useLanguage();
 
   const links = [
-    { label: { en: 'Services', bg: 'Услуги' }, href: '#services' },
-    { label: { en: 'Contact', bg: 'Контакт' }, href: '#contact' },
+    { label: copy.navigation.services, href: '#services' },
+    { label: copy.navigation.contact, href: '#contact' },
   ];
 
   return (
@@ -15,12 +16,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold text-gold mb-2">EstateVisio</h3>
-            <p className="text-cloud-white/70">
-              {t({
-                en: 'Luxury visuals, powered by AI.',
-                bg: 'Луксозни визии, задвижвани от AI.',
-              })}
-            </p>
+            <p className="text-cloud-white/70">{t(copy.footer.tagline)}</p>
           </div>
 
           {/* Links */}
@@ -40,7 +36,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gold/10 text-center">
           <p className="text-cloud-white/60 text-sm">
-            © 2025 EstateVisio. {t({ en: 'All rights reserved.', bg: 'Всички права запазени.' })}
+            © 2025 EstateVisio. {t(copy.footer.copyright)}
           </p>
         </div>
       </div>

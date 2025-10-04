@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/estatevision-logo.png';
+import { copy } from '@/config/copy';
 import {
   Sheet,
   SheetContent,
@@ -19,22 +20,10 @@ const MobileNav = () => {
   const [open, setOpen] = useState(false);
 
   const navItems = [
-    {
-      label: { en: 'Home', bg: 'Начало' },
-      path: '/',
-    },
-    {
-      label: { en: 'Services', bg: 'Услуги' },
-      path: '/services',
-    },
-    {
-      label: { en: 'Roadmap', bg: 'Пътна карта' },
-      path: '/roadmap',
-    },
-    {
-      label: { en: 'Contact', bg: 'Контакт' },
-      path: '/contact',
-    },
+    { label: copy.navigation.home, path: '/' },
+    { label: copy.navigation.services, path: '/services' },
+    { label: copy.navigation.roadmap, path: '/roadmap' },
+    { label: copy.navigation.contact, path: '/contact' },
   ];
 
   return (
@@ -64,7 +53,7 @@ const MobileNav = () => {
           {/* Language Switcher */}
           <div className="space-y-2">
             <p className="text-sm text-cloud-white/60 font-semibold px-2">
-              {t({ en: 'Language', bg: 'Език' })}
+              {t(copy.navigation.language)}
             </p>
             <div className="flex gap-2">
               <Button
@@ -99,7 +88,7 @@ const MobileNav = () => {
           {/* Navigation Links */}
           <nav className="space-y-1">
             <p className="text-sm text-cloud-white/60 font-semibold px-2 mb-2">
-              {t({ en: 'Pages', bg: 'Страници' })}
+              {t(copy.navigation.pages)}
             </p>
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;

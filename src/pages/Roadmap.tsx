@@ -14,6 +14,7 @@ import visionImage from '@/assets/roadmap-vision.jpg';
 import presentImage from '@/assets/roadmap-present.jpg';
 import futureImage from '@/assets/roadmap-future.jpg';
 import horizonImage from '@/assets/roadmap-horizon.jpg';
+import { copy } from '@/config/copy';
 
 const RoadmapContent = () => {
   const { t } = useLanguage();
