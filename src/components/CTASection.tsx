@@ -2,6 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Mail, ArrowRight } from 'lucide-react';
 import { copy } from '@/config/copy';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   const { t } = useLanguage();
@@ -31,14 +32,16 @@ const CTASection = () => {
               {t(copy.cta.requestDemo)}
             </Button>
             
-            <Button 
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 border-2 border-charcoal bg-charcoal/5 text-charcoal hover:bg-charcoal hover:text-cloud transition-smooth font-semibold"
-            >
-              {t(copy.cta.learnMore)}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/services">
+              <Button 
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-6 border-2 border-charcoal bg-charcoal/5 text-charcoal hover:bg-charcoal hover:text-cloud transition-smooth font-semibold"
+              >
+                {t(copy.cta.learnMore)}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
