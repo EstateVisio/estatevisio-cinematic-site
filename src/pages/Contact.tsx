@@ -104,7 +104,20 @@ const ContactContent = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="space-y-6 animate-fade-in-up flex flex-col h-full" style={{ animationDelay: '0.2s' }}>
+            {/* Our Vision Section - Now on top */}
+            <Card className="bg-charcoal border-gold/20 flex-grow">
+              <CardContent className="p-10 text-center flex flex-col justify-center h-full">
+                <h3 className="text-3xl font-semibold text-gold mb-6 cinematic-text">
+                  {t(copy.contact.vision.title)}
+                </h3>
+                <p className="text-slate leading-relaxed text-lg">
+                  {t(copy.contact.vision.description)}
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Contact Cards - Below vision */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
@@ -132,20 +145,6 @@ const ContactContent = () => {
                   <div key={index}>{content}</div>
                 );
               })}
-            </div>
-
-            {/* Our Vision Section */}
-            <div className="mt-8 pt-8 border-t border-gold/20">
-              <Card className="bg-charcoal border-gold/20">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-semibold text-gold mb-4 cinematic-text">
-                    {t(copy.contact.vision.title)}
-                  </h3>
-                  <p className="text-slate leading-relaxed">
-                    {t(copy.contact.vision.description)}
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
