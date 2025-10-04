@@ -108,10 +108,10 @@ const ContactContent = () => {
             {/* Our Vision Section - Now on top */}
             <Card className="bg-charcoal border-gold/20 flex-grow">
               <CardContent className="p-10 text-center flex flex-col justify-center h-full">
-                <h3 className="text-3xl font-semibold text-gold mb-6 cinematic-text">
+                <h3 className="text-3xl font-bold text-gold mb-6 cinematic-text tracking-wide">
                   {t(copy.contact.vision.title)}
                 </h3>
-                <p className="text-slate leading-relaxed text-lg">
+                <p className="text-cloud-white/90 leading-relaxed text-lg font-light">
                   {t(copy.contact.vision.description)}
                 </p>
               </CardContent>
