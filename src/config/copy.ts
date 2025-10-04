@@ -161,8 +161,8 @@ export const copy = {
   servicesPage: {
     title: { en: 'Our Services', bg: 'Нашите услуги' },
     intro: {
-      en: 'Every cinematic tour begins with a story. EstateVisio transforms your property photos into elegant, immersive videos — making every listing unforgettable.',
-      bg: 'Всеки кинематографичен тур започва с история. EstateVisio превръща вашите снимки на имоти в елегантни, потапящи видеа — правейки всяка обява незабравима.',
+      en: 'Your listings deserve cinematic stories — and with EstateVisio, creating them has never been easier.',
+      bg: 'Вашите обяви заслужават кинематографични истории — а с EstateVisio създаването им никога не е било по-лесно.',
     },
     steps: {
       one: { en: 'Step One', bg: 'Стъпка Първа' },
