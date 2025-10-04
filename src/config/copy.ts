@@ -222,17 +222,17 @@ export const copy = {
       features: {
         quality: {
           title: { en: 'Cinematic Quality', bg: 'Кинематографично качество' },
-          description: { en: 'Professional-grade videos that sell', bg: 'Професионални видеа, които продават' },
+          description: { en: 'Professional-grade videos that sell.', bg: 'Професионални видеа, които продават.' },
         },
         speed: {
-          title: { en: 'Lightning Fast', bg: 'Светкавично бързо' },
-          description: { en: 'Minutes, not hours', bg: 'Минути, не часове' },
+          title: { en: 'Delivered in 24 Hours', bg: 'Доставено до 24 часа' },
+          description: { en: 'Your property, transformed into a film — overnight.', bg: 'Вашият имот, превърнат във филм — за една нощ.' },
         },
         scale: {
-          title: { en: 'Effortless Scale', bg: 'Лесно мащабиране' },
+          title: { en: 'Trusted Partnership', bg: 'Доверено партньорство' },
           description: {
-            en: 'Consistent quality, unlimited volume',
-            bg: 'Постоянно качество, неограничен обем',
+            en: 'We handle the visuals — you close the deals.',
+            bg: 'Ние се грижим за визията — вие затваряте сделките.',
           },
         },
       },
