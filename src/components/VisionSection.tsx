@@ -32,7 +32,7 @@ const VisionSection = () => {
             <Button
               size="lg"
               className="text-lg px-8 py-6 shadow-gold hover:shadow-elegant transition-smooth bg-gold hover:bg-gold/90 text-charcoal font-semibold"
-              onClick={() => window.location.href = '/roadmap#present'}
+              onClick={() => window.location.href = '/roadmap#expanding-horizons'}
             >
               {t(copy.vision.badge)}
               <ArrowRight className="ml-2 h-5 w-5" />
