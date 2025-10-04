@@ -1,7 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import visionImage from '@/assets/vision-future.jpg';
 import { copy } from '@/config/copy';
-import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const VisionSection = () => {
   const { t } = useLanguage();
@@ -28,14 +29,14 @@ const VisionSection = () => {
           </p>
 
           <div className="pt-8">
-            <Link 
-              to="/roadmap#expanding-horizons" 
-              className="inline-block px-8 py-4 border-2 border-gold/30 rounded-full hover:bg-gold/10 hover:border-gold/50 transition-smooth cursor-pointer"
+            <Button
+              size="lg"
+              className="text-lg px-8 py-6 shadow-gold hover:shadow-elegant transition-smooth bg-gold hover:bg-gold/90 text-charcoal font-semibold"
+              onClick={() => window.location.href = '/roadmap#present'}
             >
-              <p className="text-gold font-semibold text-lg">
-                {t(copy.vision.badge)}
-              </p>
-            </Link>
+              {t(copy.vision.badge)}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </div>
