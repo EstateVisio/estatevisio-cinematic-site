@@ -195,8 +195,8 @@ export const copy = {
     closing: {
       title: { en: 'From photos to film', bg: 'От снимки до филм' },
       subtitle: {
-        en: 'EstateVisio turns property listings into cinematic experiences.',
-        bg: 'EstateVisio превръща обявите в кинематографични изживявания.',
+        en: 'We, at EstateVisio, turn property listings into cinematic experiences.',
+        bg: 'Ние, от EstateVisio, превръщаме обявите в кинематографични изживявания.',
       },
       cta: { en: 'Start Your Story', bg: 'Започнете вашата история' },
     },
