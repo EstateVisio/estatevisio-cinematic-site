@@ -32,7 +32,7 @@ const CTASection = () => {
               {t(copy.cta.requestDemo)}
             </Button>
             
-            <Link to="/services">
+            <Link to="/services" onClick={() => window.scrollTo(0, 0)}>
               <Button 
                 size="lg"
                 variant="outline"
