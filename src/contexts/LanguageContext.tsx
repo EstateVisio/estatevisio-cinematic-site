@@ -12,9 +12,9 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>(() => {
-    // Initialize from localStorage or default to 'en'
+    // Initialize from localStorage or default to 'bg'
     const saved = localStorage.getItem('estatevision-language');
-    return (saved === 'en' || saved === 'bg') ? saved : 'en';
+    return (saved === 'en' || saved === 'bg') ? saved : 'bg';
   });
 
   useEffect(() => {
