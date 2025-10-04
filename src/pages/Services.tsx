@@ -62,7 +62,7 @@ const Services = () => {
       <section className="py-24 bg-warm-sand/30">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
               {/* Visual */}
               <div className="relative animate-fade-in-up">
                 <div className="absolute -top-8 -left-8 w-32 h-32 bg-gold/20 rounded-full blur-3xl" />
