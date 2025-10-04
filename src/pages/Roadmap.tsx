@@ -186,7 +186,7 @@ const RoadmapContent = () => {
             <div className="relative p-8 md:p-12 bg-gradient-gold rounded-2xl shadow-gold animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,0,0,0.1),transparent)] rounded-2xl" />
               <div className="relative text-center">
-                <p className="text-3xl md:text-4xl font-bold text-cloud">
+                <p className="text-3xl md:text-4xl font-bold text-cloud italic">
                   {t(copy.roadmap.scene4.quote)}
                 </p>
               </div>
