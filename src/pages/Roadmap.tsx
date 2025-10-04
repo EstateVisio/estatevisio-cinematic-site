@@ -4,7 +4,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Footer from '@/components/Footer';
 import SceneSection from '@/components/roadmap/SceneSection';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, TrendingUp, Lightbulb, Rocket } from 'lucide-react';
+import { ArrowRight, Sparkles, TrendingUp, Lightbulb, Rocket, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { cn } from '@/lib/utils';
@@ -149,12 +149,12 @@ const RoadmapContent = () => {
               </div>
 
               <div className="p-6 bg-charcoal/60 backdrop-blur-sm border border-gold/20 rounded-xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                <Sparkles className="h-10 w-10 text-gold mx-auto mb-4" />
+                <Zap className="h-10 w-10 text-gold mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-cloud mb-2">
-                  {t(copy.roadmap.scene3.features.integrations.title)}
+                  {t(copy.roadmap.scene3.features.lightningFast.title)}
                 </h3>
                 <p className="text-cloud-white/70 text-sm">
-                  {t(copy.roadmap.scene3.features.integrations.description)}
+                  {t(copy.roadmap.scene3.features.lightningFast.description)}
                 </p>
               </div>
             </div>

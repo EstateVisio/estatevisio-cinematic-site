@@ -246,16 +246,16 @@ export const copy = {
       },
       features: {
         insights: {
-          title: { en: 'AI Insights', bg: 'AI Анализи' },
-          description: { en: 'Smart property analytics', bg: 'Интелигентни имотни анализи' },
+          title: { en: 'AI Insights', bg: 'AI анализи' },
+          description: { en: 'Smart property analytics.', bg: 'Интелигентна аналитика за имоти.' },
         },
         automation: {
           title: { en: 'Automation', bg: 'Автоматизация' },
-          description: { en: 'Marketing on autopilot', bg: 'Маркетинг на автопилот' },
+          description: { en: 'Marketing on autopilot.', bg: 'Маркетинг на автопилот.' },
         },
-        integrations: {
-          title: { en: 'Integrations', bg: 'Интеграции' },
-          description: { en: 'Seamless workflow connections', bg: 'Безпроблемни връзки' },
+        lightningFast: {
+          title: { en: 'Lightning Fast', bg: 'Светкавично бързо' },
+          description: { en: 'Not hours — just minutes.', bg: 'Не часове, а минути.' },
         },
       },
     },
