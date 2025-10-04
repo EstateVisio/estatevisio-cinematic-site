@@ -111,7 +111,7 @@ const ContactContent = () => {
                 <h3 className="text-4xl md:text-5xl font-bold text-gold mb-6 cinematic-text tracking-wide">
                   {t(copy.contact.vision.title)}
                 </h3>
-                <p className="text-cloud-white/90 leading-relaxed text-xl md:text-2xl font-light">
+                <p className="text-cloud-white/90 leading-relaxed text-xl md:text-2xl font-light italic">
                   {t(copy.contact.vision.description)}
                 </p>
               </CardContent>
