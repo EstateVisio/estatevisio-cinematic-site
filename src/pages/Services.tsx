@@ -42,14 +42,14 @@ const Services = () => {
       </div>
 
       {/* Introduction Section */}
-      <section className="pt-32 pb-20 bg-cloud">
+      <section className="pt-32 pb-20 bg-charcoal">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gold mb-6">
               {t(copy.servicesPage.title)}
             </h1>
             <div className="inline-block">
-              <p className="text-xl md:text-2xl text-charcoal/80 leading-relaxed pb-2">
+              <p className="text-xl md:text-2xl text-cloud leading-relaxed pb-2">
                 {t(copy.servicesPage.intro)}
               </p>
               <div className="h-1 bg-gradient-gold rounded-full" />
