@@ -64,7 +64,7 @@ const Services = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Visual */}
-              <div className="relative animate-fade-in-up flex items-center justify-center min-h-[400px]">
+              <div className="relative animate-fade-in-up">
                 <div className="absolute -top-8 -left-8 w-32 h-32 bg-gold/20 rounded-full blur-3xl" />
                 <div className="relative space-y-4">
                   {/* Staggered photo placeholders */}
