@@ -173,7 +173,7 @@ const RoadmapContent = () => {
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cloud cinematic-text leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gold cinematic-text leading-tight">
                 {t(copy.roadmap.scene4.title)}
               </h2>
 
@@ -185,12 +185,11 @@ const RoadmapContent = () => {
             {/* Vision Statement */}
             <div className="relative p-8 md:p-12 bg-gradient-gold rounded-2xl shadow-gold animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,0,0,0.1),transparent)] rounded-2xl" />
-              <blockquote className="relative text-center space-y-4">
-                <p className="text-2xl md:text-3xl font-bold text-cloud italic">
+              <div className="relative text-center">
+                <p className="text-3xl md:text-4xl font-bold text-cloud">
                   {t(copy.roadmap.scene4.quote)}
                 </p>
-                <p className="text-cloud font-semibold">— EstateVisio Team</p>
-              </blockquote>
+              </div>
             </div>
           </div>
         </div>

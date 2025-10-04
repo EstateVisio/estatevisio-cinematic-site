@@ -260,15 +260,15 @@ export const copy = {
       },
     },
     scene4: {
-      badge: { en: 'The Horizon', bg: 'Хоризонтът' },
+      badge: { en: 'The Vision Ahead', bg: 'Поглед към бъдещето' },
       title: { en: 'The Future of Real Estate', bg: 'Бъдещето на недвижимите имоти' },
       description: {
         en: 'We imagine a future where AI shapes the entire real estate experience — from first impression to final sale. EstateVisio is building that future today, bringing intelligence, creativity, and trust to every property journey.',
         bg: 'Представяме си бъдеще, в което AI оформя цялото изживяване с недвижимите имоти — от първото впечатление до финалната сделка. EstateVisio изгражда това бъдеще още днес, като носи интелигентност, креативност и доверие във всяко имотно пътешествие.',
       },
       quote: {
-        en: '"AI is not replacing real estate — it\'s elevating it."',
-        bg: '"AI не заменя недвижимите имоти — издига ги."',
+        en: 'AI isn\'t here to replace real estate agents — it\'s here to elevate their skills to a new level.',
+        bg: 'AI не е тук, за да замени брокерите — а за да издигне техните умения на ново ниво.',
       },
     },
     scene5: {
