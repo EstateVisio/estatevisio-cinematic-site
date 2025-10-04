@@ -24,13 +24,15 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <Button 
-              size="lg"
-              className="text-lg px-8 py-6 bg-charcoal hover:bg-charcoal/90 text-cloud shadow-elegant transition-smooth"
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              {t(copy.cta.requestDemo)}
-            </Button>
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+              <Button 
+                size="lg"
+                className="text-lg px-8 py-6 bg-charcoal hover:bg-charcoal/90 text-cloud shadow-elegant transition-smooth"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                {t(copy.cta.requestDemo)}
+              </Button>
+            </Link>
             
             <Link to="/services" onClick={() => window.scrollTo(0, 0)}>
               <Button 
