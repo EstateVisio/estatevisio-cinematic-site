@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import visionImage from '@/assets/vision-future.jpg';
 import { copy } from '@/config/copy';
+import { Link } from 'react-router-dom';
 
 const VisionSection = () => {
   const { t } = useLanguage();
@@ -27,11 +28,14 @@ const VisionSection = () => {
           </p>
 
           <div className="pt-8">
-            <div className="inline-block px-8 py-4 border-2 border-gold/30 rounded-full">
+            <Link 
+              to="/roadmap#expanding-horizons" 
+              className="inline-block px-8 py-4 border-2 border-gold/30 rounded-full hover:bg-gold/10 hover:border-gold/50 transition-smooth cursor-pointer"
+            >
               <p className="text-gold font-semibold text-lg">
                 {t(copy.vision.badge)}
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

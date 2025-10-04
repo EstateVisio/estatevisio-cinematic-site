@@ -7,6 +7,7 @@ interface SceneSectionProps {
   className?: string;
   parallax?: boolean;
   overlay?: 'light' | 'medium' | 'heavy';
+  id?: string;
 }
 
 const SceneSection = ({
@@ -15,6 +16,7 @@ const SceneSection = ({
   className,
   parallax = false,
   overlay = 'medium',
+  id,
 }: SceneSectionProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -61,6 +63,7 @@ const SceneSection = ({
   return (
     <section
       ref={sectionRef}
+      id={id}
       className={cn(
         'relative min-h-screen flex items-center justify-center overflow-hidden transition-all duration-1000 bg-charcoal',
         isVisible ? 'opacity-100' : 'opacity-0',

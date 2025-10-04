@@ -108,7 +108,7 @@ const RoadmapContent = () => {
       </SceneSection>
 
       {/* Scene 3: Near Future - Expanding Horizons */}
-      <SceneSection backgroundImage={futureImage} parallax overlay="medium">
+      <SceneSection backgroundImage={futureImage} parallax overlay="medium" id="expanding-horizons">
         <div className="container mx-auto px-6 py-32">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-blue/20 border border-sky-blue/40 rounded-full animate-fade-in">
