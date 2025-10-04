@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Separator } from '@/components/ui/separator';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
@@ -104,18 +105,21 @@ const ContactContent = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6 animate-fade-in-up flex flex-col h-full" style={{ animationDelay: '0.2s' }}>
+          <div className="space-y-6 animate-fade-in-up flex flex-col" style={{ animationDelay: '0.2s' }}>
             {/* Our Vision Section - Now on top */}
-            <Card className="bg-charcoal border-gold/20 flex-grow">
-              <CardContent className="p-10 text-center flex flex-col justify-center h-full">
-                <h3 className="text-4xl md:text-5xl font-bold text-gold mb-6 cinematic-text tracking-wide">
+            <Card className="bg-charcoal border-gold/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-gold mb-4 cinematic-text tracking-wide">
                   {t(copy.contact.vision.title)}
                 </h3>
-                <p className="text-cloud-white/90 leading-relaxed text-xl md:text-2xl font-light italic">
+                <p className="text-cloud-white/90 leading-relaxed text-base md:text-lg font-light italic">
                   {t(copy.contact.vision.description)}
                 </p>
               </CardContent>
             </Card>
+
+            {/* Separator */}
+            <Separator className="bg-gold/20" />
 
             {/* Contact Cards - Below vision */}
             <div className="space-y-6">
