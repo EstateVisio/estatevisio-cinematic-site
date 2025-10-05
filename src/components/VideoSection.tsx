@@ -31,9 +31,12 @@ const VideoSection = () => {
             </video>
           </div>
 
-          <p className="text-center text-gold text-lg md:text-xl font-semibold italic leading-relaxed mt-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            {t(copy.video.caption)}
-          </p>
+          <div className="flex flex-col items-center mt-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-center text-gold text-xl md:text-2xl font-semibold italic leading-relaxed">
+              {t(copy.video.caption)}
+            </p>
+            <div className="w-32 h-0.5 bg-gold mt-4"></div>
+          </div>
         </div>
       </div>
     </section>
