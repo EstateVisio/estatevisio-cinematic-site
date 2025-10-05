@@ -43,6 +43,10 @@ export const copy = {
       en: 'Your browser does not support the video tag.',
       bg: 'Вашият браузър не поддържа видео тага.',
     },
+    caption: {
+      en: 'Yes — every frame you see began as a photo.',
+      bg: 'Да — всяка сцена, която виждате, започна от снимка.',
+    },
   },
 
   // Service Section

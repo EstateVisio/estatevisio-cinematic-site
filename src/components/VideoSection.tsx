@@ -30,6 +30,10 @@ const VideoSection = () => {
               {t(copy.video.videoNotSupported)}
             </video>
           </div>
+
+          <p className="text-center text-gold text-sm font-medium italic leading-relaxed mt-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            {t(copy.video.caption)}
+          </p>
         </div>
       </div>
     </section>
