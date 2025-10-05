@@ -32,10 +32,12 @@ const VideoSection = () => {
           </div>
 
           <div className="flex flex-col items-center mt-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <p className="text-center text-gold text-xl md:text-2xl font-semibold italic leading-relaxed">
-              {t(copy.video.caption)}
-            </p>
-            <div className="w-32 h-0.5 bg-gold mt-4"></div>
+            <div className="inline-block">
+              <p className="text-center text-gold text-2xl md:text-3xl font-semibold italic leading-relaxed">
+                {t(copy.video.caption)}
+              </p>
+              <div className="w-full h-0.5 bg-gold mt-4"></div>
+            </div>
           </div>
         </div>
       </div>
