@@ -36,7 +36,7 @@ const VideoSection = () => {
               <p className="text-center text-gold text-2xl md:text-3xl font-semibold italic leading-relaxed">
                 {t(copy.video.caption)}
               </p>
-              <div className="w-full h-0.5 bg-gold mt-4"></div>
+              <div className="w-[70%] h-0.5 bg-gold mt-4 mx-auto"></div>
             </div>
           </div>
         </div>
