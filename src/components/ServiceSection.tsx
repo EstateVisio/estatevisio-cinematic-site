@@ -34,8 +34,8 @@ const ServiceSection = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8 text-center space-y-4">
-                  <div className="w-16 h-16 mx-auto bg-gradient-gold rounded-full flex items-center justify-center shadow-gold">
-                    <Icon className="h-8 w-8 text-charcoal" />
+                  <div className="w-16 h-16 mx-auto bg-charcoal/20 rounded-full flex items-center justify-center border-2 border-gold shadow-gold">
+                    <Icon className="h-8 w-8 text-gold" />
                   </div>
                   
                   <h3 className="text-2xl font-bold text-cloud">
