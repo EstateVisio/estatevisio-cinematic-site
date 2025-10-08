@@ -17,8 +17,14 @@ const VideoSection = () => {
             </p>
           </div>
 
-          <div className="relative p-2 bg-gradient-to-br from-gold via-gold/80 to-gold/60 rounded-2xl shadow-elegant animate-scale-in">
-            <div className="relative rounded-xl overflow-hidden aspect-video bg-charcoal">
+          <div className="relative animate-scale-in">
+            {/* Top-left corner accent */}
+            <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-gold z-10" />
+            
+            {/* Bottom-right corner accent */}
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-gold z-10" />
+            
+            <div className="relative rounded-xl overflow-hidden aspect-video bg-charcoal shadow-elegant">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/q3-Sk7rSWrs"
