@@ -17,14 +17,16 @@ const VideoSection = () => {
             </p>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden shadow-elegant animate-scale-in aspect-video">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/q3-Sk7rSWrs"
-              title="EstateVisio Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+          <div className="relative p-2 bg-gradient-to-br from-gold via-gold/80 to-gold/60 rounded-2xl shadow-elegant animate-scale-in">
+            <div className="relative rounded-xl overflow-hidden aspect-video bg-charcoal">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/q3-Sk7rSWrs"
+                title="EstateVisio Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
 
           <div className="flex flex-col items-center mt-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
