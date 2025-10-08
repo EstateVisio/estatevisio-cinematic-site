@@ -24,9 +24,9 @@ const VideoSection = () => {
             {/* Bottom-right corner accent */}
             <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-gold z-10" />
             
-            <div className="relative rounded-xl overflow-hidden aspect-video bg-charcoal shadow-elegant">
+            <div className="relative rounded-xl overflow-hidden shadow-elegant" style={{ aspectRatio: '16/9' }}>
               <iframe
-                className="w-full h-full"
+                className="w-full h-full absolute inset-0"
                 src="https://www.youtube.com/embed/q3-Sk7rSWrs"
                 title="EstateVisio Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
