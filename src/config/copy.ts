@@ -103,7 +103,7 @@ export const copy = {
     },
   },
 
-  // Vision Section
+  // Vision Section (Homepage)
   vision: {
     title: { en: 'Vision Beyond Tours', bg: 'Визия отвъд туровете' },
     description: {
@@ -111,6 +111,62 @@ export const copy = {
       bg: 'AI преобразува недвижимите имоти. EstateVisio изгражда бъдещето — от кинематографични турове до интелигентни имотни анализи и отвъд.',
     },
     badge: { en: 'Innovation in Progress', bg: 'Иновации в развитие' },
+  },
+
+  // Vision Page Teaser (on Homepage)
+  visionTeaser: {
+    title: { en: 'Curious where EstateVisio is headed?', bg: 'Любопитни накъде се насочва EstateVisio?' },
+    description: {
+      en: 'Discover the story and vision shaping the future of property visualization.',
+      bg: 'Открийте историята и визията, които оформят бъдещето на визуализацията на имоти.',
+    },
+    cta: { en: 'Read Our Vision', bg: 'Прочетете нашата визия' },
+  },
+
+  // Vision Page (Full Story)
+  visionPage: {
+    hero: {
+      title: { en: 'A Vision Comes to Life', bg: 'Визията оживява' },
+      subtitle: {
+        en: 'Because every property deserves its moment to shine.',
+        bg: 'Защото всеки имот заслужава своя момент да блесне.',
+      },
+    },
+    story1: {
+      title: { en: 'The Beginning', bg: 'Началото' },
+      description: {
+        en: 'EstateVisio began with a simple question — What if listings could speak for themselves? We saw potential hidden in still images, waiting to move, breathe, and evoke emotion.',
+        bg: 'EstateVisio започна с един прост въпрос — Какво, ако обявите можеха да говорят сами за себе си? Видяхме потенциал, скрит в неподвижните изображения, чакащ да се движи, диша и да предизвика емоции.',
+      },
+    },
+    story2: {
+      title: { en: 'The Transformation', bg: 'Трансформацията' },
+      description: {
+        en: 'Using AI and creativity, we gave life to the inanimate — transforming photos into living, cinematic stories. Because a great property doesn\'t just need to be seen — it needs to be felt.',
+        bg: 'Използвайки AI и креативност, дадохме живот на неодушевеното — превръщайки снимки в живи, кинематографични истории. Защото един страхотен имот не трябва просто да бъде видян — трябва да бъде усетен.',
+      },
+    },
+    story3: {
+      title: { en: 'The Purpose', bg: 'Целта' },
+      description: {
+        en: 'EstateVisio exists to help agents and developers reimagine how real estate is experienced. To elevate listings into moments. To make discovery emotional again. To make every home unforgettable.',
+        bg: 'EstateVisio съществува, за да помогне на агенти и строители да преосмислят как се изживяват недвижимите имоти. Да превърнат обявите в моменти. Да направят откритието емоционално отново. Да направят всеки дом незабравим.',
+      },
+    },
+    quote: {
+      text: {
+        en: 'We\'re not changing real estate — we\'re changing the way people feel about it.',
+        bg: 'Не променяме недвижимите имоти — променяме начина, по който хората се чувстват за тях.',
+      },
+    },
+    cta: {
+      title: { en: 'See how our vision becomes reality.', bg: 'Вижте как нашата визия става реалност.' },
+      description: {
+        en: 'Explore how EstateVisio turns your listings into cinematic experiences.',
+        bg: 'Открийте как EstateVisio превръща вашите обяви в кинематографични изживявания.',
+      },
+      button: { en: 'Discover Our Services', bg: 'Открийте нашите услуги' },
+    },
   },
 
   // CTA Section
