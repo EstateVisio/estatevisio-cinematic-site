@@ -5,9 +5,9 @@ export const copy = {
   // Navigation & Menu
   navigation: {
     home: { en: 'Home', bg: 'Начало' },
-    services: { en: 'Services', bg: 'Услуги' },
-    vision: { en: 'Vision', bg: 'Визия' },
-    roadmap: { en: 'Roadmap', bg: 'Пътна карта' },
+    services: { en: 'Our Services', bg: 'Нашите услуги' },
+    vision: { en: ' The Vision', bg: 'Визията' },
+    roadmap: { en: 'What’s Next', bg: 'Какво предстои' },
     contact: { en: 'Contact', bg: 'Контакт' },
     language: { en: 'Language', bg: 'Език' },
     pages: { en: 'Pages', bg: 'Страници' },
@@ -15,10 +15,10 @@ export const copy = {
 
   // Hero Section
   hero: {
-    title: { en: 'AI for Real Estate.', bg: 'AI за недвижими имоти.' },
+    title: { en: 'AI for Real Estate', bg: 'AI за недвижими имоти' },
     subtitle: {
-      en: 'Transform listings into cinematic experiences — and unlock the future of property marketing.',
-      bg: 'Превърнете обявите в кинематографични изживявания — и отключете бъдещето на имотния маркетинг.',
+      en: 'Transform your listings into cinematic experiences — and take part in the future of property marketing',
+      bg: 'Превърнете вашите обяви във филмови изживявания — и станете част отбъдещето на имотния маркетинг',
     },
     cta: { en: 'Explore EstateVisio', bg: 'Открийте EstateVisio' },
   },
@@ -27,18 +27,18 @@ export const copy = {
   about: {
     title: { en: 'About EstateVisio', bg: 'За EstateVisio' },
     description: {
-      en: 'EstateVisio is an AI company devoted to real estate. Our mission is to create intelligent, cinematic, and scalable solutions that elevate the way properties are presented and experienced.',
-      bg: 'EstateVisio е AI компания, посветена на недвижимите имоти. Нашата мисия е да създаваме интелигентни, кинематографични и мащабируеми решения, които издигат представянето и възприятието на имотите на ново ниво.',
+      en: 'EstateVisio is an AI company specialized in real estate. Our mission is to redefine how real estate properties are seen and felt, harnessing the power of AI to breathe life into them. ',
+      bg: 'EstateVisio е AI компания, специализирана в сферата на недвижимите имоти. Нашата мисия е да преосмислим начина, по който хората виждат и усещат имотите, използвайки силата на изкуствения интелект, за да им вдъхнем живот.',
     },
     tagline: { en: 'Luxury visuals, powered by AI.', bg: 'Луксозни визии, задвижвани от AI.' },
   },
 
   // Video Section
   video: {
-    title: { en: 'See It In Action', bg: 'Вижте го в действие' },
+    title: { en: 'See EstateVisio in action', bg: 'Вижте EstateVisio в действие' },
     subtitle: {
-      en: 'Experience the future of real estate visualization',
-      bg: 'Изживейте бъдещето на визуализацията на недвижими имоти',
+      en: 'Step into the future — where every property tells its story.',
+      bg: 'Добре дошли в бъдещето — където всеки имот разказва своята история.',
     },
     videoNotSupported: {
       en: 'Your browser does not support the video tag.',
@@ -52,28 +52,28 @@ export const copy = {
 
   // Service Section
   service: {
-    title: { en: 'AI-Powered Cinematic Tours', bg: 'AI кинематографични турове' },
+    title: { en: 'Your Property. Our Vision.', bg: 'Вашият имот. Нашата визия.' },
     subtitle: {
-      en: 'Your flagship service for transforming properties into unforgettable experiences.',
-      bg: 'Нашата водеща услуга за трансформиране на имоти в незабравими изживявания.',
+      en: 'Our flagship service tramsforms property listings into unforgettable experiences.',
+      bg: 'Нашата водеща услуга трансформира имотни обяви в незабравими изживявания.',
     },
     features: {
       reimagined: {
-        title: { en: 'Your listings, reimagined', bg: 'Вашите обяви, преосмислени' },
+        title: { en: 'Where listings come alive', bg: 'Където обявите оживяват' },
         description: {
           en: 'From static photos to immersive video experiences.',
           bg: 'От статични снимки до потапящи видео изживявания.',
         },
       },
       spotlight: {
-        title: { en: 'Cinematic spotlight', bg: 'Кинематографичен фокус' },
+        title: { en: 'Cinematic touch', bg: 'Филмов акцент' },
         description: {
-          en: 'Every property deserves the cinematic spotlight.',
-          bg: 'Всеки имот заслужава кинематографичен фокус.',
+          en: 'Every property deserves the spotlight.',
+          bg: 'Всеки имот заслужава светлината на прожекторите.',
         },
       },
       scale: {
-        title: { en: 'Quality at scale', bg: 'Качество в мащаб' },
+        title: { en: 'Trusted quality', bg: 'Надеждно качество' },
         description: {
           en: 'Consistency and quality you can trust at scale.',
           bg: 'Последователност и качество, на които може да се разчита – във всеки мащаб.',
