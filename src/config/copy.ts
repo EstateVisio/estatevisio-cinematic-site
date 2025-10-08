@@ -6,6 +6,7 @@ export const copy = {
   navigation: {
     home: { en: 'Home', bg: 'Начало' },
     services: { en: 'Services', bg: 'Услуги' },
+    vision: { en: 'Vision', bg: 'Визия' },
     roadmap: { en: 'Roadmap', bg: 'Пътна карта' },
     contact: { en: 'Contact', bg: 'Контакт' },
     language: { en: 'Language', bg: 'Език' },
