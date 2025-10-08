@@ -17,18 +17,14 @@ const VideoSection = () => {
             </p>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden shadow-elegant animate-scale-in">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto"
-              poster="/placeholder.svg"
-            >
-              <source src="/path-to-your-video.mp4" type="video/mp4" />
-              {t(copy.video.videoNotSupported)}
-            </video>
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant animate-scale-in aspect-video">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/q3-Sk7rSWrs"
+              title="EstateVisio Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
 
           <div className="flex flex-col items-center mt-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
