@@ -3,9 +3,20 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-property.jpg';
 import { copy } from '@/config/copy';
+import React from 'react';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  aboutRef: React.RefObject<HTMLDivElement>;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ aboutRef }) => {
   const { t } = useLanguage();
+
+  const handleScrollToAbout = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -33,6 +44,7 @@ const HeroSection = () => {
           size="lg"
           className="text-lg px-8 py-6 shadow-gold hover:shadow-elegant transition-smooth animate-fade-in-up bg-gold hover:bg-gold/90 text-charcoal font-semibold"
           style={{ animationDelay: '0.4s' }}
+          onClick={handleScrollToAbout}
         >
           {t(copy.hero.cta)}
           <ArrowRight className="ml-2 h-5 w-5" />

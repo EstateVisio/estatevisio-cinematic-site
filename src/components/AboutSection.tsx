@@ -1,12 +1,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import aboutImage from '@/assets/about-architecture.jpg';
 import { copy } from '@/config/copy';
+import React, { forwardRef } from 'react';
 
-const AboutSection = () => {
+const AboutSection = forwardRef<HTMLDivElement>((props, ref) => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 bg-charcoal">
+    <section ref={ref} className="py-24 bg-charcoal">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
@@ -38,6 +39,6 @@ const AboutSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default AboutSection;

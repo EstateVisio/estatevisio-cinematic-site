@@ -10,12 +10,15 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
-import MobileNav from '@/components/MobileNav';
+import React, { useRef } from 'react';
+
 import { cn } from '@/lib/utils';
 import logo from '@/assets/estatevision-logo.png';
+import MobileNav from '@/components/MobileNav';
 
 const Index = () => {
   const isVisible = useScrollVisibility();
+  const aboutSectionRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="min-h-screen bg-charcoal">
@@ -47,8 +50,8 @@ const Index = () => {
         </div>
 
         {/* All Sections */}
-        <HeroSection />
-        <AboutSection />
+        <HeroSection aboutRef={aboutSectionRef} />
+        <AboutSection ref={aboutSectionRef} />
         <VideoSection />
         <ServiceSection />
         <DifferentiatorsSection />
