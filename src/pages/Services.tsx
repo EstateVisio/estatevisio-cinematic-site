@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import MobileNav from '@/components/MobileNav';
 import logo from '@/assets/estatevision-logo.png';
 import { copy } from '@/config/copy';
+import TextRenderer from '@/components/ui/TextRenderer';
 
 const Services = () => {
   const { t } = useLanguage();
@@ -46,11 +47,11 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl font-bold text-gold mb-6">
-              {t(copy.servicesPage.title)}
+              <TextRenderer>{t(copy.servicesPage.title)}</TextRenderer>
             </h1>
             <div className="inline-block">
               <p className="text-xl md:text-2xl text-cloud leading-relaxed pb-2">
-                {t(copy.servicesPage.intro)}
+                <TextRenderer>{t(copy.servicesPage.intro)}</TextRenderer>
               </p>
               <div className="h-1 bg-gradient-gold rounded-full" />
             </div>
@@ -95,16 +96,16 @@ const Services = () => {
                     1
                   </div>
                   <span className="text-charcoal font-semibold">
-                    {t(copy.servicesPage.steps.one)}
+                    <TextRenderer>{t(copy.servicesPage.steps.one)}</TextRenderer>
                   </span>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-charcoal">
-                  {t(copy.servicesPage.step1.title)}
+                  <TextRenderer>{t(copy.servicesPage.step1.title)}</TextRenderer>
                 </h2>
 
                 <p className="text-lg md:text-xl text-charcoal/70 leading-relaxed">
-                  {t(copy.servicesPage.step1.description)}
+                  <TextRenderer>{t(copy.servicesPage.step1.description)}</TextRenderer>
                 </p>
               </div>
             </div>
@@ -124,16 +125,16 @@ const Services = () => {
                     2
                   </div>
                   <span className="text-estate-teal font-semibold">
-                    {t(copy.servicesPage.steps.two)}
+                    <TextRenderer>{t(copy.servicesPage.steps.two)}</TextRenderer>
                   </span>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-cloud">
-                  {t(copy.servicesPage.step2.title)}
+                  <TextRenderer>{t(copy.servicesPage.step2.title)}</TextRenderer>
                 </h2>
 
                 <p className="text-lg md:text-xl text-cloud-white/80 leading-relaxed">
-                  {t(copy.servicesPage.step2.description)}
+                  <TextRenderer>{t(copy.servicesPage.step2.description)}</TextRenderer>
                 </p>
               </div>
 
@@ -170,16 +171,16 @@ const Services = () => {
                   3
                 </div>
                 <span className="text-charcoal font-semibold">
-                  {t(copy.servicesPage.steps.three)}
+                  <TextRenderer>{t(copy.servicesPage.steps.three)}</TextRenderer>
                 </span>
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold text-charcoal">
-                {t(copy.servicesPage.step3.title)}
+                <TextRenderer>{t(copy.servicesPage.step3.title)}</TextRenderer>
               </h2>
 
               <p className="text-lg md:text-xl text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-                {t(copy.servicesPage.step3.description)}
+                <TextRenderer>{t(copy.servicesPage.step3.description)}</TextRenderer>
               </p>
             </div>
 
@@ -190,7 +191,7 @@ const Services = () => {
                 <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
                   <Film className="h-20 w-20 text-gold group-hover:scale-110 transition-transform" />
                   <p className="text-cloud text-lg font-semibold">
-                    {t(copy.servicesPage.step3.videoLabel)}
+                    <TextRenderer>{t(copy.servicesPage.step3.videoLabel)}</TextRenderer>
                   </p>
                   <div className="text-cloud-white/60 text-sm">16:9 • 30 seconds</div>
                 </div>
@@ -207,11 +208,11 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal">
-              {t(copy.servicesPage.closing.title)}
+              <TextRenderer>{t(copy.servicesPage.closing.title)}</TextRenderer>
             </h2>
 
             <p className="text-xl md:text-2xl text-charcoal/70 leading-relaxed">
-              {t(copy.servicesPage.closing.subtitle)}
+              <TextRenderer>{t(copy.servicesPage.closing.subtitle)}</TextRenderer>
             </p>
 
             <div className="pt-8">
@@ -221,7 +222,7 @@ const Services = () => {
                 asChild
               >
                 <Link to="/contact">
-                  {t(copy.servicesPage.closing.cta)}
+                  <TextRenderer>{t(copy.servicesPage.closing.cta)}</TextRenderer>
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </Link>
               </Button>

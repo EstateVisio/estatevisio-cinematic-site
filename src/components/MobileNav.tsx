@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import TextRenderer from '@/components/ui/TextRenderer';
 import logo from '@/assets/estatevision-logo.png';
 import { copy } from '@/config/copy';
 import {
@@ -54,7 +55,7 @@ const MobileNav = () => {
           {/* Language Switcher */}
           <div className="space-y-2">
             <p className="text-sm text-cloud-white/60 font-semibold px-2">
-              {t(copy.navigation.language)}
+              <TextRenderer>{t(copy.navigation.language)}</TextRenderer>
             </p>
             <div className="flex gap-2">
               <Button
@@ -89,7 +90,7 @@ const MobileNav = () => {
           {/* Navigation Links */}
           <nav className="space-y-1">
             <p className="text-sm text-cloud-white/60 font-semibold px-2 mb-2">
-              {t(copy.navigation.pages)}
+              <TextRenderer>{t(copy.navigation.pages)}</TextRenderer>
             </p>
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
@@ -105,7 +106,7 @@ const MobileNav = () => {
                       : 'text-cloud hover:bg-gold/10 hover:text-gold'
                   )}
                 >
-                  {t(item.label)}
+                  <TextRenderer>{t(item.label)}</TextRenderer>
                 </Link>
               );
             })}

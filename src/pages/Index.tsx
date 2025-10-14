@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import VideoSection from '@/components/VideoSection';
 import ServiceSection from '@/components/ServiceSection';
-import DifferentiatorsSection from '@/components/DifferentiatorsSection';
 import VisionSection from '@/components/VisionSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
@@ -59,7 +58,6 @@ const Index = () => {
         <AboutSection ref={aboutSectionRef} />
         <VideoSection />
         <ServiceSection />
-        <DifferentiatorsSection />
         <VisionSection />
         <CTASection />
         <Footer />

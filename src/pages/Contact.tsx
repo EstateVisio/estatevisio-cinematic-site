@@ -2,12 +2,13 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Navigation from '@/components/Navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Footer from '@/components/Footer';
+import { toast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Separator } from '@/components/ui/separator';
-import { Mail, Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { cn } from '@/lib/utils';
@@ -22,14 +23,8 @@ const ContactContent = () => {
     {
       icon: Mail,
       title: copy.contact.info.email,
-      value: 'hello@estatevisio.ai',
-      link: 'mailto:hello@estatevisio.ai',
-    },
-    {
-      icon: Phone,
-      title: copy.contact.info.phone,
-      value: '+359 XXX XXX XXX',
-      link: 'tel:+359XXXXXXXXX',
+      value: 'sales@estatevisio.com',
+      link: 'mailto:sales@estatevisio.com',
     },
   ];
 
@@ -50,12 +45,42 @@ const ContactContent = () => {
           {/* Contact Form */}
           <Card className="bg-card border-gold/20 animate-fade-in-up">
             <CardContent className="p-8">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.currentTarget as HTMLFormElement;
+                try {
+                  const formData = new FormData(form);
+                  const payload = Object.fromEntries(formData.entries());
+                  const endpoint = import.meta.env.VITE_CONTACT_EMAIL_ENDPOINT || '/api/send';
+                  const resp = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                  });
+                  if (!resp.ok) {
+                    const text = await resp.text();
+                    throw new Error(text || 'Failed to send');
+                  }
+                  toast({
+                    title: 'Message sent',
+                    description: 'Thank you! We\'ll get back to you shortly.',
+                    className: 'border-gold text-cloud bg-charcoal',
+                  });
+                  form.reset();
+                } catch (err) {
+                  toast({
+                    title: 'Send failed',
+                    description: err instanceof Error ? err.message : 'Please try again later.',
+                    className: 'border-terracotta text-cloud bg-charcoal',
+                  });
+                }
+              }}>
                 <div>
                   <label className="block text-cloud mb-2 font-medium">
                     {t(copy.contact.form.name)}
                   </label>
                   <Input
+                    name="user_name"
                     placeholder={t(copy.contact.form.namePlaceholder)}
                     className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
                   />
@@ -67,6 +92,7 @@ const ContactContent = () => {
                   </label>
                   <Input
                     type="email"
+                    name="user_email"
                     placeholder={t(copy.contact.form.emailPlaceholder)}
                     className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
                   />
@@ -77,6 +103,7 @@ const ContactContent = () => {
                     {t(copy.contact.form.company)}
                   </label>
                   <Input
+                    name="company"
                     placeholder={t(copy.contact.form.companyPlaceholder)}
                     className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
                   />
@@ -87,6 +114,7 @@ const ContactContent = () => {
                     {t(copy.contact.form.message)}
                   </label>
                   <Textarea
+                    name="message"
                     placeholder={t(copy.contact.form.messagePlaceholder)}
                     rows={6}
                     className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold resize-none"

@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { useEffect, useRef, useState } from 'react';
 import { copy } from '@/config/copy';
+import TextRenderer from '@/components/ui/TextRenderer';
 
 const Navigation = () => {
   const { t, language } = useLanguage();
@@ -75,7 +76,7 @@ const Navigation = () => {
                         : 'text-cloud hover:text-gold hover:bg-cloud/10'
                     )}
                   >
-                    {t(item.label)}
+                    <TextRenderer>{t(item.label)}</TextRenderer>
                   </Link>
                 </li>
               );

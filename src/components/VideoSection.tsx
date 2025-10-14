@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { copy } from '@/config/copy';
+import TextRenderer from '@/components/ui/TextRenderer';
 
 const VideoSection = () => {
   const { t } = useLanguage();
@@ -10,10 +11,10 @@ const VideoSection = () => {
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gold cinematic-text">
-              {t(copy.video.title)}
+              <TextRenderer>{t(copy.video.title)}</TextRenderer>
             </h2>
             <p className="text-xl text-cloud-white/80 max-w-3xl mx-auto">
-              {t(copy.video.subtitle)}
+              <TextRenderer>{t(copy.video.subtitle)}</TextRenderer>
             </p>
           </div>
 
@@ -38,7 +39,7 @@ const VideoSection = () => {
           <div className="flex flex-col items-center mt-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="inline-block">
               <p className="text-center text-gold text-2xl md:text-3xl font-semibold italic leading-relaxed">
-                {t(copy.video.caption)}
+                <TextRenderer>{t(copy.video.caption)}</TextRenderer>
               </p>
               <div className="w-[70%] h-0.5 bg-gold mt-4 mx-auto"></div>
             </div>

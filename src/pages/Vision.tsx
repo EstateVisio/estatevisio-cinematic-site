@@ -10,6 +10,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { copy } from '@/config/copy';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import TextRenderer from '@/components/ui/TextRenderer';
 
 import heroImage from '@/assets/vision-hero.jpg';
 import beginningImage from '@/assets/vision-beginning.jpg';
@@ -63,10 +64,10 @@ const Vision = () => {
 
         <div className="container mx-auto px-6 relative z-10 text-center space-y-6 animate-fade-in">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gold cinematic-text">
-            {t(copy.visionPage.hero.title)}
+            <span><TextRenderer>{t(copy.visionPage.hero.title)}</TextRenderer></span>
           </h1>
           <p className="text-2xl md:text-3xl text-cloud-white/90 max-w-3xl mx-auto leading-relaxed">
-            {t(copy.visionPage.hero.subtitle)}
+            <TextRenderer>{t(copy.visionPage.hero.subtitle)}</TextRenderer>
           </p>
         </div>
 
@@ -78,22 +79,54 @@ const Vision = () => {
         </div>
       </section>
 
-      {/* Introductory Section */}
-      <section className="relative py-20 bg-charcoal">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center space-y-10">
-            <p className="text-lg md:text-xl lg:text-2xl text-cloud-white/90 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'backwards' }}>
-              {t(copy.visionPage.intro.paragraph1)}
+      {/* Cinematic Intro Section */}
+      <section className="relative bg-charcoal">
+        {/* Seamless gradient transition from hero */}
+        <div className="absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-charcoal/0 via-charcoal/60 to-charcoal pointer-events-none" />
+
+        <div className="container mx-auto px-6 py-24 md:py-32 text-center">
+          {/* Thin gold divider (40% opacity) */}
+          <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-40" />
+
+          {/* Title */}
+          <h2
+            className="mt-10 text-3xl md:text-4xl lg:text-5xl font-bold text-gold cinematic-text animate-fade-in-up motion-reduce:animate-none"
+            style={{ animationDelay: '0.1s', animationFillMode: 'backwards' }}
+          >
+            <TextRenderer>{t(copy.visionPage.cinematicIntro.title)}</TextRenderer>
+          </h2>
+
+          {/* Emotional lines */}
+          <div className="mt-8 space-y-3">
+            <p
+              className="text-xl md:text-2xl text-cloud-white leading-relaxed animate-fade-in-up motion-reduce:animate-none"
+              style={{ animationDelay: '0.25s', animationFillMode: 'backwards' }}
+            >
+              <TextRenderer>{t(copy.visionPage.cinematicIntro.line1)}</TextRenderer>
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl text-cloud-white/90 leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'backwards' }}>
-              {t(copy.visionPage.intro.paragraph2)}
+            <p
+              className="text-xl md:text-2xl text-cloud-white leading-relaxed animate-fade-in-up motion-reduce:animate-none"
+              style={{ animationDelay: '0.4s', animationFillMode: 'backwards' }}
+            >
+              <TextRenderer>{t(copy.visionPage.cinematicIntro.line2)}</TextRenderer>
             </p>
           </div>
-        </div>
-        
-        {/* Golden Separator */}
-        <div className="container mx-auto px-6 mt-20">
-          <div className="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent opacity-60"></div>
+
+          {/* Gold chevron scroll cue */}
+          <div
+            className="mt-16 flex justify-center animate-[float_3s_ease-in-out_infinite] motion-reduce:animate-none"
+            aria-hidden="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              className="w-8 h-8 text-gold opacity-80"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
         </div>
       </section>
 
@@ -111,10 +144,10 @@ const Vision = () => {
             </div>
             <div className="order-1 md:order-2 space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold text-gold cinematic-text">
-                {t(copy.visionPage.story1.title)}
+                <TextRenderer>{t(copy.visionPage.story1.title)}</TextRenderer>
               </h2>
               <p className="text-xl text-cloud-white/90 leading-relaxed">
-                {t(copy.visionPage.story1.description)}
+                <TextRenderer>{t(copy.visionPage.story1.description)}</TextRenderer>
               </p>
             </div>
           </div>
@@ -123,10 +156,10 @@ const Vision = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in-up">
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold text-gold cinematic-text">
-                {t(copy.visionPage.story2.title)}
+                <TextRenderer>{t(copy.visionPage.story2.title)}</TextRenderer>
               </h2>
               <p className="text-xl text-cloud-white/90 leading-relaxed">
-                {t(copy.visionPage.story2.description)}
+                <TextRenderer>{t(copy.visionPage.story2.description)}</TextRenderer>
               </p>
             </div>
             <div>
@@ -149,10 +182,10 @@ const Vision = () => {
             </div>
             <div className="order-1 md:order-2 space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold text-gold cinematic-text">
-                {t(copy.visionPage.story3.title)}
+                <TextRenderer>{t(copy.visionPage.story3.title)}</TextRenderer>
               </h2>
               <p className="text-xl text-cloud-white/90 leading-relaxed">
-                {t(copy.visionPage.story3.description)}
+                <TextRenderer>{t(copy.visionPage.story3.description)}</TextRenderer>
               </p>
             </div>
           </div>
@@ -173,7 +206,7 @@ const Vision = () => {
         <div className="container mx-auto px-6 relative z-10">
           <blockquote className="max-w-4xl mx-auto text-center animate-fade-in">
             <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold cinematic-text leading-relaxed">
-              "{t(copy.visionPage.quote.text)}"
+              <TextRenderer>{t(copy.visionPage.quote.text)}</TextRenderer>
             </p>
           </blockquote>
         </div>
@@ -184,10 +217,10 @@ const Vision = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gold cinematic-text">
-              {t(copy.visionPage.cta.title)}
+              <TextRenderer>{t(copy.visionPage.cta.title)}</TextRenderer>
             </h2>
             <p className="text-xl md:text-2xl text-cloud-white/90 leading-relaxed">
-              {t(copy.visionPage.cta.description)}
+              <TextRenderer>{t(copy.visionPage.cta.description)}</TextRenderer>
             </p>
 
             <div className="pt-8">
@@ -196,7 +229,7 @@ const Vision = () => {
                   size="lg"
                   className="text-lg px-8 py-6 shadow-gold hover:shadow-elegant transition-smooth bg-gold hover:bg-gold/90 text-charcoal font-semibold"
                 >
-                  {t(copy.visionPage.cta.button)}
+                  <TextRenderer>{t(copy.visionPage.cta.button)}</TextRenderer>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>

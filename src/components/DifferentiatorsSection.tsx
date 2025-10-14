@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import TextRenderer from '@/components/ui/TextRenderer';
 import { Zap, Film, CheckCircle } from 'lucide-react';
 import { copy } from '@/config/copy';
 
@@ -16,7 +17,7 @@ const DifferentiatorsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-cloud mb-4 animate-fade-in-up">
-            {t(copy.differentiators.title)}
+            <TextRenderer>{t(copy.differentiators.title)}</TextRenderer>
           </h2>
         </div>
 
@@ -34,11 +35,11 @@ const DifferentiatorsSection = () => {
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gold">
-                  {t(item.title)}
+                  <TextRenderer>{t(item.title)}</TextRenderer>
                 </h3>
                 
                 <p className="text-lg text-cloud-white/90">
-                  {t(item.description)}
+                  <TextRenderer>{t(item.description)}</TextRenderer>
                 </p>
               </div>
             );

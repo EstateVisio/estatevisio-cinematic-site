@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import TextRenderer from '@/components/ui/TextRenderer';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-property.jpg';
@@ -33,11 +34,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ aboutRef }) => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 cinematic-text animate-fade-in-up">
-          <span className="text-cloud">{t(copy.hero.title)}</span>
+          <span className="text-cloud"><TextRenderer>{t(copy.hero.title)}</TextRenderer></span>
         </h1>
         
         <p className="text-xl md:text-2xl lg:text-3xl text-warm-sand mb-12 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          {t(copy.hero.subtitle)}
+          <TextRenderer>{t(copy.hero.subtitle)}</TextRenderer>
         </p>
 
         <Button 
@@ -46,7 +47,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ aboutRef }) => {
           style={{ animationDelay: '0.4s' }}
           onClick={handleScrollToAbout}
         >
-          {t(copy.hero.cta)}
+          <TextRenderer>{t(copy.hero.cta)}</TextRenderer>
           <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </div>

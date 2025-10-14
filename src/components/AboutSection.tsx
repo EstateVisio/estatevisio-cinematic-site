@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import aboutImage from '@/assets/about-architecture.jpg';
 import { copy } from '@/config/copy';
+import TextRenderer from '@/components/ui/TextRenderer';
 import React, { forwardRef } from 'react';
 
 const AboutSection = forwardRef<HTMLDivElement>((props, ref) => {
@@ -22,16 +23,16 @@ const AboutSection = forwardRef<HTMLDivElement>((props, ref) => {
           {/* Content */}
           <div className="space-y-6 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gold">
-              {t(copy.about.title)}
+              <TextRenderer>{t(copy.about.title)}</TextRenderer>
             </h2>
             
             <p className="text-lg md:text-xl text-cloud-white/90 leading-relaxed">
-              {t(copy.about.description)}
+              <TextRenderer>{t(copy.about.description)}</TextRenderer>
             </p>
 
             <div className="pt-4 border-t border-gold/20">
               <p className="text-gold font-semibold text-lg">
-                {t(copy.about.tagline)}
+                <TextRenderer>{t(copy.about.tagline)}</TextRenderer>
               </p>
             </div>
           </div>

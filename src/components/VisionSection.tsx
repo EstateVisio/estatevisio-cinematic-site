@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import TextRenderer from '@/components/ui/TextRenderer';
 import visionImage from '@/assets/vision-future.jpg';
 import { copy } from '@/config/copy';
 import { Button } from '@/components/ui/button';
@@ -21,11 +22,11 @@ const VisionSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gold cinematic-text">
-            {t(copy.vision.title)}
+            <TextRenderer>{t(copy.vision.title)}</TextRenderer>
           </h2>
           
           <p className="text-xl md:text-2xl text-cloud-white leading-relaxed">
-            {t(copy.vision.description)}
+            <TextRenderer>{t(copy.vision.description)}</TextRenderer>
           </p>
 
           <div className="pt-8">
@@ -34,7 +35,7 @@ const VisionSection = () => {
               className="text-lg px-8 py-6 shadow-gold hover:shadow-elegant transition-smooth bg-gold hover:bg-gold/90 text-charcoal font-semibold"
               onClick={() => window.location.href = '/vision'}
             >
-              {t(copy.vision.badge)}
+              <TextRenderer>{t(copy.vision.badge)}</TextRenderer>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

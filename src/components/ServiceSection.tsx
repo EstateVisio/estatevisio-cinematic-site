@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
-import { Video, Sparkles, TrendingUp } from 'lucide-react';
+import TextRenderer from '@/components/ui/TextRenderer';
+import { Video, Sparkles, TrendingUp, CheckCircle } from 'lucide-react';
 import { copy } from '@/config/copy';
 
 const ServiceSection = () => {
@@ -9,7 +10,7 @@ const ServiceSection = () => {
   const features = [
     { icon: Video, ...copy.service.features.reimagined },
     { icon: Sparkles, ...copy.service.features.spotlight },
-    { icon: TrendingUp, ...copy.service.features.scale },
+    { icon: CheckCircle, ...copy.differentiators.items.trust },
   ];
 
   return (
@@ -17,10 +18,10 @@ const ServiceSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-cloud mb-6">
-            {t(copy.service.title)}
+            <TextRenderer>{t(copy.service.title)}</TextRenderer>
           </h2>
           <p className="text-xl text-warm-sand max-w-3xl mx-auto">
-            {t(copy.service.subtitle)}
+            <TextRenderer>{t(copy.service.subtitle)}</TextRenderer>
           </p>
         </div>
 
@@ -39,11 +40,11 @@ const ServiceSection = () => {
                   </div>
                   
                   <h3 className="text-2xl font-bold text-cloud">
-                    {t(feature.title)}
+                    <TextRenderer>{t(feature.title)}</TextRenderer>
                   </h3>
                   
                   <p className="text-cloud-white/80 text-lg">
-                    {t(feature.description)}
+                    <TextRenderer>{t(feature.description)}</TextRenderer>
                   </p>
                 </CardContent>
               </Card>

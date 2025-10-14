@@ -15,6 +15,7 @@ import presentImage from '@/assets/roadmap-present.jpg';
 import futureImage from '@/assets/roadmap-future.jpg';
 import horizonImage from '@/assets/roadmap-horizon.jpg';
 import { copy } from '@/config/copy';
+import TextRenderer from '@/components/ui/TextRenderer';
 
 const RoadmapContent = () => {
   const { t } = useLanguage();
@@ -28,16 +29,16 @@ const RoadmapContent = () => {
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-gold/20 border border-gold/40 rounded-full mb-6">
               <Sparkles className="h-5 w-5 text-gold" />
               <span className="text-gold font-semibold">
-                {t(copy.roadmap.scene1.badge)}
+                <TextRenderer>{t(copy.roadmap.scene1.badge)}</TextRenderer>
               </span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-cloud cinematic-text leading-tight">
-              {t(copy.roadmap.scene1.title)}
+              <TextRenderer>{t(copy.roadmap.scene1.title)}</TextRenderer>
             </h1>
 
             <p className="text-xl md:text-2xl text-warm-sand leading-relaxed">
-              {t(copy.roadmap.scene1.description)}
+              <TextRenderer>{t(copy.roadmap.scene1.description)}</TextRenderer>
             </p>
 
             {/* Scroll Indicator */}
@@ -65,11 +66,11 @@ const RoadmapContent = () => {
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-gold cinematic-text">
-                  {t(copy.roadmap.scene2.title)}
+                  <TextRenderer>{t(copy.roadmap.scene2.title)}</TextRenderer>
                 </h2>
 
                 <p className="text-lg md:text-xl text-cloud-white leading-relaxed">
-                  {t(copy.roadmap.scene2.description)}
+                  <TextRenderer>{t(copy.roadmap.scene2.description)}</TextRenderer>
                 </p>
               </div>
 
@@ -77,28 +78,28 @@ const RoadmapContent = () => {
               <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <div className="p-6 bg-card/80 backdrop-blur-sm border border-gold/20 rounded-xl hover:border-gold/40 transition-smooth">
                   <h3 className="text-xl font-bold text-cloud mb-2">
-                    {t(copy.roadmap.scene2.features.quality.title)}
+                    <TextRenderer>{t(copy.roadmap.scene2.features.quality.title)}</TextRenderer>
                   </h3>
                   <p className="text-cloud-white/80">
-                    {t(copy.roadmap.scene2.features.quality.description)}
+                    <TextRenderer>{t(copy.roadmap.scene2.features.quality.description)}</TextRenderer>
                   </p>
                 </div>
 
                 <div className="p-6 bg-card/80 backdrop-blur-sm border border-gold/20 rounded-xl hover:border-gold/40 transition-smooth">
                   <h3 className="text-xl font-bold text-cloud mb-2">
-                    {t(copy.roadmap.scene2.features.speed.title)}
+                    <TextRenderer>{t(copy.roadmap.scene2.features.speed.title)}</TextRenderer>
                   </h3>
                   <p className="text-cloud-white/80">
-                    {t(copy.roadmap.scene2.features.speed.description)}
+                    <TextRenderer>{t(copy.roadmap.scene2.features.speed.description)}</TextRenderer>
                   </p>
                 </div>
 
                 <div className="p-6 bg-card/80 backdrop-blur-sm border border-gold/20 rounded-xl hover:border-gold/40 transition-smooth">
                   <h3 className="text-xl font-bold text-cloud mb-2">
-                    {t(copy.roadmap.scene2.features.scale.title)}
+                    <TextRenderer>{t(copy.roadmap.scene2.features.scale.title)}</TextRenderer>
                   </h3>
                   <p className="text-cloud-white/80">
-                    {t(copy.roadmap.scene2.features.scale.description)}
+                    <TextRenderer>{t(copy.roadmap.scene2.features.scale.description)}</TextRenderer>
                   </p>
                 </div>
               </div>
@@ -114,16 +115,16 @@ const RoadmapContent = () => {
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-blue/20 border border-sky-blue/40 rounded-full animate-fade-in">
               <TrendingUp className="h-5 w-5 text-sky-blue" />
               <span className="text-sky-blue font-semibold">
-                {t(copy.roadmap.scene3.badge)}
+                <TextRenderer>{t(copy.roadmap.scene3.badge)}</TextRenderer>
               </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gold cinematic-text animate-fade-in-up">
-              {t(copy.roadmap.scene3.title)}
+              <TextRenderer>{t(copy.roadmap.scene3.title)}</TextRenderer>
             </h2>
 
             <p className="text-xl md:text-2xl text-cloud-white leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              {t(copy.roadmap.scene3.description)}
+              <TextRenderer>{t(copy.roadmap.scene3.description)}</TextRenderer>
             </p>
 
             {/* Feature Grid */}
@@ -131,30 +132,30 @@ const RoadmapContent = () => {
               <div className="p-6 bg-charcoal/60 backdrop-blur-sm border border-gold/20 rounded-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <Lightbulb className="h-10 w-10 text-gold mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-cloud mb-2">
-                  {t(copy.roadmap.scene3.features.insights.title)}
+                  <TextRenderer>{t(copy.roadmap.scene3.features.insights.title)}</TextRenderer>
                 </h3>
                 <p className="text-cloud-white/70 text-sm">
-                  {t(copy.roadmap.scene3.features.insights.description)}
+                  <TextRenderer>{t(copy.roadmap.scene3.features.insights.description)}</TextRenderer>
                 </p>
               </div>
 
               <div className="p-6 bg-charcoal/60 backdrop-blur-sm border border-gold/20 rounded-xl animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                 <Rocket className="h-10 w-10 text-gold mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-cloud mb-2">
-                  {t(copy.roadmap.scene3.features.automation.title)}
+                  <TextRenderer>{t(copy.roadmap.scene3.features.automation.title)}</TextRenderer>
                 </h3>
                 <p className="text-cloud-white/70 text-sm">
-                  {t(copy.roadmap.scene3.features.automation.description)}
+                  <TextRenderer>{t(copy.roadmap.scene3.features.automation.description)}</TextRenderer>
                 </p>
               </div>
 
               <div className="p-6 bg-charcoal/60 backdrop-blur-sm border border-gold/20 rounded-xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <Zap className="h-10 w-10 text-gold mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-cloud mb-2">
-                  {t(copy.roadmap.scene3.features.lightningFast.title)}
+                  <TextRenderer>{t(copy.roadmap.scene3.features.lightningFast.title)}</TextRenderer>
                 </h3>
                 <p className="text-cloud-white/70 text-sm">
-                  {t(copy.roadmap.scene3.features.lightningFast.description)}
+                  <TextRenderer>{t(copy.roadmap.scene3.features.lightningFast.description)}</TextRenderer>
                 </p>
               </div>
             </div>
@@ -168,17 +169,17 @@ const RoadmapContent = () => {
           <div className="max-w-5xl mx-auto space-y-12">
             <div className="text-center space-y-8 animate-fade-in-up">
               <div className="inline-flex items-center gap-3 px-6 py-3 bg-estate-teal/20 border border-estate-teal/40 rounded-full">
-                <span className="text-estate-teal font-semibold">
-                  {t(copy.roadmap.scene4.badge)}
-                </span>
+              <span className="text-estate-teal font-semibold">
+                <TextRenderer>{t(copy.roadmap.scene4.badge)}</TextRenderer>
+              </span>
               </div>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gold cinematic-text leading-tight">
-                {t(copy.roadmap.scene4.title)}
+                <TextRenderer>{t(copy.roadmap.scene4.title)}</TextRenderer>
               </h2>
 
               <p className="text-xl md:text-2xl text-cloud-white leading-relaxed max-w-3xl mx-auto">
-                {t(copy.roadmap.scene4.description)}
+                <TextRenderer>{t(copy.roadmap.scene4.description)}</TextRenderer>
               </p>
             </div>
 
@@ -187,7 +188,7 @@ const RoadmapContent = () => {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,0,0,0.1),transparent)] rounded-2xl" />
               <div className="relative text-center">
                 <p className="text-3xl md:text-4xl font-bold text-cloud italic">
-                  {t(copy.roadmap.scene4.quote)}
+                  <TextRenderer>{t(copy.roadmap.scene4.quote)}</TextRenderer>
                 </p>
               </div>
             </div>
@@ -200,11 +201,11 @@ const RoadmapContent = () => {
         <div className="container mx-auto px-6 py-32">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gold cinematic-text animate-fade-in-up">
-              {t(copy.roadmap.scene5.title)}
+              <TextRenderer>{t(copy.roadmap.scene5.title)}</TextRenderer>
             </h2>
 
             <p className="text-xl md:text-2xl text-cloud-white leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              {t(copy.roadmap.scene5.description)}
+              <TextRenderer>{t(copy.roadmap.scene5.description)}</TextRenderer>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -212,7 +213,7 @@ const RoadmapContent = () => {
                 size="lg"
                 className="text-lg px-10 py-7 bg-gold hover:bg-gold/90 text-charcoal font-bold shadow-gold animate-glow transition-smooth"
               >
-                {t(copy.roadmap.scene5.cta)}
+                <TextRenderer>{t(copy.roadmap.scene5.cta)}</TextRenderer>
                 <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </div>

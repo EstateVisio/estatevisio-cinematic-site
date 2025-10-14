@@ -1,12 +1,18 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { copy } from '@/config/copy';
+import TextRenderer from '@/components/ui/TextRenderer';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useLanguage();
 
+  const location = useLocation();
   const links = [
-    { label: copy.navigation.services, href: '#services' },
-    { label: copy.navigation.contact, href: '#contact' },
+    { label: copy.navigation.home, path: '/' },
+    { label: copy.navigation.vision, path: '/vision' },
+    { label: copy.navigation.services, path: '/services' },
+    { label: copy.navigation.roadmap, path: '/roadmap' },
+    { label: copy.navigation.contact, path: '/contact' },
   ];
 
   return (
@@ -16,19 +22,25 @@ const Footer = () => {
           {/* Brand */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold text-gold mb-2">EstateVisio</h3>
-            <p className="text-cloud-white/70">{t(copy.footer.tagline)}</p>
+            <p className="text-cloud-white/70"><TextRenderer>{t(copy.footer.tagline)}</TextRenderer></p>
           </div>
 
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6">
             {links.map((link, index) => (
-              <a
+              <Link
                 key={index}
-                href={link.href}
+                to={link.path}
+                onClick={(e) => {
+                  if (location.pathname === link.path) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
                 className="text-cloud-white/80 hover:text-gold transition-smooth"
               >
-                {t(link.label)}
-              </a>
+                <TextRenderer>{t(link.label)}</TextRenderer>
+              </Link>
             ))}
           </nav>
         </div>
