@@ -79,21 +79,21 @@ const Vision = () => {
       </section>
 
       {/* Introductory Section */}
-      <section className="relative py-24 bg-charcoal">
+      <section className="relative py-20 bg-charcoal">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <p className="text-xl md:text-2xl text-cloud-white/95 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'backwards' }}>
+          <div className="max-w-5xl mx-auto text-center space-y-10">
+            <p className="text-lg md:text-xl lg:text-2xl text-cloud-white/90 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'backwards' }}>
               {t(copy.visionPage.intro.paragraph1)}
             </p>
-            <p className="text-xl md:text-2xl text-cloud-white/95 leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'backwards' }}>
+            <p className="text-lg md:text-xl lg:text-2xl text-cloud-white/90 leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'backwards' }}>
               {t(copy.visionPage.intro.paragraph2)}
             </p>
           </div>
         </div>
         
         {/* Golden Separator */}
-        <div className="container mx-auto px-6 mt-16">
-          <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+        <div className="container mx-auto px-6 mt-20">
+          <div className="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent opacity-60"></div>
         </div>
       </section>
 
