@@ -106,7 +106,7 @@ export const copy = {
 
   // Vision Section (Homepage)
   vision: {
-    title: { en: 'Vision Beyond Tours', bg: 'Визия отвъд туровете' },
+    title: { en: 'Vision That Redefines Real Estate', bg: 'Визия, която преосмисля недвижимите имоти' },
     description: {
       en: 'AI is reshaping real estate. EstateVisio is building the future — from cinematic tours to intelligent property insights, and beyond.',
       bg: 'AI преобразува недвижимите имоти. EstateVisio изгражда бъдещето — от кинематографични турове до интелигентни имотни анализи и отвъд.',
