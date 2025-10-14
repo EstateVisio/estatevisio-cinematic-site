@@ -133,6 +133,16 @@ export const copy = {
         bg: 'Защото всеки имот заслужава своя момент да блесне.',
       },
     },
+    intro: {
+      paragraph1: {
+        en: 'The real estate market is evolving faster than ever. With every listing competing for attention, agencies are investing more effort, creativity, and emotion to make their properties stand out.',
+        bg: 'Пазарът на недвижими имоти се развива по-бързо от всякога. Всяка обява се бори за внимание, а агенциите влагат все повече усилия, креативност и емоция, за да направят имотите си по-привлекателни.',
+      },
+      paragraph2: {
+        en: 'Yet, as visuals flood the market, only the ones that feel alive truly captivate. That\'s where EstateVisio comes in — bringing cinematic storytelling and AI innovation together to turn properties into experiences worth remembering.',
+        bg: 'Но сред безбройните визуализации, само тези, които оживяват, наистина впечатляват. Тук идва EstateVisio — обединявайки филмово усещане и изкуствен интелект, за да превърне имотите в преживявания, които се помнят.',
+      },
+    },
     story1: {
       title: { en: 'The Beginning', bg: 'Началото' },
       description: {
