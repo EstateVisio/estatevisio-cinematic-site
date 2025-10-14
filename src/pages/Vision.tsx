@@ -79,18 +79,8 @@ const Vision = () => {
       </section>
 
       {/* Introductory Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="Introduction"
-            className="w-full h-full object-cover blur-sm scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-radial from-charcoal/60 via-charcoal/80 to-charcoal"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-charcoal/60"></div>
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
+      <section className="relative py-24 bg-charcoal">
+        <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-8">
             <p className="text-xl md:text-2xl text-cloud-white/95 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'backwards' }}>
               {t(copy.visionPage.intro.paragraph1)}
@@ -99,6 +89,11 @@ const Vision = () => {
               {t(copy.visionPage.intro.paragraph2)}
             </p>
           </div>
+        </div>
+        
+        {/* Golden Separator */}
+        <div className="container mx-auto px-6 mt-16">
+          <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
         </div>
       </section>
 
