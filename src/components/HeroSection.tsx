@@ -4,20 +4,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-property.jpg';
 import { copy } from '@/config/copy';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
-interface HeroSectionProps {
-  aboutRef: React.RefObject<HTMLDivElement>;
-}
-
-const HeroSection: React.FC<HeroSectionProps> = ({ aboutRef }) => {
+const HeroSection: React.FC = () => {
   const { t } = useLanguage();
-
-  const handleScrollToAbout = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -36,20 +27,34 @@ const HeroSection: React.FC<HeroSectionProps> = ({ aboutRef }) => {
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 cinematic-text animate-fade-in-up">
           <span className="text-cloud"><TextRenderer>{t(copy.hero.title)}</TextRenderer></span>
         </h1>
-        
+
         <p className="text-xl md:text-2xl lg:text-3xl text-warm-sand mb-12 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <TextRenderer>{t(copy.hero.subtitle)}</TextRenderer>
         </p>
 
-        <Button 
-          size="lg"
-          className="text-lg px-8 py-6 shadow-gold hover:shadow-elegant transition-smooth animate-fade-in-up bg-gold hover:bg-gold/90 text-charcoal font-semibold"
-          style={{ animationDelay: '0.4s' }}
-          onClick={handleScrollToAbout}
-        >
-          <TextRenderer>{t(copy.hero.cta)}</TextRenderer>
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <Button
+            size="lg"
+            className="text-lg px-8 py-6 shadow-gold hover:shadow-elegant transition-smooth bg-gold hover:bg-gold/90 text-charcoal font-semibold"
+            asChild
+          >
+            <Link to="/contact">
+              <TextRenderer>{t(copy.hero.cta)}</TextRenderer>
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-lg px-8 py-6 border-2 border-cloud bg-cloud/10 text-cloud hover:bg-cloud hover:text-charcoal transition-smooth font-semibold"
+            asChild
+          >
+            <Link to="/services">
+              <TextRenderer>{t(copy.hero.secondaryCta)}</TextRenderer>
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
       </div>
 
       {/* Scroll Indicator */}
