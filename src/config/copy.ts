@@ -15,12 +15,13 @@ export const copy = {
 
   // Hero Section
   hero: {
-    title: { en: 'AI for Real Estate', bg: 'AI за недвижими имоти' },
+    title: { en: "Your property. On film.", bg: "Вашият имот. На филм." },
     subtitle: {
-      en: 'Transform your listings into cinematic experiences — and take part in the future of property marketing',
-      bg: 'Превърнете вашите обяви във филмови изживявания — и станете част отбъдещето на имотния маркетинг',
+      en: "Cinematic tours. Virtual furnishing. Your AI avatar — all from photos, in 24 hours.",
+      bg: "Кинематографични разходки. Виртуално обзавеждане. Вашият AI аватар — всичко от снимки, до 24 часа.",
     },
-    cta: { en: 'Explore EstateVisio', bg: 'Открийте EstateVisio' },
+    cta: { en: "Get a Free Sample Video", bg: "Получете безплатно примерно видео" },
+    secondaryCta: { en: "See How It Works", bg: "Вижте как работи" },
   },
 
   // About Section
@@ -59,24 +60,24 @@ export const copy = {
     },
     features: {
       reimagined: {
-        title: { en: 'Where listings come alive', bg: 'Където обявите оживяват' },
+        title: { en: "Cinematic Tour", bg: "Кинематографична разходка" },
         description: {
-          en: 'From static photos to immersive video experiences.',
-          bg: 'От статични снимки до потапящи видео изживявания.',
+          en: "Your photos become a smooth, film-like walkthrough of the property.",
+          bg: "Снимките ви стават плавна, кинематографична разходка на имота.",
         },
       },
       spotlight: {
-        title: { en: 'Cinematic touch', bg: 'Филмов акцент' },
+        title: { en: "Virtual Furnishing", bg: "Виртуално обзавеждане" },
         description: {
-          en: 'Every property deserves the spotlight.',
-          bg: 'Всеки имот заслужава светлината на прожекторите.',
+          en: "Empty apartments shown furnished, room by room — on video, not just photos.",
+          bg: "Празните апартаменти показани обзаведени, стая по стая — на видео, не само на снимки.",
         },
       },
-      scale: {
-        title: { en: 'Trusted quality', bg: 'Надеждно качество' },
+      avatar: {
+        title: { en: "AI Avatar Presenter", bg: "AI Аватар Презентатор" },
         description: {
-          en: 'Consistency and quality you can trust at scale.',
-          bg: 'Последователност и качество, на които може да се разчита – във всеки мащаб.',
+          en: "Your likeness and voice presenting the property — no camera needed.",
+          bg: "Вашият облик и глас представят имота — без камера.",
         },
       },
     },
@@ -203,6 +204,18 @@ export const copy = {
     copyright: { en: 'All rights reserved.', bg: 'Всички права запазени.' },
   },
 
+  // Gallery Page
+  galleryPage: {
+    headline: { en: "Three capabilities. One set of photos.", bg: "Три възможности. Едни снимки." },
+    subtitle: { en: "Every frame you see began as a photo.", bg: "Всяка сцена, която виждате, започна от снимка." },
+    videos: {
+      commercial: { en: "Main Showreel · All Capabilities", bg: "Основен клип · Всички възможности" },
+      tour: { en: "Cinematic Tour · Luxury apartment · Sofia", bg: "Кинематографична разходка · Луксозен апартамент · София" },
+      furnishing: { en: "Virtual Furnishing · Empty studio · Before/After", bg: "Виртуално обзавеждане · Студио · Преди/След" },
+      avatar: { en: "AI Avatar · Villa presentation", bg: "AI Аватар · Презентация на вила" },
+    },
+  },
+
   // Contact Page
   contact: {
     title: { en: 'Get in Touch', bg: 'Свържете се с нас' },
@@ -276,6 +289,34 @@ export const copy = {
         bg: 'Ние, от EstateVisio, превръщаме вашите обяви в филмови изживявания.',
       },
       cta: { en: 'Begin Your Story', bg: 'Започнете вашата история' },
+    },
+    capabilities: {
+      headline: { en: "From photos to professional video.", bg: "От снимки до професионално видео." },
+      intro: { en: "No crews. No scheduling. No site visits. Three capabilities, one delivery.", bg: "Без екип. Без уговорки. Без посещения. Три възможности, една доставка." },
+      tour: {
+        badge: { en: "Cinematic Tour", bg: "Кинематографична разходка" },
+        title: { en: "Your photos become a film.", bg: "Снимките ви стават филм." },
+        description: {
+          en: "We turn your property photos into a smooth, film-like walkthrough. Every angle, every room — sequenced and brought to life with cinematic motion.",
+          bg: "Превръщаме снимките на вашия имот в плавна, кинематографична разходка. Всеки ъгъл, всяка стая — наредени и оживени с кинематографично движение.",
+        },
+      },
+      furnishing: {
+        badge: { en: "Virtual Furnishing", bg: "Виртуално обзавеждане" },
+        title: { en: "Empty becomes home — on video.", bg: "Празното се превръща в дом — на видео." },
+        description: {
+          en: "We furnish empty apartments virtually, room by room, revealed on video. Buyers see the full potential of a space before a single piece of furniture arrives.",
+          bg: "Обзавеждаме виртуално празните апартаменти, стая по стая, разкрити на видео. Купувачите виждат пълния потенциал на пространството, преди да пристигне мебел.",
+        },
+      },
+      avatar: {
+        badge: { en: "AI Avatar Presenter", bg: "AI Аватар Презентатор" },
+        title: { en: "Your face. Your voice. No camera.", bg: "Вашето лице. Вашият глас. Без камера." },
+        description: {
+          en: "Present your listings as a digital twin of yourself — your exact likeness and voice, narrating every property. Build a consistent personal brand across every listing you represent.",
+          bg: "Представяйте обявите си като цифров двойник — вашият точен облик и глас, разказвайки всеки имот. Изградете последователна лична марка за всяка обява.",
+        },
+      },
     },
   },
 
