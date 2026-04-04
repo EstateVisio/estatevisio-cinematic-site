@@ -1,16 +1,17 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import TextRenderer from '@/components/ui/TextRenderer';
-import { Video, Sparkles, TrendingUp, CheckCircle } from 'lucide-react';
+import { Film, Sparkles, UserCircle, ArrowRight } from 'lucide-react';
 import { copy } from '@/config/copy';
+import { Link } from 'react-router-dom';
 
 const ServiceSection = () => {
   const { t } = useLanguage();
 
   const features = [
-    { icon: Video, ...copy.service.features.reimagined },
+    { icon: Film, ...copy.service.features.reimagined },
     { icon: Sparkles, ...copy.service.features.spotlight },
-    { icon: CheckCircle, ...copy.differentiators.items.trust },
+    { icon: UserCircle, ...copy.service.features.avatar },
   ];
 
   return (
@@ -38,14 +39,21 @@ const ServiceSection = () => {
                   <div className="w-16 h-16 mx-auto bg-charcoal/20 rounded-full flex items-center justify-center border-2 border-gold shadow-gold">
                     <Icon className="h-8 w-8 text-gold" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-cloud">
                     <TextRenderer>{t(feature.title)}</TextRenderer>
                   </h3>
-                  
+
                   <p className="text-cloud-white/80 text-lg">
                     <TextRenderer>{t(feature.description)}</TextRenderer>
                   </p>
+
+                  <Link
+                    to="/gallery"
+                    className="inline-flex items-center gap-1 text-gold text-sm font-medium hover:text-gold/80 transition-colors mt-2"
+                  >
+                    Watch example <ArrowRight className="h-3 w-3" />
+                  </Link>
                 </CardContent>
               </Card>
             );
