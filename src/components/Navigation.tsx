@@ -16,9 +16,8 @@ const Navigation = () => {
 
   const navItems = [
     { label: copy.navigation.home, path: '/' },
-    { label: copy.navigation.vision, path: '/vision' },
     { label: copy.navigation.services, path: '/services' },
-    { label: copy.navigation.roadmap, path: '/roadmap' },
+    { label: copy.navigation.gallery, path: '/gallery' },
     { label: copy.navigation.contact, path: '/contact' },
   ];
 
