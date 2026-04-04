@@ -5,11 +5,11 @@ export const copy = {
   // Navigation & Menu
   navigation: {
     home: { en: 'Home', bg: 'Начало' },
-    services: { en: ‘Our Services’, bg: ‘Нашите услуги’ },
-    gallery: { en: ‘Our Work’, bg: ‘Нашите работи’ },
-    vision: { en: ‘ The Vision’, bg: ‘Визията’ },
-    roadmap: { en: ‘What’s Next’, bg: ‘Какво предстои’ },
-    contact: { en: ‘Contact’, bg: ‘Контакт’ },
+    services: { en: 'Our Services', bg: 'Нашите услуги' },
+    gallery: { en: 'Our Work', bg: 'Нашите работи' },
+    vision: { en: ' The Vision', bg: 'Визията' },
+    roadmap: { en: "What's Next", bg: 'Какво предстои' },
+    contact: { en: 'Contact', bg: 'Контакт' },
     language: { en: 'Language', bg: 'Език' },
     pages: { en: 'Pages', bg: 'Страници' },
   },
@@ -139,7 +139,7 @@ export const copy = {
       dividerLabel: { en: '', bg: '' },
       title: { en: 'Every vision deserves its life.', bg: 'Всяка обява заслужава своя живот.' },
       line1: { en: 'The real estate market moves faster than ever.', bg: 'Пазарът за недвижими имоти се движи по-бързо от всякога.' },
-      line2: { en: 'What sets you apart today isn’t just the view — it’s the feeling it leaves behind.', bg: 'Днес това, което те отличава, не е само облика — а усещането, което оставя.' },
+      line2: { en: "What sets you apart today isn't just the view — it's the feeling it leaves behind.", bg: 'Днес това, което те отличава, не е само облика — а усещането, което оставя.' },
     },
     intro: {
       paragraph1: {
@@ -174,7 +174,7 @@ export const copy = {
     },
     quote: {
       text: {
-        en: 'We’re not redefining real estate — we’re redefining the emotion within it.',
+        en: "We're not redefining real estate — we're redefining the emotion within it.",
         bg: 'Не преоткриваме недвижимите имоти — преоткриваме емоцията в тях.',
       },
     },
@@ -386,7 +386,7 @@ export const copy = {
         bg: 'Представяме си свят, в който изкуственият интелект вдъхва живот на всяко преживяване с недвижимите имоти — от първото впечатление до сключването на сделката. EstateVisio създава това бъдеще още днес, водено от прецизност и вдъхновение.',
       },
       quote: {
-        en: 'AI isn’t here to replace agents — it’s here to elevate their potential to a new level.',
+        en: "AI isn't here to replace agents — it's here to elevate their potential to a new level.",
         bg: 'AI не е тук, за да замени брокерите — а за да издигне техния потенциал на ново ниво',
       },
     },
