@@ -8,13 +8,11 @@ import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { copy } from '@/config/copy';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import logo from '@/assets/estatevision-logo.png';
 import MobileNav from '@/components/MobileNav';
-import TextRenderer from '@/components/ui/TextRenderer';
 
 // TODO: Replace placeholder IDs with real YouTube video IDs once uploaded
 const VIDEO_IDS = {
