@@ -97,7 +97,7 @@ const Services = () => {
       </section>
 
       {/* Capability Sections */}
-      {capabilities.map((cap, index) => {
+      {capabilities.map((cap) => {
         const capCopy = copy.servicesPage.capabilities[cap.key];
         return (
           <section key={cap.key} className={`py-24 ${cap.bg}`}>
