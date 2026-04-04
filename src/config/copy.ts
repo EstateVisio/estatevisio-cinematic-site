@@ -5,10 +5,11 @@ export const copy = {
   // Navigation & Menu
   navigation: {
     home: { en: 'Home', bg: 'Начало' },
-    services: { en: 'Our Services', bg: 'Нашите услуги' },
-    vision: { en: ' The Vision', bg: 'Визията' },
-    roadmap: { en: 'What’s Next', bg: 'Какво предстои' },
-    contact: { en: 'Contact', bg: 'Контакт' },
+    services: { en: ‘Our Services’, bg: ‘Нашите услуги’ },
+    gallery: { en: ‘Our Work’, bg: ‘Нашите работи’ },
+    vision: { en: ‘ The Vision’, bg: ‘Визията’ },
+    roadmap: { en: ‘What’s Next’, bg: ‘Какво предстои’ },
+    contact: { en: ‘Contact’, bg: ‘Контакт’ },
     language: { en: 'Language', bg: 'Език' },
     pages: { en: 'Pages', bg: 'Страници' },
   },
