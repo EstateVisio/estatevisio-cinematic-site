@@ -1,221 +1,147 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navigation from '@/components/Navigation';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+import MobileNav from '@/components/MobileNav';
 import Footer from '@/components/Footer';
+import SectionLabel from '@/components/SectionLabel';
 import { toast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Separator } from '@/components/ui/separator';
 import { Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useScrollVisibility } from '@/hooks/useScrollVisibility';
-import { cn } from '@/lib/utils';
-import MobileNav from '@/components/MobileNav';
-import logo from '@/assets/estatevision-logo.png';
 import { copy } from '@/config/copy';
 
-const ContactContent = () => {
+const Contact = () => {
   const { t } = useLanguage();
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: copy.contact.info.email,
-      value: 'sales@estatevisio.com',
-      link: 'mailto:sales@estatevisio.com',
-    },
-  ];
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      name: data.get('name'),
+      email: data.get('email'),
+      company: data.get('company'),
+      message: data.get('message'),
+    };
+    try {
+      const resp = await fetch('https://formspree.io/f/mwkgvgkg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!resp.ok) {
+        const text = await resp.text();
+        throw new Error(text || 'Failed to send');
+      }
+      toast({
+        title: 'Message sent',
+        description: "Thank you! We'll get back to you shortly.",
+        className: 'border-gold text-parchment bg-noir',
+      });
+      form.reset();
+    } catch (err) {
+      toast({
+        title: 'Send failed',
+        description: err instanceof Error ? err.message : 'Please try again later.',
+        className: 'border-red-500 text-parchment bg-noir',
+      });
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-charcoal pt-32 pb-24">
-      <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold text-gold mb-6 cinematic-text">
-            {t(copy.contact.title)}
+    <div className="min-h-screen bg-noir text-parchment">
+      <Navigation />
+      <MobileNav />
+
+      {/* Header */}
+      <section className="px-8 md:px-16 lg:px-24 pt-40 pb-20">
+        <div className="max-w-5xl">
+          <SectionLabel number="01" label={t(copy.contact.title)} />
+          <h1
+            className="font-black text-parchment leading-[0.92]"
+            style={{ fontSize: 'clamp(3rem, 7vw, 6.5rem)' }}
+          >
+            {t({ en: "Let's talk.", bg: 'Нека поговорим.' })}
           </h1>
-          <p className="text-xl text-cloud-white/80 max-w-3xl mx-auto">
-            {t(copy.contact.subtitle)}
-          </p>
+          <div className="w-24 h-px bg-gold mt-8" />
         </div>
+      </section>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <Card className="bg-card border-gold/20 animate-fade-in-up">
-            <CardContent className="p-8">
-              <form className="space-y-6" onSubmit={async (e) => {
-                e.preventDefault();
-                const form = e.currentTarget as HTMLFormElement;
-                try {
-                  const formData = new FormData(form);
-                  const payload = Object.fromEntries(formData.entries());
-                  const endpoint = import.meta.env.VITE_CONTACT_EMAIL_ENDPOINT || '/api/send';
-                  const resp = await fetch(endpoint, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload),
-                  });
-                  if (!resp.ok) {
-                    const text = await resp.text();
-                    throw new Error(text || 'Failed to send');
-                  }
-                  toast({
-                    title: 'Message sent',
-                    description: 'Thank you! We\'ll get back to you shortly.',
-                    className: 'border-gold text-cloud bg-charcoal',
-                  });
-                  form.reset();
-                } catch (err) {
-                  toast({
-                    title: 'Send failed',
-                    description: err instanceof Error ? err.message : 'Please try again later.',
-                    className: 'border-terracotta text-cloud bg-charcoal',
-                  });
-                }
-              }}>
+      {/* Content */}
+      <section className="pb-32 px-8 md:px-16 lg:px-24">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16">
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="space-y-2">
+              <label className="text-xs tracking-[0.3em] uppercase text-parchment/50">{t(copy.contact.form.name)}</label>
+              <Input
+                name="name"
+                required
+                placeholder={t(copy.contact.form.namePlaceholder)}
+                className="bg-transparent border-0 border-b border-parchment/20 rounded-none px-0 text-parchment placeholder:text-parchment/30 focus-visible:ring-0 focus-visible:border-gold transition-colors"
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="text-xs tracking-[0.3em] uppercase text-parchment/50">{t(copy.contact.form.email)}</label>
+              <Input
+                name="email"
+                type="email"
+                required
+                placeholder={t(copy.contact.form.emailPlaceholder)}
+                className="bg-transparent border-0 border-b border-parchment/20 rounded-none px-0 text-parchment placeholder:text-parchment/30 focus-visible:ring-0 focus-visible:border-gold transition-colors"
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="text-xs tracking-[0.3em] uppercase text-parchment/50">{t(copy.contact.form.company)}</label>
+              <Input
+                name="company"
+                placeholder={t(copy.contact.form.companyPlaceholder)}
+                className="bg-transparent border-0 border-b border-parchment/20 rounded-none px-0 text-parchment placeholder:text-parchment/30 focus-visible:ring-0 focus-visible:border-gold transition-colors"
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="text-xs tracking-[0.3em] uppercase text-parchment/50">{t(copy.contact.form.message)}</label>
+              <Textarea
+                name="message"
+                required
+                rows={5}
+                placeholder={t(copy.contact.form.messagePlaceholder)}
+                className="bg-transparent border-0 border-b border-parchment/20 rounded-none px-0 text-parchment placeholder:text-parchment/30 focus-visible:ring-0 focus-visible:border-gold transition-colors resize-none"
+              />
+            </div>
+            <Button
+              type="submit"
+              className="bg-gold hover:bg-gold/90 text-noir font-semibold tracking-[0.2em] uppercase text-sm px-8 py-6 rounded-none"
+            >
+              {t(copy.contact.form.submit)}
+            </Button>
+          </form>
+
+          {/* Info */}
+          <div className="space-y-12 pt-8 lg:pt-0">
+            <div>
+              <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4">{t(copy.contact.vision.title)}</p>
+              <p className="text-parchment-dim text-lg leading-relaxed italic">
+                {t(copy.contact.vision.description)}
+              </p>
+            </div>
+            <div className="border-t border-parchment/10 pt-8">
+              <div className="flex items-center gap-4">
+                <Mail className="h-5 w-5 text-gold/60" />
                 <div>
-                  <label className="block text-cloud mb-2 font-medium">
-                    {t(copy.contact.form.name)}
-                  </label>
-                  <Input
-                    name="user_name"
-                    placeholder={t(copy.contact.form.namePlaceholder)}
-                    className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-cloud mb-2 font-medium">
-                    {t(copy.contact.form.email)}
-                  </label>
-                  <Input
-                    type="email"
-                    name="user_email"
-                    placeholder={t(copy.contact.form.emailPlaceholder)}
-                    className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-cloud mb-2 font-medium">
-                    {t(copy.contact.form.company)}
-                  </label>
-                  <Input
-                    name="company"
-                    placeholder={t(copy.contact.form.companyPlaceholder)}
-                    className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-cloud mb-2 font-medium">
-                    {t(copy.contact.form.message)}
-                  </label>
-                  <Textarea
-                    name="message"
-                    placeholder={t(copy.contact.form.messagePlaceholder)}
-                    rows={6}
-                    className="bg-charcoal/50 border-gold/20 text-cloud focus:border-gold resize-none"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-gold hover:bg-gold/90 text-charcoal font-semibold shadow-gold transition-smooth"
-                >
-                  {t(copy.contact.form.submit)}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
-          {/* Contact Information */}
-          <div className="space-y-6 animate-fade-in-up flex flex-col" style={{ animationDelay: '0.2s' }}>
-            {/* Our Vision Section - Now on top */}
-            <Card className="bg-charcoal border-gold/20">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-gold mb-4 cinematic-text tracking-wide">
-                  {t(copy.contact.vision.title)}
-                </h3>
-                <p className="text-cloud-white/90 leading-relaxed text-base md:text-lg font-light italic">
-                  {t(copy.contact.vision.description)}
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Separator */}
-            <Separator className="bg-gold/20" />
-
-            {/* Contact Cards - Below vision */}
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => {
-                const Icon = info.icon;
-                const content = (
-                  <Card className="bg-card border-gold/20 hover:border-gold/40 transition-smooth">
-                    <CardContent className="p-6 flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-gold" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-cloud mb-1">
-                          {t(info.title)}
-                        </h3>
-                        <p className="text-cloud-white/80">{info.value}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-
-                return info.link ? (
-                  <a key={index} href={info.link} className="block">
-                    {content}
+                  <p className="text-xs tracking-[0.3em] uppercase text-parchment/40 mb-1">{t(copy.contact.info.email)}</p>
+                  <a href="mailto:sales@estatevisio.com" className="text-parchment hover:text-gold transition-colors">
+                    sales@estatevisio.com
                   </a>
-                ) : (
-                  <div key={index}>{content}</div>
-                );
-              })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
-  );
-};
-
-const Contact = () => {
-  const isVisible = useScrollVisibility();
-
-  return (
-    <div className="min-h-screen bg-charcoal">
-        {/* Mobile Navigation */}
-        <MobileNav />
-
-        {/* Logo - Fixed Top Left (Desktop) or Center (Mobile) */}
-        <Link 
-          to="/" 
-          className={cn(
-            "fixed top-6 left-20 lg:left-6 z-50 transition-all duration-300",
-            isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
-          )}
-        >
-          <img src={logo} alt="EstateVisio" className="h-10 w-auto" />
-        </Link>
-
-        <Navigation />
-        <div 
-          className={cn(
-            "fixed top-6 right-6 z-50 transition-all duration-300 hidden lg:block",
-            isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
-          )}
-        >
-          <LanguageSwitcher />
-        </div>
-        <ContactContent />
-        <Footer />
-      </div>
   );
 };
 
