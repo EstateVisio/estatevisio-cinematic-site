@@ -290,6 +290,7 @@ export const copy = {
         bg: 'Ние, от EstateVisio, превръщаме вашите обяви в филмови изживявания.',
       },
       cta: { en: 'Begin Your Story', bg: 'Започнете вашата история' },
+      secondaryCta: { en: 'Book a Call', bg: 'Резервирайте разговор' },
     },
     capabilities: {
       headline: { en: "From photos to professional video.", bg: "От снимки до професионално видео." },
