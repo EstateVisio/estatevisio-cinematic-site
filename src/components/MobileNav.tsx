@@ -2,117 +2,71 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import TextRenderer from '@/components/ui/TextRenderer';
-import logo from '@/assets/estatevision-logo.png';
 import { copy } from '@/config/copy';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
+
+const navItems = [
+  { label: copy.navigation.home, path: '/' },
+  { label: copy.navigation.services, path: '/services' },
+  { label: copy.navigation.gallery, path: '/gallery' },
+  { label: copy.navigation.contact, path: '/contact' },
+];
 
 const MobileNav = () => {
   const { t, language, setLanguage } = useLanguage();
   const location = useLocation();
   const [open, setOpen] = useState(false);
 
-  const navItems = [
-    { label: copy.navigation.home, path: '/' },
-    { label: copy.navigation.services, path: '/services' },
-    { label: copy.navigation.gallery, path: '/gallery' },
-    { label: copy.navigation.contact, path: '/contact' },
-  ];
-
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="fixed top-6 left-6 z-50 lg:hidden bg-cloud/10 backdrop-blur-xl border border-cloud/20 hover:bg-cloud/20 rounded-full h-12 w-12"
-        >
-          <Menu className="h-6 w-6 text-cloud" />
-          <span className="sr-only">Toggle menu</span>
-        </Button>
-      </SheetTrigger>
-
-      <SheetContent
-        side="left"
-        className="w-[280px] bg-charcoal/95 backdrop-blur-xl border-gold/20"
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="fixed top-5 right-5 z-50 lg:hidden text-parchment p-2"
+        aria-label="Open menu"
       >
-        <SheetHeader className="border-b border-gold/20 pb-4">
-          <SheetTitle className="flex items-center justify-center">
-            <img src={logo} alt="EstateVisio" className="h-8 w-auto" />
-          </SheetTitle>
-        </SheetHeader>
+        <Menu className="h-6 w-6" />
+      </button>
 
-        <div className="flex flex-col gap-6 mt-6">
-          {/* Language Switcher */}
-          <div className="space-y-2">
-            <p className="text-sm text-cloud-white/60 font-semibold px-2">
-              <TextRenderer>{t(copy.navigation.language)}</TextRenderer>
-            </p>
-            <div className="flex gap-2">
-              <Button
-                variant={language === 'en' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setLanguage('en')}
+      <Link
+        to="/"
+        className="fixed top-5 left-5 z-50 lg:hidden text-sm tracking-[0.3em] font-bold text-parchment uppercase"
+      >
+        EV
+      </Link>
+
+      {open && (
+        <div className="fixed inset-0 z-[100] bg-noir flex flex-col items-center justify-center">
+          <button
+            onClick={() => setOpen(false)}
+            className="absolute top-5 right-5 text-parchment/60 hover:text-parchment p-2"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          <nav className="flex flex-col items-center gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setOpen(false)}
                 className={cn(
-                  'flex-1',
-                  language === 'en'
-                    ? 'bg-gold text-charcoal hover:bg-gold/90'
-                    : 'border-gold/30 text-cloud hover:bg-gold/10'
+                  'text-3xl font-bold tracking-[0.1em] uppercase transition-colors',
+                  location.pathname === item.path ? 'text-gold' : 'text-parchment/60 hover:text-parchment'
                 )}
               >
-                EN
-              </Button>
-              <Button
-                variant={language === 'bg' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setLanguage('bg')}
-                className={cn(
-                  'flex-1',
-                  language === 'bg'
-                    ? 'bg-gold text-charcoal hover:bg-gold/90'
-                    : 'border-gold/30 text-cloud hover:bg-gold/10'
-                )}
-              >
-                BG
-              </Button>
-            </div>
-          </div>
-
-          {/* Navigation Links */}
-          <nav className="space-y-1">
-            <p className="text-sm text-cloud-white/60 font-semibold px-2 mb-2">
-              <TextRenderer>{t(copy.navigation.pages)}</TextRenderer>
-            </p>
-            {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
-              return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    'block px-4 py-3 rounded-lg text-base font-medium transition-all',
-                    isActive
-                      ? 'bg-gold text-charcoal shadow-lg'
-                      : 'text-cloud hover:bg-gold/10 hover:text-gold'
-                  )}
-                >
-                  <TextRenderer>{t(item.label)}</TextRenderer>
-                </Link>
-              );
-            })}
+                {t(item.label)}
+              </Link>
+            ))}
           </nav>
+
+          <div className="absolute bottom-10 flex gap-6 text-sm tracking-[0.3em] uppercase">
+            <button onClick={() => setLanguage('en')} className={language === 'en' ? 'text-gold' : 'text-parchment/40'}>EN</button>
+            <span className="text-parchment/20">/</span>
+            <button onClick={() => setLanguage('bg')} className={language === 'bg' ? 'text-gold' : 'text-parchment/40'}>BG</button>
+          </div>
         </div>
-      </SheetContent>
-    </Sheet>
+      )}
+    </>
   );
 };
 
