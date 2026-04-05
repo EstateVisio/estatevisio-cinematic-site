@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Roadmap from "./pages/Roadmap";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/roadmap" element={<Roadmap />} />
             <Route path="/services" element={<Services />} />
             <Route path="/vision" element={<Navigate to="/" replace />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
