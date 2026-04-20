@@ -178,7 +178,7 @@ const Gallery = () => {
             </div>
           </div>
           <div className="px-4 lg:px-0 lg:pl-10">
-            <VideoPlayer src="/videos/furnishing.mp4" label="Before · After · 2 min" />
+            <VideoPlayer src="https://player.mediadelivery.net/play/641261/56db8421-d3d1-4778-a151-ef6ef859d4d6" label="Before · After · 2 min" />
           </div>
           <div className="hidden lg:block" />
         </div>

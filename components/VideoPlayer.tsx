@@ -10,7 +10,35 @@ interface VideoPlayerProps {
   className?: string;
 }
 
+function toBunnyEmbedUrl(src: string): string | null {
+  const match = src.match(/player\.mediadelivery\.net\/play\/(\d+)\/([a-f0-9-]+)/i);
+  if (!match) return null;
+  return `https://iframe.mediadelivery.net/embed/${match[1]}/${match[2]}?autoplay=false&responsive=true&preload=true`;
+}
+
+function BunnyEmbed({ src, label, className }: { src: string; label?: string; className?: string }) {
+  const embedUrl = toBunnyEmbedUrl(src)!;
+  return (
+    <div className={`relative overflow-hidden bg-charcoal border border-gold/20 hover:border-gold/35 transition-colors duration-500 aspect-video ${className ?? ''}`}>
+      {label && (
+        <p className="absolute top-3 left-4 z-10 text-cloud-white/50 text-xs tracking-[0.14em] uppercase pointer-events-none">
+          {label}
+        </p>
+      )}
+      <iframe
+        src={embedUrl}
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+        allowFullScreen
+        loading="lazy"
+        className="absolute inset-0 w-full h-full border-0"
+      />
+    </div>
+  );
+}
+
 export function VideoPlayer({ src, poster, label, className }: VideoPlayerProps) {
+  if (toBunnyEmbedUrl(src)) return <BunnyEmbed src={src} label={label} className={className} />;
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
