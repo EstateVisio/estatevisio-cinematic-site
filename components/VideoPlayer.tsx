@@ -36,7 +36,9 @@ function BunnyEmbed({ src, label, className }: { src: string; label?: string; cl
   );
 }
 
-function LocalVideoPlayer({ src, poster, label, className }: VideoPlayerProps) {
+export function VideoPlayer({ src, poster, label, className }: VideoPlayerProps) {
+  if (toBunnyEmbedUrl(src)) return <BunnyEmbed src={src} label={label} className={className} />;
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
@@ -221,9 +223,4 @@ function LocalVideoPlayer({ src, poster, label, className }: VideoPlayerProps) {
       </div>
     </div>
   );
-}
-
-export function VideoPlayer({ src, poster, label, className }: VideoPlayerProps) {
-  if (toBunnyEmbedUrl(src)) return <BunnyEmbed src={src} label={label} className={className} />;
-  return <LocalVideoPlayer src={src} poster={poster} label={label} className={className} />;
 }
