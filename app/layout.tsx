@@ -19,6 +19,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/images/estatevision-logo.png',
+    apple: '/images/estatevision-logo.png',
+  },
   title: 'EstateVisio — AI-Powered Property Video',
   description: 'Turn property photos into cinematic videos. No camera crew needed.',
   openGraph: {
