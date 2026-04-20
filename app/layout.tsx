@@ -8,14 +8,14 @@ const cormorant = Cormorant_Garamond({
   weight: ['300', '400', '500'],
   style: ['normal', 'italic'],
   variable: '--font-display',
-  display: 'swap',
+  display: 'block',
 });
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-body',
-  display: 'swap',
+  display: 'block',
 });
 
 export const metadata: Metadata = {
@@ -56,14 +56,14 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="bg" suppressHydrationWarning>
+    <html lang="bg" suppressHydrationWarning className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${cormorant.variable} ${inter.variable}`}>
+      <body>
         <Providers>{children}</Providers>
       </body>
     </html>
