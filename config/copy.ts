@@ -218,7 +218,7 @@ export const copy = {
       label: { en: 'Not weeks — your video, ready fast', bg: 'Не седмици — вашето видео, готово светкавично' },
     },
     stat2: {
-      value: { en: '×4', bg: '×4' },
+      value: { en: '×3', bg: '×3' },
       label: { en: 'More views vs. static photos', bg: 'Повече гледания vs. статични снимки' },
     },
     stat3: {
