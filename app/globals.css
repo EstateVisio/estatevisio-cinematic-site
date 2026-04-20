@@ -1,26 +1,214 @@
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+/* ── Brand Design System ─────────────────────────────────────────────────────── */
+
+@theme {
+  /* Brand Colors */
+  --color-charcoal: hsl(180 2% 20%);
+  --color-gold: hsl(40 38% 47%);
+  --color-warm-sand: hsl(36 52% 81%);
+  --color-terracotta: hsl(12 40% 54%);
+  --color-estate-teal: hsl(190 63% 33%);
+  --color-sky-blue: hsl(198 80% 60%);
+  --color-fresh-green: hsl(88 35% 52%);
+  --color-cloud-white: hsl(210 17% 98%);
+  --color-slate: hsl(0 1% 42%);
+
+  /* Semantic tokens */
+  --color-background: hsl(180 2% 20%);
+  --color-foreground: hsl(210 17% 98%);
+  --color-border: hsl(0 1% 30%);
+  --color-input: hsl(0 1% 30%);
+  --color-ring: hsl(40 38% 47%);
+  --color-primary: hsl(40 38% 47%);
+  --color-primary-foreground: hsl(180 2% 20%);
+  --color-secondary: hsl(36 52% 81%);
+  --color-secondary-foreground: hsl(180 2% 20%);
+  --color-muted: hsl(0 1% 42%);
+  --color-muted-foreground: hsl(210 17% 85%);
+  --color-accent: hsl(40 38% 47%);
+  --color-accent-foreground: hsl(180 2% 20%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(210 17% 98%);
+  --color-card: hsl(180 2% 18%);
+  --color-card-foreground: hsl(210 17% 98%);
+  --color-popover: hsl(180 2% 18%);
+  --color-popover-foreground: hsl(210 17% 98%);
+
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Border radius */
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+
+  /* Keyframe animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out;
+  --animate-scale-in: scale-in 0.5s ease-out;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-ken-burns: ken-burns 20s ease-in-out infinite alternate;
+  --animate-marquee: marquee 32s linear infinite;
+}
+
+/* ── CSS Custom Properties (for legacy HSL usage in components/ui) ─────────── */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --charcoal: 180 2% 20%;
+  --gold: 40 38% 47%;
+  --warm-sand: 36 52% 81%;
+  --terracotta: 12 40% 54%;
+  --estate-teal: 190 63% 33%;
+  --sky-blue: 198 80% 60%;
+  --fresh-green: 88 35% 52%;
+  --cloud-white: 210 17% 98%;
+  --slate: 0 1% 42%;
+
+  --background: 180 2% 20%;
+  --foreground: 210 17% 98%;
+
+  --card: 180 2% 18%;
+  --card-foreground: 210 17% 98%;
+
+  --popover: 180 2% 18%;
+  --popover-foreground: 210 17% 98%;
+
+  --primary: 40 38% 47%;
+  --primary-foreground: 180 2% 20%;
+
+  --secondary: 36 52% 81%;
+  --secondary-foreground: 180 2% 20%;
+
+  --muted: 0 1% 42%;
+  --muted-foreground: 210 17% 85%;
+
+  --accent: 40 38% 47%;
+  --accent-foreground: 180 2% 20%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 17% 98%;
+
+  --border: 0 1% 30%;
+  --input: 0 1% 30%;
+  --ring: 40 38% 47%;
+
+  --radius: 0.75rem;
+
+  --gradient-hero: linear-gradient(135deg, hsl(180 2% 15%), hsl(180 2% 25%));
+  --gradient-gold: linear-gradient(135deg, hsl(40 38% 47%), hsl(40 38% 57%));
+  --gradient-warm: linear-gradient(135deg, hsl(36 52% 81%), hsl(12 40% 54%));
+
+  --shadow-gold: 0 10px 40px -10px hsl(40 38% 47% / 0.4);
+  --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.6);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Keyframes ───────────────────────────────────────────────────────────────── */
+
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(40 38% 47% / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(40 38% 47% / 0.6); }
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── Base styles ─────────────────────────────────────────────────────────────── */
+
+html {
+  font-size: 18px;
+}
+
+* {
+  border-color: hsl(var(--border));
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(var(--charcoal));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+}
+
+/* ── Utility classes ─────────────────────────────────────────────────────────── */
+
+.font-display {
+  font-family: var(--font-display, 'Cormorant Garamond', Georgia, serif);
+}
+
+.transition-smooth {
+  transition: var(--transition-smooth);
+}
+
+.cinematic-text {
+  text-shadow: 0 2px 20px hsl(0 0% 0% / 0.5);
+}
+
+.shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+.shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+/* ── Nav link hover animation ────────────────────────────────────────────────── */
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: hsl(var(--gold));
+  transform: translateX(-50%);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link--active::after {
+  width: 100%;
 }
