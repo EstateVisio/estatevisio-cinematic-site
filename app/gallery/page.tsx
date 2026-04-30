@@ -3,10 +3,10 @@ import { Suspense } from 'react';
 import Gallery from '@/components/pages/Gallery';
 
 export const metadata: Metadata = {
-  title: 'Property Tour & Furnishing Videos — EstateVisio',
+  title: 'Property Tour & Furnishing Videos - EstateVisio',
   description: 'Cinematic property tours and furnishing videos, generated from still photographs.',
   openGraph: {
-    title: 'Property Tour & Furnishing Videos — EstateVisio',
+    title: 'Property Tour & Furnishing Videos - EstateVisio',
     description: 'Cinematic property tours and furnishing videos, generated from still photographs.',
   },
 };
