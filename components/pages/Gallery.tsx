@@ -140,7 +140,7 @@ const Gallery = () => {
         >
           <div className="hidden lg:block" />
           <div className="px-4 lg:px-0 lg:pr-10">
-            <VideoPlayer src="https://player.mediadelivery.net/play/641261/eabcd2b7-586c-4c41-8fba-a04f3c990265" label="30 sec · HD" />
+            <VideoPlayer src="https://player.mediadelivery.net/play/653121/1f40c226-e544-4429-86ca-c81d0e92b5ec" label="30 sec · HD" />
           </div>
           <div className="flex flex-col gap-4 px-8 lg:pl-12 lg:pr-16 py-10 lg:py-0">
             <span className="font-display text-[6rem] lg:text-[9rem] leading-none text-gold font-light select-none [text-shadow:0_0_40px_rgba(0,0,0,1),0_2px_0_rgba(0,0,0,1),0_0_8px_rgba(180,150,80,0.4)]">01</span>
@@ -178,7 +178,7 @@ const Gallery = () => {
             </div>
           </div>
           <div className="px-4 lg:px-0 lg:pl-10">
-            <VideoPlayer src="https://player.mediadelivery.net/play/641261/56db8421-d3d1-4778-a151-ef6ef859d4d6" label="40 sec · HD" />
+            <VideoPlayer src="https://player.mediadelivery.net/play/653121/54fb262d-068b-4e08-a214-0b2c6a9bf61c" label="40 sec · HD" />
           </div>
           <div className="hidden lg:block" />
         </div>
