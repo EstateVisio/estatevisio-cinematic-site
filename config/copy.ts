@@ -229,7 +229,7 @@ export const copy = {
 
   // Gallery Page
   galleryPage: {
-    title: { en: 'Our work.', bg: 'Нашата работа.' },
+    title: { en: 'AI Property Video Gallery', bg: 'AI галерия — видео за имоти' },
     scene1: {
       title: { en: 'Property Tour', bg: 'Обиколка на имота' },
       location: { en: 'Around the World', bg: 'По целия свят' },
@@ -309,7 +309,7 @@ export const copy = {
 
   // Services Page
   servicesPage: {
-    title: { en: 'Our Services', bg: 'Нашите услуги' },
+    title: { en: 'How It Works', bg: 'Как работи' },
     intro: {
       en: 'Your listings deserve cinematic stories — and with EstateVisio, creating them has never been easier.',
       bg: 'Вашите обяви заслужават кинематографични истории — а с EstateVisio създаването им никога не е било по-лесно.',
