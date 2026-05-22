@@ -25,6 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ aboutRef }) => {
         <img
           src="/images/hero-property.jpg"
           alt="Luxury property"
+          fetchPriority="high"
           className="w-full h-full object-cover animate-ken-burns"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/65 to-charcoal/20" />

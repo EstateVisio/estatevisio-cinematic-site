@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { copy } from '@/config/copy';
 import TextRenderer from '@/components/ui/TextRenderer';
 import { useInView } from '@/hooks/useInView';
@@ -29,6 +30,8 @@ function Reveal({ children, className }: { children: React.ReactNode; className?
 
 const Services = () => {
   const { t, language } = useLanguage();
+  const params = useParams();
+  const lang = params?.lang === 'bg' ? 'bg' : 'en';
   const { ref: includedRef, inView: includedInView } = useInView<HTMLDivElement>();
   const { ref: closingRef, inView: closingInView } = useInView<HTMLDivElement>();
 
@@ -64,7 +67,7 @@ const Services = () => {
       {/* Page header */}
       <section className="pt-40 pb-16 px-8 lg:px-20 text-center">
         <h1 className="font-display text-[clamp(3rem,7vw,7rem)] leading-none font-light text-cloud-white animate-fade-in">
-          How it <span className="text-gold italic">works.</span>
+          <TextRenderer>{t(copy.servicesPage.title)}</TextRenderer>
         </h1>
         <div className="mt-8 h-px bg-gold/20 max-w-[1400px] mx-auto" />
       </section>
@@ -72,7 +75,7 @@ const Services = () => {
       {steps.map((step) => (
         <section key={step.id} className="py-24 lg:py-40 border-t border-gold/10 relative overflow-hidden">
           <div className="absolute inset-0">
-            <img src={step.bg} alt="" aria-hidden className="w-full h-full object-cover" />
+            <img src={step.bg} alt="" aria-hidden loading="lazy" className="w-full h-full object-cover" />
           </div>
           <div className="absolute inset-0 bg-charcoal/48" />
           <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-charcoal to-transparent" />
@@ -164,7 +167,7 @@ const Services = () => {
       {/* Closing CTA */}
       <section className="py-32 lg:py-48 border-t border-gold/10 relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/services-closing-bg.jpg" alt="" aria-hidden className="w-full h-full object-cover" />
+          <img src="/images/services-closing-bg.jpg" alt="" aria-hidden loading="lazy" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-charcoal/75" />
         <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-charcoal to-transparent" />
@@ -183,7 +186,7 @@ const Services = () => {
           </h2>
           <div className="w-12 h-px bg-gold/25 mb-10" />
           <Link
-            href="/contact"
+            href={`/${lang}/contact`}
             className="inline-block px-10 py-5 bg-gold text-charcoal text-sm tracking-[0.12em] uppercase font-medium hover:bg-gold/85 transition-colors duration-300"
           >
             <TextRenderer>{t(copy.servicesPage.closing.cta)}</TextRenderer>

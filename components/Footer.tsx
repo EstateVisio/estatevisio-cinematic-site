@@ -4,17 +4,19 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { copy } from '@/config/copy';
 import TextRenderer from '@/components/ui/TextRenderer';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useParams } from 'next/navigation';
 
 const Footer = () => {
   const { t } = useLanguage();
   const pathname = usePathname();
+  const params = useParams();
+  const lang = params?.lang === 'bg' ? 'bg' : 'en';
 
   const links = [
-    { label: copy.navigation.vision, path: '/vision' },
-    { label: copy.navigation.services, path: '/services' },
-    { label: copy.navigation.gallery, path: '/gallery' },
-    { label: copy.navigation.contact, path: '/contact' },
+    { label: copy.navigation.vision, path: `/${lang}/vision` },
+    { label: copy.navigation.services, path: `/${lang}/services` },
+    { label: copy.navigation.gallery, path: `/${lang}/gallery` },
+    { label: copy.navigation.contact, path: `/${lang}/contact` },
   ];
 
   return (

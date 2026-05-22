@@ -5,7 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useParams } from 'next/navigation';
 import { useInView } from '@/hooks/useInView';
 import { VideoPlayer } from '@/components/VideoPlayer';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -27,6 +27,7 @@ function PropertyBackground() {
           src="/images/gallery-tour-bg.jpg"
           alt=""
           aria-hidden
+          fetchPriority="high"
           className="w-full h-full object-cover animate-ken-burns"
         />
       </div>
@@ -66,13 +67,14 @@ function SliderBackground() {
   return (
     <>
       <div className="absolute inset-0">
-        <img src="/images/about-architecture.jpg" alt="" aria-hidden className="w-full h-full object-cover" />
+        <img src="/images/about-architecture.jpg" alt="" aria-hidden loading="lazy" className="w-full h-full object-cover" />
       </div>
       <div ref={overlayRef} className="absolute inset-0" style={{ clipPath: 'inset(0 50% 0 0)' }}>
         <img
           src="/images/about-architecture.jpg"
           alt=""
           aria-hidden
+          loading="lazy"
           className="w-full h-full object-cover"
           style={{ filter: 'grayscale(100%) brightness(0.5) contrast(1.1)' }}
         />
@@ -92,6 +94,8 @@ function SliderBackground() {
 const Gallery = () => {
   const { t } = useLanguage();
   const searchParams = useSearchParams();
+  const params = useParams();
+  const lang = params?.lang === 'bg' ? 'bg' : 'en';
   const { ref: scene1Ref, inView: scene1InView } = useInView<HTMLDivElement>();
   const { ref: scene2Ref, inView: scene2InView } = useInView<HTMLDivElement>();
   const { ref: bottomRef, inView: bottomInView } = useInView<HTMLDivElement>();
@@ -192,7 +196,7 @@ const Gallery = () => {
             {t(copy.galleryPage.cta.heading)}
           </p>
           <Link
-            href="/contact"
+            href={`/${lang}/contact`}
             className="px-8 py-4 bg-gold text-charcoal text-sm tracking-[0.1em] uppercase font-medium hover:bg-gold/85 transition-colors duration-300 flex-shrink-0"
           >
             {t(copy.galleryPage.cta.button)}

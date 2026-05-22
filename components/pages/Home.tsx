@@ -78,6 +78,7 @@ const Home = () => {
           src="/images/home-statement-bg.jpg"
           alt=""
           aria-hidden
+          loading="lazy"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-charcoal/82" />
@@ -118,6 +119,7 @@ const Home = () => {
               <img
                 src={service.image}
                 alt={service.title}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/92 via-charcoal/35 to-charcoal/5" />
