@@ -6,6 +6,7 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { Play } from 'lucide-react';
 import React, { useRef } from 'react';
 import { useInView } from '@/hooks/useInView';
@@ -38,12 +39,14 @@ function Reveal({
 }
 
 const SERVICE_META = [
-  { id: '01', image: '/images/gallery-tour-bg.jpg', href: '/gallery#scene-01', copy: 'service1' as const },
-  { id: '02', image: '/images/about-architecture.jpg', href: '/gallery#scene-02', copy: 'service2' as const },
+  { id: '01', image: '/images/gallery-tour-bg.jpg', anchor: 'scene-01', copy: 'service1' as const },
+  { id: '02', image: '/images/about-architecture.jpg', anchor: 'scene-02', copy: 'service2' as const },
 ];
 
 const Home = () => {
   const { t } = useLanguage();
+  const params = useParams();
+  const lang = params?.lang === 'bg' ? 'bg' : 'en';
   const statementRef = useRef<HTMLDivElement>(null);
   const { ref: videoRef, inView: videoInView } = useInView<HTMLDivElement>();
   const { ref: statsRef, inView: statsInView } = useInView<HTMLDivElement>();
@@ -118,7 +121,7 @@ const Home = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/92 via-charcoal/35 to-charcoal/5" />
-              <Link href={service.href} className="absolute inset-0 flex flex-col justify-between p-8 lg:p-10">
+              <Link href={`/${lang}/gallery#${service.anchor}`} className="absolute inset-0 flex flex-col justify-between p-8 lg:p-10">
                 <span className="font-display text-[6rem] leading-none text-cloud-white/6 font-light select-none">
                   {service.id}
                 </span>
@@ -182,7 +185,7 @@ const Home = () => {
               See for yourself.
             </h2>
             <Link
-              href="/gallery"
+              href={`/${lang}/gallery`}
               className="hidden sm:inline-block text-sm tracking-[0.1em] uppercase text-gold/55 hover:text-gold transition-colors duration-300 border-b border-gold/20 hover:border-gold/55 pb-0.5 mb-1"
             >
               Full gallery →
