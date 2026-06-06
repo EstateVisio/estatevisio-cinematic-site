@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { copy } from '@/config/copy';
 import TextRenderer from '@/components/ui/TextRenderer';
@@ -75,7 +76,7 @@ const Services = () => {
       {steps.map((step) => (
         <section key={step.id} className="py-24 lg:py-40 border-t border-gold/10 relative overflow-hidden">
           <div className="absolute inset-0">
-            <img src={step.bg} alt="" aria-hidden loading="lazy" className="w-full h-full object-cover" />
+            <Image src={step.bg} alt="" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-charcoal/48" />
           <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-charcoal to-transparent" />
@@ -167,7 +168,7 @@ const Services = () => {
       {/* Closing CTA */}
       <section className="py-32 lg:py-48 border-t border-gold/10 relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/services-closing-bg.jpg" alt="" aria-hidden loading="lazy" className="w-full h-full object-cover" />
+          <Image src="/images/services-closing-bg.jpg" alt="" fill sizes="100vw" className="object-cover" />
         </div>
         <div className="absolute inset-0 bg-charcoal/75" />
         <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-charcoal to-transparent" />

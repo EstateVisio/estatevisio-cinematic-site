@@ -3,6 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import TextRenderer from '@/components/ui/TextRenderer';
 import { copy } from '@/config/copy';
+import Image from 'next/image';
 import React from 'react';
 
 interface HeroSectionProps {
@@ -22,11 +23,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ aboutRef }) => {
     <section className="relative h-screen overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/images/hero-property.jpg"
           alt="Luxury property"
-          fetchPriority="high"
-          className="w-full h-full object-cover animate-ken-burns"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover animate-ken-burns"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/65 to-charcoal/20" />
       </div>

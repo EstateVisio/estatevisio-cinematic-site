@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import TextRenderer from '@/components/ui/TextRenderer';
 import { copy } from '@/config/copy';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { useInView } from '@/hooks/useInView';
 
@@ -16,11 +17,12 @@ const CTASection = () => {
   return (
     <section className="py-28 lg:py-44 relative overflow-hidden">
       {/* Background image */}
-      <img
+      <Image
         src="/images/services-closing-bg.jpg"
         alt=""
-        aria-hidden
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        fill
+        sizes="100vw"
+        className="object-cover object-center"
       />
       {/* Dark overlay: cinematic but legible */}
       <div className="absolute inset-0 bg-charcoal/88" />

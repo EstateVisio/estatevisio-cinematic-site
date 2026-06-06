@@ -6,6 +6,7 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Play } from 'lucide-react';
 import React, { useRef } from 'react';
@@ -74,12 +75,12 @@ const Home = () => {
 
       {/* 2. Editorial statement */}
       <section ref={statementRef} className="py-28 lg:py-44 relative overflow-hidden">
-        <img
+        <Image
           src="/images/home-statement-bg.jpg"
           alt=""
-          aria-hidden
-          loading="lazy"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-charcoal/82" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-charcoal to-transparent" />
@@ -116,11 +117,12 @@ const Home = () => {
               delay={i * 0.08}
               className="relative h-[460px] lg:h-[70vh] overflow-hidden group cursor-pointer"
             >
-              <img
+              <Image
                 src={service.image}
                 alt={service.title}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/92 via-charcoal/35 to-charcoal/5" />
               <Link href={`/${lang}/gallery`} className="absolute inset-0 flex flex-col justify-between p-8 lg:p-10">

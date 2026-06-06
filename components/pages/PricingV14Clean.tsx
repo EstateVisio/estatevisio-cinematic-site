@@ -30,7 +30,7 @@ function getPackages(lang: string) {
       idealFor: bg
         ? 'Един шанс да ви впечатлим. Не го приемаме леко.'
         : 'One shot to impress you. We don\'t take that lightly.',
-      price: '€79', sub: bg ? '/ видео' : '/ video', savings: null, prePrice: bg ? 'започва от' : 'starts from',
+      price: '€69', sub: bg ? '/ видео' : '/ video', savings: null, prePrice: bg ? 'започва от' : 'starts from',
       features: bg
         ? ['30–35 секунди финален монтаж', 'Доставка в рамките на 48 часа', 'Добавяне на лого и/или акценти на марката', '1 корекция включена']
         : ['30–35 second final cut', 'Delivered in 48 hours', 'Add brand logo and/or accents', '1 revision included'],
@@ -43,8 +43,8 @@ function getPackages(lang: string) {
       idealFor: bg
         ? 'Първото видео ви представя. Следващите четири ви правят познати. Познатото е това, което конвертира.'
         : 'The first video introduces you. The next four make you familiar. Familiarity is what converts.',
-      price: '€359', sub: bg ? '€72 на видео' : '€72 per video',
-      savings: bg ? 'Спестете €36 спрямо единични' : 'Save €36 vs singles',
+      price: '€319', sub: bg ? '€64 на видео' : '€64 per video',
+      savings: bg ? 'Спестете €26 спрямо единични' : 'Save €26 vs singles',
       prePrice: bg ? 'започва от' : 'starts from',
       features: bg
         ? ['5 видеа, 30–35 секунди финална дължина', 'Възможност за AI-аватар добавка', '1 корекция включена на видео']
@@ -58,8 +58,8 @@ function getPackages(lang: string) {
       idealFor: bg
         ? 'Последователното видео съдържание е това, което отделя видимите марки от забравените.'
         : 'Consistent video output is what separates visible brands from forgotten ones.',
-      price: '€679', sub: bg ? '€68 на видео' : '€68 per video',
-      savings: bg ? 'Спестете €111 спрямо единични' : 'Save €111 vs singles',
+      price: '€599', sub: bg ? '€60 на видео' : '€60 per video',
+      savings: bg ? 'Спестете €91 спрямо единични' : 'Save €91 vs singles',
       prePrice: bg ? 'започва от' : 'starts from',
       features: bg
         ? ['10 видеа, 30–35 секунди финален монтаж', 'Възможност за AI-аватар добавка', '1 корекция включена на видео']

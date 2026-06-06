@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { copy } from '@/config/copy';
@@ -51,7 +52,7 @@ function StorySection({
   return (
     <section className="relative py-32 lg:py-52 border-t border-gold/10 overflow-hidden">
       <div className="absolute inset-0">
-        <img src={image} alt="" aria-hidden loading="lazy" className="w-full h-full object-cover" />
+        <Image src={image} alt="" fill sizes="100vw" className="object-cover" />
       </div>
       <div className="absolute inset-0 bg-charcoal/60" />
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-charcoal to-transparent" />
@@ -110,7 +111,7 @@ const Vision = () => {
       {/* Hero */}
       <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/vision-hero.jpg" alt="Cinematic AI property video by EstateVisio" fetchPriority="high" className="w-full h-full object-cover animate-ken-burns" />
+          <Image src="/images/vision-hero.jpg" alt="Cinematic AI property video by EstateVisio" fill sizes="100vw" priority className="object-cover animate-ken-burns" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/10" />
         </div>
         <div className="relative z-10 h-full flex flex-col justify-end px-8 lg:px-20 pb-20 lg:pb-32">
@@ -125,7 +126,7 @@ const Vision = () => {
 
       {/* Editorial intro */}
       <section className="py-28 lg:py-44 border-t border-gold/10 relative overflow-hidden">
-        <img src="/images/vision-hero.jpg" alt="" aria-hidden loading="lazy" className="absolute inset-0 w-full h-full object-cover object-center opacity-15" />
+        <Image src="/images/vision-hero.jpg" alt="" fill sizes="100vw" className="object-cover object-center opacity-15" />
         <div className="absolute inset-0 bg-charcoal/80" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-charcoal to-transparent" />
         <div ref={introRef} className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-20">
@@ -190,7 +191,7 @@ const Vision = () => {
 
       {/* CTA */}
       <section className="py-32 lg:py-48 relative overflow-hidden">
-        <img src="/images/vision-cta-bg.jpg" alt="" aria-hidden loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+        <Image src="/images/vision-cta-bg.jpg" alt="" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-charcoal/85" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-charcoal to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-charcoal to-transparent" />
