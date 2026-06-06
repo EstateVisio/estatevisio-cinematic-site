@@ -1,6 +1,7 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { useParams } from 'next/navigation';
 
 type Language = 'en' | 'bg';
 
@@ -13,17 +14,15 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('bg');
+  const params = useParams();
+  const language: Language = params?.lang === 'bg' ? 'bg' : 'en';
 
   useEffect(() => {
-    const saved = localStorage.getItem('estatevision-language');
-    if (saved === 'en' || saved === 'bg') setLanguage(saved);
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('estatevision-language', language);
     document.documentElement.lang = language;
   }, [language]);
+
+  // setLanguage is kept for API compatibility but navigation handles switching
+  const setLanguage = (_lang: Language) => {};
 
   const t = (translations: { en: string; bg: string }) => translations[language];
 

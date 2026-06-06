@@ -9,6 +9,7 @@ export const copy = {
     vision: { en: 'The Vision', bg: 'Визията' },
     gallery: { en: 'Gallery', bg: 'Галерия' },
     roadmap: { en: "What's Next", bg: 'Какво предстои' },
+    pricing: { en: 'Pricing', bg: 'Цени' },
     contact: { en: 'Contact', bg: 'Контакт' },
     language: { en: 'Language', bg: 'Език' },
     pages: { en: 'Pages', bg: 'Страници' },
@@ -18,8 +19,8 @@ export const copy = {
   hero: {
     title: { en: 'AI for Real Estate', bg: 'AI за недвижими имоти' },
     subtitle: {
-      en: 'Transform your listings into cinematic experiences — and take part in the future of property marketing.',
-      bg: 'Превърнете вашите обяви във филмови изживявания — и станете част от бъдещето на имотния маркетинг.',
+      en: 'Transform your listings into cinematic experiences, and take part in the future of property marketing.',
+      bg: 'Превърнете вашите обяви във филмови изживявания, и станете част от бъдещето на имотния маркетинг.',
     },
     cta: { en: 'Explore EstateVisio', bg: 'Открийте EstateVisio' },
   },
@@ -38,16 +39,16 @@ export const copy = {
   video: {
     title: { en: 'See EstateVisio in action', bg: 'Вижте EstateVisio в действие' },
     subtitle: {
-      en: 'Step into the future — where every property tells its story.',
-      bg: 'Добре дошли в бъдещето — където всеки имот разказва своята история.',
+      en: 'Step into the future: where every property tells its story.',
+      bg: 'Добре дошли в бъдещето: където всеки имот разказва своята история.',
     },
     videoNotSupported: {
       en: 'Your browser does not support the video tag.',
       bg: 'Вашият браузър не поддържа видео тага.',
     },
     caption: {
-      en: 'Yes — every frame you see began as a photo.',
-      bg: 'Да — всяка сцена, която виждате, започна от снимка.',
+      en: 'Yes, every frame you see began as a photo.',
+      bg: 'Да, всяка сцена, която виждате, започна от снимка.',
     },
   },
 
@@ -109,8 +110,8 @@ export const copy = {
   vision: {
     title: { en: 'Vision That Redefines Real Estate', bg: 'Визия, която преосмисля недвижимите имоти' },
     description: {
-      en: 'AI is reshaping real estate. EstateVisio is building the future — from cinematic tours to intelligent property insights, and beyond.',
-      bg: 'AI преобразува недвижимите имоти. EstateVisio изгражда бъдещето — от кинематографични турове до интелигентни имотни анализи и отвъд.',
+      en: 'AI is reshaping real estate. EstateVisio is building the future: from cinematic tours to intelligent property insights, and beyond.',
+      bg: 'AI преобразува недвижимите имоти. EstateVisio изгражда бъдещето: от кинематографични турове до интелигентни имотни анализи и отвъд.',
     },
     badge: { en: 'Innovation in Progress', bg: 'Иновации в развитие' },
   },
@@ -138,7 +139,7 @@ export const copy = {
       dividerLabel: { en: '', bg: '' },
       title: { en: 'Every vision deserves its life.', bg: 'Всяка обява заслужава своя живот.' },
       line1: { en: 'The real estate market moves faster than ever.', bg: 'Пазарът за недвижими имоти се движи по-бързо от всякога.' },
-      line2: { en: "What sets you apart today isn't just the view — it's the feeling it leaves behind.", bg: 'Днес това, което те отличава, не е само облика — а усещането, което оставя.' },
+      line2: { en: "What sets you apart today isn't just the view, it's the feeling it leaves behind.", bg: 'Днес това, което те отличава, не е само облика, а усещането, което оставя.' },
     },
     intro: {
       paragraph1: {
@@ -146,35 +147,35 @@ export const copy = {
         bg: 'Всяка обява се бори за едно и също внимание. Статичните снимки вече не спират никого. Имотите, които се продават по-бързо, са тези, които карат купувачите да почувстват нещо, преди да прекрачат прага.',
       },
       paragraph2: {
-        en: 'We turn photographs into cinema. No crew, no reshoots — just your existing images, transformed into a film that gives your property a presence it has never had before.',
-        bg: 'Превръщаме снимките в кино. Без снимачен екип, без повторни заснемания — само вашите съществуващи изображения, трансформирани във филм, който дава на имота ви присъствие, каквото никога не е имал.',
+        en: 'We turn photographs into cinema. No crew, no reshoots, just your existing images, transformed into a film that gives your property a presence it has never had before.',
+        bg: 'Превръщаме снимките в кино. Без снимачен екип, без повторни заснемания, само вашите съществуващи изображения, трансформирани във филм, който дава на имота ви присъствие, каквото никога не е имал.',
       },
     },
     story1: {
       title: { en: 'The Beginning', bg: 'Началото' },
       description: {
-        en: 'EstateVisio began with a simple question — What if listings could speak for themselves? We saw potential hidden in every image — a story waiting to be told.',
-        bg: 'EstateVisio започна с един прост въпрос — Какво, ако обявите можеха да говорят сами за себе си? Видяхме потенциал, скрит във всяко изображение — история, чакаща да бъде разказана.',
+        en: 'EstateVisio began with a simple question: What if listings could speak for themselves? We saw potential hidden in every image, a story waiting to be told.',
+        bg: 'EstateVisio започна с един прост въпрос: Какво, ако обявите можеха да говорят сами за себе си? Видяхме потенциал, скрит във всяко изображение, история, чакаща да бъде разказана.',
       },
     },
     story2: {
       title: { en: 'The Transformation', bg: 'Трансформацията' },
       description: {
-        en: 'Blending AI precision with creative vision, we bring still photos to life — transforming them into film-like stories that move and inspire.',
-        bg: 'Съчетавайки прецизността на AI с креативната визия, вдъхваме живот на снимките — превръщайки ги във филмови истории, които докосват и вдъхновяват.',
+        en: 'Blending AI precision with creative vision, we bring still photos to life, transforming them into film-like stories that move and inspire.',
+        bg: 'Съчетавайки прецизността на AI с креативната визия, вдъхваме живот на снимките, превръщайки ги във филмови истории, които докосват и вдъхновяват.',
       },
     },
     story3: {
       title: { en: 'The Purpose', bg: 'Целта' },
       description: {
-        en: 'Our mission is to help agents turn property presentations into experiences — into film-like stories that touch and stay remembered.',
-        bg: 'Нашата мисия е да помогнем на брокерите да превърнат представянето на имотите в преживяване — във филмови истории, които докосват и остават в съзнанието.',
+        en: 'Our mission is to help agents turn property presentations into experiences, into film-like stories that touch and stay remembered.',
+        bg: 'Нашата мисия е да помогнем на брокерите да превърнат представянето на имотите в преживяване, във филмови истории, които докосват и остават в съзнанието.',
       },
     },
     quote: {
       text: {
-        en: "We're not redefining real estate — we're redefining the emotion within it.",
-        bg: 'Не преоткриваме недвижимите имоти — преоткриваме емоцията в тях.',
+        en: "We're not redefining real estate, we're redefining the emotion within it.",
+        bg: 'Не преоткриваме недвижимите имоти, преоткриваме емоцията в тях.',
       },
     },
     cta: {
@@ -193,29 +194,29 @@ export const copy = {
       line1: { en: 'From still.', bg: 'От снимка.' },
       line2: { en: 'To cinematic.', bg: 'До кино.' },
       body: {
-        en: 'Every property listing has a story. We make it visible — from your existing photos, no crew needed.',
-        bg: 'Всяка обява разказва история. Ние я правим видима — изцяло от вашите снимки, без екип.',
+        en: 'Every property listing has a story. We make it visible, from your existing photos, no crew needed.',
+        bg: 'Всяка обява разказва история. Ние я правим видима, изцяло от вашите снимки, без екип.',
       },
     },
     service1: {
       title: { en: 'Property Tour', bg: 'Обиколка на имота' },
       location: { en: 'Around the World', bg: 'По целия свят' },
       description: {
-        en: 'A cinematic walkthrough generated entirely from still photographs — every room, every angle.',
-        bg: 'Кинематографична обиколка, създадена изцяло от снимки — всяка стая, всеки ъгъл.',
+        en: 'A cinematic walkthrough generated entirely from still photographs, every room, every angle.',
+        bg: 'Кинематографична обиколка, създадена изцяло от снимки, всяка стая, всеки ъгъл.',
       },
     },
     service2: {
       title: { en: 'Furnishing', bg: 'Обзавеждане' },
       location: { en: 'Sofia, Bulgaria', bg: 'София, България' },
       description: {
-        en: 'Empty spaces transformed into staged, liveable homes — done in minutes, not weeks.',
-        bg: 'Празни пространства, трансформирани в обзаведени домове — за минути, не седмици.',
+        en: 'Empty spaces transformed into staged, liveable homes, done in minutes, not weeks.',
+        bg: 'Празни пространства, трансформирани в обзаведени домове, за минути, не седмици.',
       },
     },
     stat1: {
       value: { en: 'Days', bg: 'Дни' },
-      label: { en: 'Not weeks — your video, ready fast', bg: 'Не седмици — вашето видео, готово светкавично' },
+      label: { en: 'Not weeks, your video, ready fast', bg: 'Не седмици, вашето видео, готово светкавично' },
     },
     stat2: {
       value: { en: '×4', bg: '×4' },
@@ -223,31 +224,81 @@ export const copy = {
     },
     stat3: {
       value: { en: 'No', bg: 'Без' },
-      label: { en: 'Camera crew — just your photos', bg: 'Снимачен екип — само вашите снимки' },
+      label: { en: 'Camera crew, just your photos', bg: 'Снимачен екип, само вашите снимки' },
     },
   },
 
   // Gallery Page
   galleryPage: {
-    title: { en: 'AI Property Video Gallery', bg: 'AI галерия — видео за имоти' },
-    scene1: {
-      title: { en: 'Property Tour', bg: 'Обиколка на имота' },
-      location: { en: 'Around the World', bg: 'По целия свят' },
-      description: {
-        en: 'A cinematic walkthrough generated entirely from still photographs — every room, every angle, no camera crew.',
-        bg: 'Кинематографична обиколка, създадена изцяло от снимки — всяка стая, всеки ъгъл, без снимачен екип.',
+    title: { en: 'Industries We Serve', bg: 'Индустрии, които обслужваме' },
+    subtitle: {
+      en: 'Cinematic AI video, built for every sector of the built environment.',
+      bg: 'Кинематографично AI видео, създадено за всеки сектор на изграденото пространство.',
+    },
+    industries: {
+      realEstate: {
+        tag: { en: 'Real Estate', bg: 'Недвижими имоти' },
+        title: { en: 'Real Estate Tours', bg: 'Огледи на имоти' },
+        description: {
+          en: 'A cinematic walkthrough generated entirely from still photographs: every room, every angle, no camera crew required.',
+          bg: 'Кинематографична обиколка, създадена изцяло от снимки: всяка стая, всеки ъгъл, без снимачен екип.',
+        },
+        videoLabel: { en: '2 min · HD', bg: '2 мин · HD' },
+      },
+      interiorDesign: {
+        tag: { en: 'Interior Design', bg: 'Интериорен дизайн' },
+        title: { en: 'Interior Design', bg: 'Интериорен дизайн' },
+        description: {
+          en: 'An empty space transformed. Bare walls become a staged, liveable home, furnished in minutes, not weeks.',
+          bg: 'Празно пространство, преобразено. Голи стени стават обзаведен, уютен дом, за минути, не за седмици.',
+        },
+        videoLabel: { en: 'Before · After · 2 min', bg: 'Преди · След · 2 мин' },
+      },
+      renovations: {
+        tag: { en: 'Renovations', bg: 'Ремонти' },
+        title: { en: 'Renovation Showcases', bg: 'Представяне на ремонти' },
+        description: {
+          en: 'Capture the full transformation, from raw space to finished result, in a single compelling visual story.',
+          bg: 'Покажете цялата трансформация, от суровото пространство до крайния резултат, в една завладяваща визуална история.',
+        },
+        videoLabel: { en: 'Coming Soon', bg: 'Очаквайте скоро' },
+      },
+      construction: {
+        tag: { en: 'Construction', bg: 'Строителство' },
+        title: { en: 'Construction Progress', bg: 'Строителен прогрес' },
+        description: {
+          en: 'Showcase building milestones and attract investors with dynamic, cinematic progress reels that speak for themselves.',
+          bg: 'Представете строителните етапи и привлечете инвеститори с динамични, кинематографични клипове.',
+        },
+        videoLabel: { en: 'Coming Soon', bg: 'Очаквайте скоро' },
+      },
+      architecture: {
+        tag: { en: 'Architecture', bg: 'Архитектура' },
+        title: { en: 'Architectural Projects', bg: 'Архитектурни проекти' },
+        description: {
+          en: 'Bring bold architectural visions to life: facades, forms, and spaces presented with the cinematic weight they deserve.',
+          bg: 'Вдъхнете живот на смели архитектурни визии: фасади, форми и пространства, представени с кинематографична тежест.',
+        },
+        videoLabel: { en: 'Coming Soon', bg: 'Очаквайте скоро' },
+      },
+      landscape: {
+        tag: { en: 'Landscape', bg: 'Ландшафт' },
+        title: { en: 'Landscape Design', bg: 'Ландшафтен дизайн' },
+        description: {
+          en: 'Outdoor spaces deserve the same visual care as interiors: sculpted gardens, terraces, and grounds shown at their best.',
+          bg: 'Външните пространства заслужават същото визуално внимание като интериорите: градини, тераси и дворове в най-добрата им светлина.',
+        },
+        videoLabel: { en: 'Coming Soon', bg: 'Очаквайте скоро' },
       },
     },
-    scene2: {
-      title: { en: 'Apartment Furnishing', bg: 'Обзавеждане на апартамент' },
-      location: { en: 'Sofia, Bulgaria', bg: 'София, България' },
-      description: {
-        en: 'An empty space transformed. Bare walls become a staged, liveable home — furnishing applied in minutes, not weeks.',
-        bg: 'Празно пространство, преобразено. Голи стени стават обзаведен, уютен дом — за минути, не седмици.',
-      },
+    comingSoon: { en: 'Coming Soon', bg: 'Очаквайте скоро' },
+    comingSoonSub: {
+      en: 'This industry showcase is in production.',
+      bg: 'Материалите за тази индустрия са в процес на изготвяне.',
     },
+    clickToReveal: { en: 'Click to watch', bg: 'Кликнете, за да гледате' },
     cta: {
-      heading: { en: 'Want one for your property?', bg: 'Искате такова за вашия имот?' },
+      heading: { en: 'Want one for your project?', bg: 'Искате такова за вашия проект?' },
       button: { en: 'Get started', bg: 'Започнете сега' },
     },
   },
@@ -274,8 +325,17 @@ export const copy = {
   contact: {
     title: { en: 'Get in Touch', bg: 'Свържете се с нас' },
     subtitle: {
-      en: "Ready to transform your property listings? Let's start a conversation.",
-      bg: 'Готови ли сте да трансформирате вашите имотни обяви? Нека започнем разговор.',
+      en: "Ready to elevate your visual content? Let's start a conversation.",
+      bg: 'Готови ли сте да издигнете визуалното си съдържание? Нека започнем разговор.',
+    },
+    reason: {
+      label: { en: 'What are you interested in?', bg: 'Какво ви интересува?' },
+      single: { en: 'Start Here: 1 video', bg: 'Започнете тук: 1 видео' },
+      fivePack: { en: 'Build Momentum: 5 videos', bg: 'Наберете скорост: 5 видеа' },
+      tenPack: { en: 'Own the Market: 10 videos', bg: 'Доминирайте пазара: 10 видеа' },
+      custom: { en: 'Partnership', bg: 'Партньорство' },
+      question: { en: 'General question', bg: 'Общ въпрос' },
+      demo: { en: 'Request a demo', bg: 'Поискайте демо' },
     },
     form: {
       name: { en: 'Name', bg: 'Име' },
@@ -301,8 +361,8 @@ export const copy = {
     vision: {
       title: { en: 'Our Vision', bg: 'Нашата визия' },
       description: {
-        en: 'To bring listings to life — through AI-powered video tours that turn every property into its own cinematic story.',
-        bg: 'Да вдъхнем живот на обявите — чрез видео разходи, създадени чрез изкуствен интелект, които превръщат всеки имот в негова собствена филмова история.',
+        en: 'To bring spaces to life through AI-powered video that turns every project into its own cinematic story.',
+        bg: 'Да вдъхнем живот на пространствата чрез видео, създадено с изкуствен интелект, което превръща всеки проект в негова собствена филмова история.',
       },
     },
   },
@@ -311,8 +371,8 @@ export const copy = {
   servicesPage: {
     title: { en: 'How It Works', bg: 'Как работи' },
     intro: {
-      en: 'Your listings deserve cinematic stories — and with EstateVisio, creating them has never been easier.',
-      bg: 'Вашите обяви заслужават кинематографични истории — а с EstateVisio създаването им никога не е било по-лесно.',
+      en: 'Your listings deserve cinematic stories, and with EstateVisio, creating them has never been easier.',
+      bg: 'Вашите обяви заслужават кинематографични истории, а с EstateVisio създаването им никога не е било по-лесно.',
     },
     steps: {
       one: { en: 'Step One', bg: 'Стъпка Първа' },
@@ -322,23 +382,23 @@ export const copy = {
     step1: {
       title: { en: 'Sending the Photos', bg: 'Изпращане на снимките' },
       description: {
-        en: 'It starts with your photos. You send us your property images — the raw material for every story.',
-        bg: 'Всичко започва с вашите снимки. Вие изпращате вашите изображения на имота — суровият материал за една нова история.',
+        en: 'It starts with your photos. You send us your property images, the raw material for every story.',
+        bg: 'Всичко започва с вашите снимки. Вие изпращате вашите изображения на имота, суровият материал за една нова история.',
       },
     },
     step2: {
       title: { en: 'Evaluation & Processing', bg: 'Оценка и обработка' },
       description: {
-        en: 'We analyze, refine, and sequence your images with care — reviewing each frame to ensure flawless quality and film-like continuity from start to finish.',
-        bg: 'Ние анализираме, усъвършенстваме и подреждаме вашите изображения с внимание — преглеждаме всеки кадър, за да осигурим безупречно качество и филмова последователност от началото до края.',
+        en: 'We analyze, refine, and sequence your images with care, reviewing each frame to ensure flawless quality and film-like continuity from start to finish.',
+        bg: 'Ние анализираме, усъвършенстваме и подреждаме вашите изображения с внимание, преглеждаме всеки кадър, за да осигурим безупречно качество и филмова последователност от началото до края.',
       },
       aiProcessing: { en: '// AI Processing...', bg: '// AI Обработка...' },
     },
     step3: {
       title: { en: 'The Final Result', bg: 'Крайният резултат' },
       description: {
-        en: 'A cinematic movie experience — where every frame tells the story of your property and leaves a lasting impression.',
-        bg: 'Филмово изживяване — където всеки кадър разказва историята на вашия имот и оставя трайно впечатление.',
+        en: 'A cinematic movie experience: where every frame tells the story of your property and leaves a lasting impression.',
+        bg: 'Филмово изживяване: където всеки кадър разказва историята на вашия имот и оставя трайно впечатление.',
       },
       videoLabel: { en: 'Cinematic Property Video', bg: 'Кинематографично видео на имота' },
     },
@@ -377,8 +437,8 @@ export const copy = {
       badge: { en: 'The Journey Begins', bg: 'Пътешествието започва' },
       title: { en: 'Every great story starts with a vision.', bg: 'Всяка велика история започва с визия.' },
       description: {
-        en: 'EstateVisio was founded with a single mission — to redefine how real estate is seen and experienced through the power of AI.',
-        bg: 'EstateVisio започна с една мисия — да преосмисли как недвижимите имоти се виждат и изживяват чрез силата на изкуствения интелект.',
+        en: 'EstateVisio was founded with a single mission: to redefine how real estate is seen and experienced through the power of AI.',
+        bg: 'EstateVisio започна с една мисия: да преосмисли как недвижимите имоти се виждат и изживяват чрез силата на изкуствения интелект.',
       },
     },
     scene2: {
@@ -386,7 +446,7 @@ export const copy = {
       title: { en: 'Where We Are Today', bg: 'Къде сме днес' },
       description: {
         en: 'Today, we breathe new life into properties through film-like AI tours. From photos to immersive videos, EstateVisio helps real estate professionals present their listings with elegance and emotion.',
-        bg: 'Днес вдъхваме нов живот на имотите чрез филмови AI разходки. От снимки до потапящи видеа — EstateVisio помага на професионалистите в недвижимите имоти да представят обявите си с елегантност и емоция.',
+        bg: 'Днес вдъхваме нов живот на имотите чрез филмови AI разходки. От снимки до потапящи видеа, EstateVisio помага на професионалистите в недвижимите имоти да представят обявите си с елегантност и емоция.',
       },
       features: {
         quality: {
@@ -395,13 +455,13 @@ export const copy = {
         },
         speed: {
           title: { en: 'Delivered in 24 Hours', bg: 'Доставено до 24 часа' },
-          description: { en: 'Your property, transformed into a film — overnight.', bg: 'Вашият имот, превърнат във филм — за една нощ.' },
+          description: { en: 'Your property, transformed into a film overnight.', bg: 'Вашият имот, превърнат във филм за една нощ.' },
         },
         scale: {
           title: { en: 'Trusted Partnership', bg: 'Доверено партньорство' },
           description: {
-            en: 'We handle the visuals — you close the deals.',
-            bg: 'Ние се грижим за визията — вие сключвате сделките.',
+            en: 'We handle the visuals, you close the deals.',
+            bg: 'Ние се грижим за визията, вие сключвате сделките.',
           },
         },
       },
@@ -410,8 +470,8 @@ export const copy = {
       badge: { en: 'Coming Soon', bg: 'Скоро' },
       title: { en: 'Expanding Horizons', bg: 'Разширяване на хоризонтите' },
       description: {
-        en: 'The next chapter returns the power to the storytellers — the agents and property owners. EstateVisio provides the tools to create film-like videos, marketing content, and immersive presentations with ease. Professional quality — now in your hands.',
-        bg: 'Следващата глава връща силата в ръцете на разказвачите — брокерите и собствениците на имоти. EstateVisio предоставя инструментите, които им позволяват да създават филмови видеа, маркетинг съдържание и потапящи презентации с лекота. Професионалното качество вече е във вашите ръце.',
+        en: 'The next chapter returns the power to the storytellers: the agents and property owners. EstateVisio provides the tools to create film-like videos, marketing content, and immersive presentations with ease. Professional quality, now in your hands.',
+        bg: 'Следващата глава връща силата в ръцете на разказвачите: брокерите и собствениците на имоти. EstateVisio предоставя инструментите, които им позволяват да създават филмови видеа, маркетинг съдържание и потапящи презентации с лекота. Професионалното качество вече е във вашите ръце.',
       },
       features: {
         insights: {
@@ -424,7 +484,7 @@ export const copy = {
         },
         lightningFast: {
           title: { en: 'Lightning Fast', bg: 'Светкавично бързо' },
-          description: { en: 'Not hours — just minutes.', bg: 'Не часове, а минути.' },
+          description: { en: 'Not hours, just minutes.', bg: 'Не часове, а минути.' },
         },
       },
     },
@@ -432,12 +492,12 @@ export const copy = {
       badge: { en: 'The Vision Ahead', bg: 'Поглед към бъдещето' },
       title: { en: 'The Future of Real Estate', bg: 'Бъдещето на недвижимите имоти' },
       description: {
-        en: 'We imagine a world where artificial intelligence breathes life into every real estate experience — from the first impression to the closing of the deal. EstateVisio is creating that future today, guided by precision and inspiration.',
-        bg: 'Представяме си свят, в който изкуственият интелект вдъхва живот на всяко преживяване с недвижимите имоти — от първото впечатление до сключването на сделката. EstateVisio създава това бъдеще още днес, водено от прецизност и вдъхновение.',
+        en: 'We imagine a world where artificial intelligence breathes life into every real estate experience, from the first impression to the closing of the deal. EstateVisio is creating that future today, guided by precision and inspiration.',
+        bg: 'Представяме си свят, в който изкуственият интелект вдъхва живот на всяко преживяване с недвижимите имоти, от първото впечатление до сключването на сделката. EstateVisio създава това бъдеще още днес, водено от прецизност и вдъхновение.',
       },
       quote: {
-        en: "AI isn't here to replace agents — it's here to elevate their potential to a new level.",
-        bg: 'AI не е тук, за да замени брокерите — а за да издигне техния потенциал на ново ниво',
+        en: "AI isn't here to replace agents, it's here to elevate their potential to a new level.",
+        bg: 'AI не е тук, за да замени брокерите, а за да издигне техния потенциал на ново ниво',
       },
     },
     scene5: {

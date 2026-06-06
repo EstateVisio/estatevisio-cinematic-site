@@ -7,8 +7,8 @@ const titles = {
 };
 
 const descriptions = {
-  en: 'Meet EstateVisio — an AI company redefining how real estate is marketed. We turn still photos into cinematic property videos that drive 3x more engagement.',
-  bg: 'Запознайте се с EstateVisio — AI компания, която преосмисля маркетинга на недвижими имоти. Превръщаме снимки в кинематографични видеа с 3 пъти повече ангажираност.',
+  en: 'Meet EstateVisio, an AI company redefining how real estate is marketed. We turn still photos into cinematic property videos that drive 3x more engagement.',
+  bg: 'Запознайте се с EstateVisio, AI компания, която преосмисля маркетинга на недвижими имоти. Превръщаме снимки в кинематографични видеа с 3 пъти повече ангажираност.',
 };
 
 function getJsonLd(lang: string) {

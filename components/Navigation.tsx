@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useParams } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import { useScrollVisibility } from '@/hooks/useScrollVisibility';
@@ -13,6 +13,8 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 const Navigation = () => {
   const { t } = useLanguage();
   const pathname = usePathname();
+  const params = useParams();
+  const lang = params?.lang === 'bg' ? 'bg' : 'en';
   const isVisible = useScrollVisibility();
   const [scrolled, setScrolled] = useState(false);
 
@@ -23,11 +25,12 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: copy.navigation.home, path: '/' },
-    { label: copy.navigation.vision, path: '/vision' },
-    { label: copy.navigation.services, path: '/services' },
-    { label: copy.navigation.gallery, path: '/gallery' },
-    { label: copy.navigation.contact, path: '/contact' },
+    { label: copy.navigation.home, path: `/${lang}` },
+    { label: copy.navigation.vision, path: `/${lang}/vision` },
+    { label: copy.navigation.services, path: `/${lang}/services` },
+    { label: copy.navigation.gallery, path: `/${lang}/gallery` },
+    { label: copy.navigation.pricing, path: `/${lang}/pricing` },
+    { label: copy.navigation.contact, path: `/${lang}/contact` },
   ];
 
   return (
@@ -38,12 +41,12 @@ const Navigation = () => {
         scrolled ? 'bg-charcoal/85 backdrop-blur-md border-b border-gold/10' : 'bg-gradient-to-b from-charcoal/85 to-transparent'
       )}
     >
-      {/* Logo — left col */}
-      <Link href="/" className="flex-shrink-0 justify-self-start">
-        <img src="/images/estatevision-logo.png" alt="EstateVisio" className="h-12 w-auto" />
+      {/* Logo: left col */}
+      <Link href={`/${lang}`} className="flex-shrink-0 justify-self-start">
+        <img src="/images/estatevisio-logo.png" alt="EstateVisio" className="h-12 w-auto" />
       </Link>
 
-      {/* Nav links — centre col, truly centred */}
+      {/* Nav links: centre col, truly centred */}
       <nav className="flex justify-center">
         <ul className="flex items-center gap-10">
           {navItems.map((item) => {
@@ -67,7 +70,7 @@ const Navigation = () => {
         </ul>
       </nav>
 
-      {/* Language switcher — right col */}
+      {/* Language switcher: right col */}
       <div className="flex justify-end">
         <LanguageSwitcher />
       </div>

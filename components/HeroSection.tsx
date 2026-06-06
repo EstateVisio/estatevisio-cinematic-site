@@ -38,7 +38,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ aboutRef }) => {
         </div>
       </div>
 
-      {/* Content — editorial bottom-left */}
+      {/* Content: editorial bottom-left */}
       <div className="relative z-10 h-full flex flex-col justify-end px-8 lg:px-20 pb-16 lg:pb-24">
         {/* Large display headline */}
         <h1 className="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.92] font-light tracking-tight text-cloud-white mb-8 animate-fade-in">

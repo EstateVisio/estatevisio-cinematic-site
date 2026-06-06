@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useParams, useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -18,17 +18,27 @@ import {
 } from '@/components/ui/sheet';
 
 const MobileNav = () => {
-  const { t, language, setLanguage } = useLanguage();
+  const { t } = useLanguage();
   const pathname = usePathname();
+  const params = useParams();
+  const router = useRouter();
+  const lang = params?.lang === 'bg' ? 'bg' : 'en';
   const [open, setOpen] = useState(false);
 
   const navItems = [
-    { label: copy.navigation.home, path: '/' },
-    { label: copy.navigation.services, path: '/services' },
-    { label: copy.navigation.vision, path: '/vision' },
-    { label: copy.navigation.roadmap, path: '/roadmap' },
-    { label: copy.navigation.contact, path: '/contact' },
+    { label: copy.navigation.home, path: `/${lang}` },
+    { label: copy.navigation.services, path: `/${lang}/services` },
+    { label: copy.navigation.vision, path: `/${lang}/vision` },
+    { label: copy.navigation.roadmap, path: `/${lang}/roadmap` },
+    { label: copy.navigation.contact, path: `/${lang}/contact` },
   ];
+
+  const switchLang = (newLang: 'en' | 'bg') => {
+    if (newLang === lang) return;
+    const newPath = pathname.replace(`/${lang}`, `/${newLang}`);
+    router.push(newPath);
+    setOpen(false);
+  };
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -49,7 +59,7 @@ const MobileNav = () => {
       >
         <SheetHeader className="border-b border-gold/20 pb-4">
           <SheetTitle className="flex items-center justify-center">
-            <img src="/images/estatevision-logo.png" alt="EstateVisio" className="h-8 w-auto" />
+            <img src="/images/estatevisio-logo.png" alt="EstateVisio" className="h-8 w-auto" />
           </SheetTitle>
         </SheetHeader>
 
@@ -61,12 +71,12 @@ const MobileNav = () => {
             </p>
             <div className="flex gap-2">
               <Button
-                variant={language === 'en' ? 'default' : 'outline'}
+                variant={lang === 'en' ? 'default' : 'outline'}
                 size="sm"
-                onClick={() => setLanguage('en')}
+                onClick={() => switchLang('en')}
                 className={cn(
                   'flex-1',
-                  language === 'en'
+                  lang === 'en'
                     ? 'bg-gold text-charcoal hover:bg-gold/90'
                     : 'border-gold/30 text-cloud hover:bg-gold/10'
                 )}
@@ -74,12 +84,12 @@ const MobileNav = () => {
                 EN
               </Button>
               <Button
-                variant={language === 'bg' ? 'default' : 'outline'}
+                variant={lang === 'bg' ? 'default' : 'outline'}
                 size="sm"
-                onClick={() => setLanguage('bg')}
+                onClick={() => switchLang('bg')}
                 className={cn(
                   'flex-1',
-                  language === 'bg'
+                  lang === 'bg'
                     ? 'bg-gold text-charcoal hover:bg-gold/90'
                     : 'border-gold/30 text-cloud hover:bg-gold/10'
                 )}

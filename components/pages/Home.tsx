@@ -39,8 +39,8 @@ function Reveal({
 }
 
 const SERVICE_META = [
-  { id: '01', image: '/images/gallery-tour-bg.jpg', anchor: 'scene-01', copy: 'service1' as const },
-  { id: '02', image: '/images/about-architecture.jpg', anchor: 'scene-02', copy: 'service2' as const },
+  { id: '01', image: '/images/gallery-tour-bg.jpg', industryKey: 'realEstate' as const },
+  { id: '02', image: '/images/about-architecture.jpg', industryKey: 'interiorDesign' as const },
 ];
 
 const Home = () => {
@@ -53,9 +53,9 @@ const Home = () => {
 
   const SERVICES = SERVICE_META.map((s) => ({
     ...s,
-    title: t(copy.homePage[s.copy].title),
-    location: t(copy.homePage[s.copy].location),
-    description: t(copy.homePage[s.copy].description),
+    title: t(copy.galleryPage.industries[s.industryKey].title),
+    tag: t(copy.galleryPage.industries[s.industryKey].tag),
+    description: t(copy.galleryPage.industries[s.industryKey].description),
   }));
 
   const STATS = [
@@ -123,12 +123,12 @@ const Home = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/92 via-charcoal/35 to-charcoal/5" />
-              <Link href={`/${lang}/gallery#${service.anchor}`} className="absolute inset-0 flex flex-col justify-between p-8 lg:p-10">
+              <Link href={`/${lang}/gallery`} className="absolute inset-0 flex flex-col justify-between p-8 lg:p-10">
                 <span className="font-display text-[6rem] leading-none text-cloud-white/6 font-light select-none">
                   {service.id}
                 </span>
                 <div>
-                  <p className="text-cloud-white/75 text-xs tracking-[0.2em] uppercase mb-3 [text-shadow:0_1px_8px_rgba(0,0,0,1)]">{service.location}</p>
+                  <p className="text-cloud-white/75 text-xs tracking-[0.2em] uppercase mb-3 [text-shadow:0_1px_8px_rgba(0,0,0,1)]">{service.tag}</p>
                   <h3 className="font-display text-[clamp(2.2rem,3vw,4rem)] font-light italic text-cloud-white leading-tight mb-3 [text-shadow:0_2px_16px_rgba(0,0,0,0.9)]">
                     {service.title}
                   </h3>
@@ -171,7 +171,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 5. Showcase video — hidden until video is ready */}
+      {/* 5. Showcase video: hidden until video is ready */}
       <section className="hidden py-20 lg:py-32 border-t border-gold/10">
         <div
           ref={videoRef}

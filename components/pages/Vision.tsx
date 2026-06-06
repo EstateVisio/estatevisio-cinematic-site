@@ -110,7 +110,7 @@ const Vision = () => {
       {/* Hero */}
       <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/vision-hero.jpg" alt="Cinematic AI property video — EstateVisio" fetchPriority="high" className="w-full h-full object-cover animate-ken-burns" />
+          <img src="/images/vision-hero.jpg" alt="Cinematic AI property video by EstateVisio" fetchPriority="high" className="w-full h-full object-cover animate-ken-burns" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/10" />
         </div>
         <div className="relative z-10 h-full flex flex-col justify-end px-8 lg:px-20 pb-20 lg:pb-32">

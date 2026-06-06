@@ -4,10 +4,13 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import TextRenderer from '@/components/ui/TextRenderer';
 import { copy } from '@/config/copy';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { useInView } from '@/hooks/useInView';
 
 const CTASection = () => {
   const { t } = useLanguage();
+  const params = useParams();
+  const lang = params?.lang === 'bg' ? 'bg' : 'en';
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
@@ -19,14 +22,14 @@ const CTASection = () => {
         aria-hidden
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
-      {/* Dark overlay — cinematic but legible */}
+      {/* Dark overlay: cinematic but legible */}
       <div className="absolute inset-0 bg-charcoal/88" />
       {/* Top fade */}
       <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-charcoal to-transparent" />
       {/* Bottom fade */}
       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-charcoal to-transparent" />
 
-      {/* Vertical gold accent — top */}
+      {/* Vertical gold accent: top */}
       <div className="absolute top-0 inset-x-0 flex justify-center pointer-events-none">
         <div className="w-px h-16 bg-gradient-to-b from-transparent via-gold/25 to-transparent" />
       </div>
@@ -59,12 +62,12 @@ const CTASection = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/contact" onClick={() => window.scrollTo(0, 0)}>
+          <Link href={`/${lang}/contact`} onClick={() => window.scrollTo(0, 0)}>
             <button className="px-10 py-4 bg-gold text-charcoal text-sm tracking-[0.1em] uppercase font-medium hover:bg-gold/85 active:scale-[0.98] transition-all duration-300">
               <TextRenderer>{t(copy.cta.requestDemo)}</TextRenderer>
             </button>
           </Link>
-          <Link href="/services" onClick={() => window.scrollTo(0, 0)}>
+          <Link href={`/${lang}/services`} onClick={() => window.scrollTo(0, 0)}>
             <button className="px-10 py-4 border border-gold/30 text-cloud-white/55 text-sm tracking-[0.1em] uppercase hover:border-gold/70 hover:text-cloud-white active:scale-[0.98] transition-all duration-300">
               <TextRenderer>{t(copy.cta.learnMore)}</TextRenderer>
             </button>
@@ -72,7 +75,7 @@ const CTASection = () => {
         </div>
       </div>
 
-      {/* Vertical gold accent — bottom */}
+      {/* Vertical gold accent: bottom */}
       <div className="absolute bottom-0 inset-x-0 z-10 flex justify-center pointer-events-none">
         <div className="w-px h-16 bg-gradient-to-t from-transparent via-gold/25 to-transparent" />
       </div>

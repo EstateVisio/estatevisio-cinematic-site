@@ -2,8 +2,8 @@ import type { Metadata, PageProps } from 'next';
 import Contact from '@/components/pages/Contact';
 
 const titles = {
-  en: 'Contact EstateVisio — Request a Free AI Property Video Demo',
-  bg: 'Свържете се с EstateVisio — Безплатна AI видео демонстрация',
+  en: 'Contact EstateVisio: Request a Free AI Property Video Demo',
+  bg: 'Свържете се с EstateVisio: Безплатна AI видео демонстрация',
 };
 
 const descriptions = {

@@ -2,8 +2,8 @@ import type { Metadata, PageProps } from 'next';
 import Services from '@/components/pages/Services';
 
 const titles = {
-  en: 'How It Works — AI Property Video in 3 Steps | EstateVisio',
-  bg: 'Как работи — AI видео за имоти в 3 стъпки | EstateVisio',
+  en: 'How It Works: AI Property Video in 3 Steps | EstateVisio',
+  bg: 'Как работи: AI видео за имоти в 3 стъпки | EstateVisio',
 };
 
 const descriptions = {

@@ -1,15 +1,15 @@
 import type { Metadata, PageProps } from 'next';
 import { Suspense } from 'react';
-import Gallery from '@/components/pages/Gallery';
+import GalleryA from '@/components/pages/GalleryA';
 
 const titles = {
-  en: 'AI Property Video Gallery — Tours & Furnishing | EstateVisio',
-  bg: 'AI галерия — разходки и обзавеждане на имоти | EstateVisio',
+  en: 'AI Property Video Gallery: Industries We Serve | EstateVisio',
+  bg: 'AI галерия: индустрии, които обслужваме | EstateVisio',
 };
 
 const descriptions = {
-  en: 'Browse cinematic property tours and AI-generated furnishing videos. Every frame began as a photograph — see what AI video production looks like in practice.',
-  bg: 'Разгледайте кинематографични разходки на имоти и AI-генерирани видеа за обзавеждане. Всеки кадър е започнал от снимка — вижте AI видео производство в действие.',
+  en: 'Explore cinematic AI video production across real estate, interior design, renovations, and construction. Every frame began as a photograph.',
+  bg: 'Разгледайте кинематографично AI видео производство в сферите на недвижими имоти, интериорен дизайн, ремонти и строителство.',
 };
 
 function getJsonLd(lang: string) {
@@ -17,35 +17,43 @@ function getJsonLd(lang: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: isEn ? 'EstateVisio AI Property Video Gallery' : 'Галерия AI видео за имоти — EstateVisio',
+    name: isEn
+      ? 'EstateVisio AI Video Gallery: Industries'
+      : 'Галерия AI видео: индустрии, EstateVisio',
     description: isEn
-      ? 'Cinematic AI property videos produced by EstateVisio'
-      : 'Кинематографични AI видеа за имоти от EstateVisio',
-    numberOfItems: 2,
+      ? 'Cinematic AI video production for real estate and beyond'
+      : 'Кинематографично AI видео производство за недвижими имоти и повече',
+    numberOfItems: 4,
     itemListElement: [
       {
         '@type': 'ListItem',
         position: 1,
-        name: isEn ? 'Property Tour Video' : 'Видео — обиколка на имот',
-        description: isEn
-          ? 'A cinematic walkthrough generated entirely from still photographs'
-          : 'Кинематографична обиколка, създадена изцяло от снимки',
-        url: `https://estatevisio.com/${isEn ? 'en' : 'bg'}/gallery#scene-01`,
+        name: isEn ? 'Real Estate Tours' : 'Огледи на имоти',
+        url: `https://estatevisio.com/${isEn ? 'en' : 'bg'}/gallery-a`,
       },
       {
         '@type': 'ListItem',
         position: 2,
-        name: isEn ? 'Apartment Furnishing Video' : 'Видео — обзавеждане на апартамент',
-        description: isEn
-          ? 'An empty space transformed with AI-generated furnishing'
-          : 'Празно пространство, преобразено с AI-генерирано обзавеждане',
-        url: `https://estatevisio.com/${isEn ? 'en' : 'bg'}/gallery#scene-02`,
+        name: isEn ? 'Interior Design' : 'Интериорен дизайн',
+        url: `https://estatevisio.com/${isEn ? 'en' : 'bg'}/gallery-a`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: isEn ? 'Renovation Showcases' : 'Представяне на ремонти',
+        url: `https://estatevisio.com/${isEn ? 'en' : 'bg'}/gallery-a`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: isEn ? 'Construction Progress' : 'Строителен прогрес',
+        url: `https://estatevisio.com/${isEn ? 'en' : 'bg'}/gallery-a`,
       },
     ],
   };
 }
 
-export async function generateMetadata({ params }: PageProps<'/[lang]/gallery'>): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<'/[lang]/gallery-a'>): Promise<Metadata> {
   const { lang } = await params;
   const l = lang === 'bg' ? 'bg' : 'en';
 
@@ -53,15 +61,15 @@ export async function generateMetadata({ params }: PageProps<'/[lang]/gallery'>)
     title: titles[l],
     description: descriptions[l],
     alternates: {
-      canonical: `https://estatevisio.com/${l}/gallery`,
+      canonical: `https://estatevisio.com/${l}/gallery-a`,
       languages: {
-        en: 'https://estatevisio.com/en/gallery',
-        bg: 'https://estatevisio.com/bg/gallery',
-        'x-default': 'https://estatevisio.com/en/gallery',
+        en: 'https://estatevisio.com/en/gallery-a',
+        bg: 'https://estatevisio.com/bg/gallery-a',
+        'x-default': 'https://estatevisio.com/en/gallery-a',
       },
     },
     openGraph: {
-      url: `https://estatevisio.com/${l}/gallery`,
+      url: `https://estatevisio.com/${l}/gallery-a`,
       title: titles[l],
       description: descriptions[l],
       images: [{ url: 'https://estatevisio.com/social_card.png', width: 1200, height: 630 }],
@@ -75,7 +83,7 @@ export async function generateMetadata({ params }: PageProps<'/[lang]/gallery'>)
   };
 }
 
-export default async function Page({ params }: PageProps<'/[lang]/gallery'>) {
+export default async function Page({ params }: PageProps<'/[lang]/gallery-a'>) {
   const { lang } = await params;
   const l = lang === 'bg' ? 'bg' : 'en';
   return (
@@ -85,7 +93,7 @@ export default async function Page({ params }: PageProps<'/[lang]/gallery'>) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLd(l)) }}
       />
       <Suspense>
-        <Gallery />
+        <GalleryA />
       </Suspense>
     </>
   );
