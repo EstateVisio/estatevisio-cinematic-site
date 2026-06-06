@@ -14,7 +14,6 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
 import PhoneMockup from '@/components/PhoneMockup';
-import SavingsCalculatorV5 from '@/components/calculator/SavingsCalculatorV5';
 import Link from 'next/link';
 import React, { useRef } from 'react';
 import { useInView } from '@/hooks/useInView';
@@ -83,7 +82,6 @@ export default function HomeV15() {
       </section>
 
       {/* 3. Calculator: early, right after the statement */}
-      <SavingsCalculatorV5 />
 
       {/* Decorative divider */}
       <div className="relative flex items-center justify-center bg-charcoal">

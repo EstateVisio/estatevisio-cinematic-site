@@ -7,7 +7,6 @@ import HeroSection from '@/components/HeroSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
-import SavingsCalculatorV5 from '@/components/calculator/SavingsCalculatorV5';
 import Link from 'next/link';
 import { Play } from 'lucide-react';
 import React, { useRef } from 'react';
@@ -99,7 +98,6 @@ export default function HomeV13() {
       </section>
 
       {/* 4. Calculator: after seeing the product, before the stats */}
-      <SavingsCalculatorV5 />
 
       {/* 5. Stats strip */}
       <section className="border-t border-gold/10">

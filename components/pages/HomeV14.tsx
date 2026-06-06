@@ -13,7 +13,6 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
 import PhoneMockup from '@/components/PhoneMockup';
-import SavingsCalculatorV5 from '@/components/calculator/SavingsCalculatorV5';
 import Link from 'next/link';
 import React, { useRef } from 'react';
 import { useInView } from '@/hooks/useInView';
@@ -123,7 +122,6 @@ export default function HomeV14() {
       </section>
 
       {/* 5. Calculator: late, after stats */}
-      <SavingsCalculatorV5 />
 
       {/* 6. CTA */}
       <CTASection />

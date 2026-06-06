@@ -7,7 +7,6 @@ import HeroSection from '@/components/HeroSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import MobileNav from '@/components/MobileNav';
-import SavingsCalculatorV5 from '@/components/calculator/SavingsCalculatorV5';
 import Link from 'next/link';
 import { Play } from 'lucide-react';
 import React, { useRef } from 'react';
@@ -70,7 +69,6 @@ export default function HomeV12() {
       </section>
 
       {/* 3. Calculator: immediately after statement */}
-      <SavingsCalculatorV5 />
 
       {/* Decorative divider */}
       <div className="relative flex items-center justify-center py-0 bg-charcoal">
