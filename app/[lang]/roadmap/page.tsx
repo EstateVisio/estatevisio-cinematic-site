@@ -1,4 +1,4 @@
-import type { Metadata, PageProps } from 'next';
+import type { Metadata } from 'next';
 import Roadmap from '@/components/pages/Roadmap';
 
 const titles = {
@@ -11,7 +11,7 @@ const descriptions = {
   bg: 'Вижте накъде се насочва EstateVisio: от кинематографични разходки до интелигентни AI инструменти за недвижими имоти. Открийте какво предстои.',
 };
 
-export async function generateMetadata({ params }: PageProps<'/[lang]/roadmap'>): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const l = lang === 'bg' ? 'bg' : 'en';
 

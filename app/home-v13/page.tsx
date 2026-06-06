@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+export const dynamic = 'force-dynamic';
+
 import HomeV13 from '@/components/pages/HomeV13';
 
 export const metadata: Metadata = {

@@ -1,4 +1,4 @@
-import type { Metadata, PageProps } from 'next';
+import type { Metadata } from 'next';
 import Vision from '@/components/pages/Vision';
 
 const titles = {
@@ -32,7 +32,7 @@ function getJsonLd(lang: string) {
   };
 }
 
-export async function generateMetadata({ params }: PageProps<'/[lang]/vision'>): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const l = lang === 'bg' ? 'bg' : 'en';
 
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: PageProps<'/[lang]/vision'>):
   };
 }
 
-export default async function Page({ params }: PageProps<'/[lang]/vision'>) {
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const l = lang === 'bg' ? 'bg' : 'en';
   return (

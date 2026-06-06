@@ -1,4 +1,5 @@
-import type { Metadata, LayoutProps } from 'next';
+import type { Metadata } from 'next';
+import React from 'react';
 import { Providers } from '../providers';
 
 export async function generateStaticParams() {
@@ -37,7 +38,10 @@ function getJsonLd(lang: string) {
 export default async function LangLayout({
   children,
   params,
-}: LayoutProps<'/[lang]'>) {
+}: {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
 
   return (

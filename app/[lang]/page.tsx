@@ -1,4 +1,4 @@
-import type { Metadata, PageProps } from 'next';
+import type { Metadata } from 'next';
 import Home from '@/components/pages/Home';
 
 const titles = {
@@ -11,7 +11,7 @@ const descriptions = {
   bg: 'EstateVisio превръща снимки на имоти в кинематографични AI видеа за 24–48 часа. Без екип. Без закъснения. 3 пъти повече гледания на вашите обяви.',
 };
 
-export async function generateMetadata({ params }: PageProps<'/[lang]'>): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const l = lang === 'bg' ? 'bg' : 'en';
 
